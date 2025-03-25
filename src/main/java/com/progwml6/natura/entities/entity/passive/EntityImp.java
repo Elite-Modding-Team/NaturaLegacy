@@ -2,6 +2,7 @@ package com.progwml6.natura.entities.entity.passive;
 
 import javax.annotation.Nullable;
 
+import com.progwml6.natura.common.config.Config;
 import com.progwml6.natura.entities.NaturaEntities;
 import com.progwml6.natura.nether.NaturaNether;
 import net.minecraft.block.Block;
@@ -58,7 +59,7 @@ public class EntityImp extends EntityAnimal {
     @Override
     protected void entityInit() {
         super.entityInit();
-        this.getDataManager().register(SKIN_TYPE, Integer.valueOf(this.rand.nextInt(5)));
+        this.getDataManager().register(SKIN_TYPE, Integer.valueOf(Config.impVariants ? this.rand.nextInt(5) : 0));
     }
 
     @Override

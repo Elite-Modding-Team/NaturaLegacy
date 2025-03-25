@@ -80,6 +80,8 @@ public final class Config
         impWeight = configFile.get(ENTITIES, "Imp Spawn Weight [default: 10]", impWeight).getInt(impWeight);
         if (impWeight < 0) impWeight = 0;
         
+        impVariants = configFile.get(ENTITIES, "Should Imps have more color variants?", impVariants).getBoolean(impVariants);
+        
         // Nitro Creeper
         nitroCreeperFallExplosion = configFile.get(ENTITIES, "Should Nitro Creepers explode while moderate fall damage is taken? [default: true]", nitroCreeperFallExplosion).getBoolean(nitroCreeperFallExplosion);
         nitroCreeperInstantChargedExplosion = configFile.get(ENTITIES, "Should Nitro Creepers instantly explode while charged? [default: true]", nitroCreeperInstantChargedExplosion).getBoolean(nitroCreeperInstantChargedExplosion);
@@ -327,6 +329,7 @@ public final class Config
     public static int impSpawnMaximum = 12;
     public static int impSpawnMinimum = 8;
     public static int impWeight = 10;
+    public static boolean impVariants = true;
     
     public static boolean nitroCreeperFallExplosion = true;
     public static boolean nitroCreeperInstantChargedExplosion = true;
