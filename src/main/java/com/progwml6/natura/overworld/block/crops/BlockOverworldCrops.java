@@ -9,6 +9,7 @@ import net.minecraft.block.IGrowable;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -85,6 +86,7 @@ public abstract class BlockOverworldCrops extends BlockBush implements IGrowable
         this.setHardness(0.0F);
         this.setSoundType(SoundType.PLANT);
         this.disableStats();
+        this.setCreativeTab(null);
     }
 
     public abstract int getMaxAge();
