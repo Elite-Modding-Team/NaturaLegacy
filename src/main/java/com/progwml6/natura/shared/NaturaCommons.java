@@ -74,7 +74,7 @@ public class NaturaCommons extends NaturaPulse
     public static ItemStack impmeatCooked;
 
     // Soups
-    public static Item berryMedley;
+    public static Item berry_medley;
     public static Item glowshroom_stew;
 
     // Berries
@@ -112,6 +112,9 @@ public class NaturaCommons extends NaturaPulse
     public static ItemStack darkwood_stick;
     public static ItemStack fusewood_stick;
     public static ItemStack bloodwood_stick;
+
+    //Dummy Entries (for compatibility purposes)
+    public static ItemStack berryMedley = new ItemStack(new ItemNaturaEdibleSoup(5, 1.4F, false));
     //@formatter:on
 
     @SubscribeEvent
@@ -168,7 +171,7 @@ public class NaturaCommons extends NaturaPulse
             blueberry = edibles.addFood(3, 1, 0.4F, 16, "blueberry", false);
             blackberry = edibles.addFood(4, 1, 0.4F, 16, "blackberry", false);
             maloberry = edibles.addFood(5, 1, 0.4F, 16, "maloberry", false);
-            berryMedley = registerItem(registry, new ItemNaturaEdibleSoup(5, 1.4F, false), "berry_medley").setCreativeTab(Natura.TAB);
+            berry_medley = registerItem(registry, new ItemNaturaEdibleSoup(5, 1.4F, false), "berry_medley").setCreativeTab(Natura.TAB);
         }
 
         if (isNetherLoaded())

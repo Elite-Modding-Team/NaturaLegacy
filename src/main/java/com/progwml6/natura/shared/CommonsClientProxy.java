@@ -29,7 +29,7 @@ public class CommonsClientProxy extends ClientProxy
             sticks.registerItemModels();
         }
 
-        registerItemModel(berryMedley);
+        registerItemModel(berry_medley);
         registerItemModel(boneMealBag);
         registerItemModel(glowshroom_stew);
     }
