@@ -3,14 +3,12 @@ package com.progwml6.natura.overworld.block.crops;
 import java.util.Random;
 import javax.annotation.Nonnull;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
+import net.minecraft.block.BlockFarmland;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
@@ -212,7 +210,7 @@ public abstract class BlockOverworldCrops extends BlockBush implements IGrowable
     @Override
     protected boolean canSustainBush(IBlockState state)
     {
-        return state.getBlock() == Blocks.FARMLAND;
+        return state.getBlock() instanceof BlockFarmland || state.getBlock().getRegistryName().getPath().contains("farmland");
     }
 
     @Override
