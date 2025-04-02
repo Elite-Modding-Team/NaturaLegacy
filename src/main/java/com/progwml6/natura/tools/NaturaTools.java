@@ -84,6 +84,13 @@ public class NaturaTools extends NaturaPulse
     public static Item netherquartzShears;
 
     public static Item flintAndBlaze;
+
+    //Dummy Entries (for compatibility purposes)
+    public static Item ghostwoodKama;
+    public static Item bloodwoodKama;
+    public static Item darkwoodKama;
+    public static Item fusewoodKama;
+    public static Item netherquartzKama;
     //@formatter:on
 
     @SubscribeEvent

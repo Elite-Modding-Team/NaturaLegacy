@@ -115,6 +115,8 @@ public class NaturaCommons extends NaturaPulse
 
     //Dummy Entries (for compatibility purposes)
     public static ItemStack berryMedley = new ItemStack(new ItemNaturaEdibleSoup(5, 1.4F, false));
+    public static ItemMetaDynamic empty_bowls;
+    public static ItemNaturaEdibleSoup soups;
     //@formatter:on
 
     @SubscribeEvent
