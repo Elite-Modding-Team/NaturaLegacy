@@ -3,6 +3,7 @@ package com.progwml6.natura.overworld.block.crops;
 import java.util.Random;
 import javax.annotation.Nonnull;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.BlockFarmland;
 import net.minecraft.block.IGrowable;
