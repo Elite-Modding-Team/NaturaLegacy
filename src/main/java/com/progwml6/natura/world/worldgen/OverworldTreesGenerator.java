@@ -107,7 +107,10 @@ public class OverworldTreesGenerator implements IWorldGenerator
 
         Biome biome = world.getChunk(chunkPos).getBiome(chunkPos, world.getBiomeProvider());
 
-        if (this.shouldGenerateInDimension(world.provider.getDimension()))
+        if (this.shouldGenerateInDimension(world.provider.getDimension())
+            && !BiomeDictionary.hasType(biome, Type.DEAD)
+            && !BiomeDictionary.hasType(biome, Type.SPOOKY)
+            && !BiomeDictionary.hasType(biome, Type.WASTELAND))
         {
             if (BiomeDictionary.hasType(biome, Type.FOREST))
             {
