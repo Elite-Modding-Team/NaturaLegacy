@@ -267,8 +267,8 @@ public final class Config
 
         thornSpawnRarity = configFile.get(WORLDGEN, "Thornvines Spawn Rarity", thornSpawnRarity).getInt(thornSpawnRarity);
 
-        overworldWorldGenBlacklist = configFile.get(WORLDGEN, "Overworld World Generation Dimension Blacklist", overworldWorldGenBlacklist).getIntList();
-        netherWorldGenBlacklist = configFile.get(WORLDGEN, "Nether World Generation Dimension Blacklist", netherWorldGenBlacklist).getIntList();
+        overworldWorldGenWhitelist = configFile.get(WORLDGEN, "Overworld World Generation Dimension Whitelist", overworldWorldGenWhitelist).getIntList();
+        netherWorldGenWhitelist = configFile.get(WORLDGEN, "Nether World Generation Dimension Whitelist", netherWorldGenWhitelist).getIntList();
 
         // save changes if any
         boolean changed = false;
@@ -456,8 +456,8 @@ public final class Config
 
     public static boolean enableStickVariants = true;
 
-    public static int[] overworldWorldGenBlacklist = new int[] {};
-    public static int[] netherWorldGenBlacklist = new int[] {};
+    public static int[] overworldWorldGenWhitelist = new int[] {0};
+    public static int[] netherWorldGenWhitelist = new int[] {-1};
 
     static Configuration configFile;
     //@formatter:on

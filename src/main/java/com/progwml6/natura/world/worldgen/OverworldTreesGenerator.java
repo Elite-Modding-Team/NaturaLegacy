@@ -310,14 +310,14 @@ public class OverworldTreesGenerator implements IWorldGenerator
 
     public boolean shouldGenerateInDimension(int dimension)
     {
-        for (int dimensionId : Config.overworldWorldGenBlacklist)
+        for (int dimensionId : Config.overworldWorldGenWhitelist)
         {
             if (dimension == dimensionId)
             {
-                return false;
+                return true;
             }
         }
 
-        return true;
+        return false;
     }
 }

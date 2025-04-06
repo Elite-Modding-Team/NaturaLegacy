@@ -118,15 +118,15 @@ public class OverworldBerryBushesGenerator implements IWorldGenerator
 
     public boolean shouldGenerateInDimension(int dimension)
     {
-        for (int dimensionId : Config.overworldWorldGenBlacklist)
+        for (int dimensionId : Config.overworldWorldGenWhitelist)
         {
             if (dimension == dimensionId)
             {
-                return false;
+                return true;
             }
         }
 
-        return true;
+        return false;
     }
 
     public boolean goodClimate(Biome biome, float minTemp, float maxTemp, float minRain, float maxRain)

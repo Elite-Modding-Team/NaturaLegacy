@@ -124,15 +124,15 @@ public class NetherTreesGenerator implements IWorldGenerator
 
     public boolean shouldGenerateInDimension(int dimension)
     {
-        for (int dimensionId : Config.netherWorldGenBlacklist)
+        for (int dimensionId : Config.netherWorldGenWhitelist)
         {
             if (dimension == dimensionId)
             {
-                return false;
+                return true;
             }
         }
 
-        return true;
+        return false;
     }
 
 }
