@@ -139,6 +139,7 @@ public final class Config
         generateSulfurClouds = configFile.get(ENABLE_DISABLE, "Generate Sulfur Clouds", generateSulfurClouds).getBoolean(generateSulfurClouds);
         generateAshClouds = configFile.get(ENABLE_DISABLE, "Generate Ash Clouds", generateAshClouds).getBoolean(generateAshClouds);
         generateDarkClouds = configFile.get(ENABLE_DISABLE, "Generate Dark Clouds", generateDarkClouds).getBoolean(generateDarkClouds);
+        generateLegacyClouds = configFile.get(ENABLE_DISABLE, "Generate Legacy Clouds", generateLegacyClouds).getBoolean(generateLegacyClouds);
 
         enableCloudBlocks = configFile.get(ENABLE_DISABLE, "Enable Clouds", enableCloudBlocks).getBoolean(enableCloudBlocks);
         //Cloud End
@@ -287,6 +288,7 @@ public final class Config
     public static boolean generateSulfurClouds = true;
     public static boolean generateAshClouds = true;
     public static boolean generateDarkClouds = true;
+    public static boolean generateLegacyClouds = true;
 
     public static int[] cloudWhitelist = new int[] {0};
     public static int[] darkCloudWhitelist = new int[] {1};

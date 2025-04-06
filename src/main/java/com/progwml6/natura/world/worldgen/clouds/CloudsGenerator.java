@@ -1,7 +1,5 @@
 package com.progwml6.natura.world.worldgen.clouds;
 
-import java.util.Random;
-
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
@@ -9,6 +7,9 @@ import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
+
+import com.progwml6.natura.common.config.Config;
+import java.util.Random;
 
 public class CloudsGenerator implements IWorldGenerator
 {
@@ -37,6 +38,12 @@ public class CloudsGenerator implements IWorldGenerator
 
     public void generateCloud(Random random, World world, BlockPos pos)
     {
+        if (Config.generateLegacyClouds)
+        {
+            generateLegacyCloud(random, world, pos);
+            return;
+        }
+
         int xRand = random.nextInt(3) - 1;
         int zRand = random.nextInt(3) - 1;
 
@@ -72,6 +79,40 @@ public class CloudsGenerator implements IWorldGenerator
                             {
                                 world.setBlockState(blockpos, this.cloud, 2);
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public void generateLegacyCloud(Random random, World world, BlockPos pos)
+    {
+        int x = pos.getX();
+        int y = pos.getY();
+        int z = pos.getZ();
+        int l = random.nextInt(3) - 1;
+        int i1 = random.nextInt(3) - 1;
+        BlockPos.MutableBlockPos blockPos = new BlockPos.MutableBlockPos();
+
+        for (int j1 = 0; j1 < cloudSize; j1++)
+        {
+            x += (random.nextInt(3) - 1) + l;
+            z += (random.nextInt(3) - 1) + i1;
+            if (random.nextBoolean() && !flatCloud || flatCloud && random.nextInt(10) == 0)
+            {
+                y += random.nextInt(3) - 1;
+            }
+            for (int xIter = x; xIter < x + random.nextInt(4) + 3 * (flatCloud ? 3 : 1); xIter++)
+            {
+                for (int yIter = y; yIter < y + random.nextInt(1) + 2; yIter++)
+                {
+                    for (int zIter = z; zIter < z + random.nextInt(4) + 3 * (flatCloud ? 3 : 1); zIter++)
+                    {
+                        blockPos.setPos(xIter, yIter, zIter);
+                        if (world.isAirBlock(blockPos) && Math.abs(xIter - x) + Math.abs(yIter - y) + Math.abs(zIter - z) < 4 * (flatCloud ? 3 : 1) + random.nextInt(2))
+                        {
+                            world.setBlockState(blockPos, cloud, 2);
                         }
                     }
                 }
