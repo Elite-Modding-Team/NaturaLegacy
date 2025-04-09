@@ -22,7 +22,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.oredict.OreDictionary;
 import slimeknights.mantle.pulsar.pulse.Pulse;
 
-// TODO: Add ore dictionary support for fences, fence gates, buttons, pressure plates, and trapdoors
 @Pulse(id = NaturaOredict.PulseId, description = "Everything that has to do with the ore dictionary", forced = true)
 public class NaturaOredict extends NaturaPulse {
     public static final String PulseId = "NaturaOredict";
@@ -214,6 +213,27 @@ public class NaturaOredict extends NaturaPulse {
             if (isNetherLoaded()) {
                 oredict(NaturaDecorative.netherWorkbenches, "crafterWood");
                 oredict(NaturaDecorative.netherWorkbenches, "craftingTableWood");
+            }
+
+            // Buttons
+            for (Block button : NaturaDecorative.buttons) {
+                oredict(button, "buttonWood");
+            }
+            // Pressure Plates
+            for (Block pressurePlate : NaturaDecorative.pressurePlates) {
+                oredict(pressurePlate, "pressurePlateWood");
+            }
+            // Trapdoors
+            for (Block trapDoor : NaturaDecorative.trapDoors) {
+                oredict(trapDoor, "trapDoorWood");
+            }
+            // Fences
+            for (Block fence : NaturaDecorative.fences) {
+                oredict(fence, "fenceWood");
+            }
+            // Fence Gates
+            for (Block fenceGate : NaturaDecorative.fenceGates) {
+                oredict(fenceGate, "fenceGateWood");
             }
         }
     }
