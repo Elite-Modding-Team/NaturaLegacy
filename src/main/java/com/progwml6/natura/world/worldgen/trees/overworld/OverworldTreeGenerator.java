@@ -1,15 +1,16 @@
 package com.progwml6.natura.world.worldgen.trees.overworld;
 
-import java.util.Random;
-import com.progwml6.natura.common.config.Config;
-import com.progwml6.natura.overworld.NaturaOverworld;
-import com.progwml6.natura.world.worldgen.trees.BaseTreeGenerator;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldType;
+
+import com.progwml6.natura.common.config.Config;
+import com.progwml6.natura.overworld.NaturaOverworld;
+import com.progwml6.natura.world.worldgen.trees.BaseTreeGenerator;
+import java.util.Random;
 
 public class OverworldTreeGenerator extends BaseTreeGenerator
 {
@@ -122,58 +123,41 @@ public class OverworldTreeGenerator extends BaseTreeGenerator
 
     protected BlockPos findGround(World world, BlockPos pos)
     {
-        int returnHeight = 0;
-
         int height = pos.getY();
+        int minHeight = world.getWorldType() == WorldType.FLAT ? Config.flatSeaLevel : Config.seaLevel;
 
-        if (world.getWorldType() == WorldType.FLAT && this.isSapling)
+        do
         {
-            do
+            BlockPos position = new BlockPos(pos.getX(), height, pos.getZ());
+            IBlockState state = world.getBlockState(position);
+            Block block = state.getBlock();
+            boolean isSoil = block.canSustainPlant(state, world, position, EnumFacing.UP, NaturaOverworld.overworldSapling);
+
+            if (isSoil && !world.getBlockState(position.up()).isFullBlock())
             {
-                BlockPos position = new BlockPos(pos.getX(), height, pos.getZ());
-                IBlockState state = world.getBlockState(position);
-                Block block = state.getBlock();
-                boolean isSoil = block.canSustainPlant(state, world, position, EnumFacing.UP, NaturaOverworld.overworldSapling);
+                return new BlockPos(pos.getX(), height + 1, pos.getZ());
+            }
 
-                if (isSoil && !world.getBlockState(position.up()).isFullBlock())
-                {
-                    returnHeight = height + 1;
-                    break;
-                }
+            height--;
+        } while (height >= minHeight);
 
-                height--;
-            } while (height > Config.flatSeaLevel);
-
-        }
-        else
+        BlockPos originalPos = new BlockPos(pos.getX(), pos.getY(), pos.getZ());
+        IBlockState originalState = world.getBlockState(originalPos);
+        if (originalState.getBlock().canSustainPlant(originalState, world, originalPos, EnumFacing.UP, NaturaOverworld.overworldSapling) && !world.getBlockState(originalPos.up()).isFullBlock())
         {
-            do
-            {
-                BlockPos position = new BlockPos(pos.getX(), height, pos.getZ());
-                IBlockState state = world.getBlockState(position);
-                Block block = state.getBlock();
-                boolean isSoil = block.canSustainPlant(state, world, position, EnumFacing.UP, NaturaOverworld.overworldSapling);
-
-                if (isSoil && !world.getBlockState(position.up()).isFullBlock())
-                {
-                    returnHeight = height + 1;
-                    break;
-                }
-
-                height--;
-            } while (height > Config.seaLevel);
+            return originalPos.up();
         }
-        return new BlockPos(pos.getX(), returnHeight, pos.getZ());
+
+        return new BlockPos(pos.getX(), 0, pos.getZ());
     }
 
     protected boolean checkIfCanGrow(BlockPos position, int heightRange, World world)
     {
         boolean canGrowTree = true;
-        int range;
 
         for (int y = position.getY(); y <= position.getY() + 1 + heightRange; ++y)
         {
-            range = 1;
+            int range = 1;
 
             if (y == position.getY())
             {
@@ -191,7 +175,9 @@ public class OverworldTreeGenerator extends BaseTreeGenerator
             {
                 for (int z = position.getZ() - range; z <= position.getZ() + range && canGrowTree; ++z)
                 {
-                    canGrowTree = world.isAirBlock(blockPos.setPos(x, y, z));
+                    blockPos.setPos(x, y, z);
+                    IBlockState state = world.getBlockState(blockPos);
+                    canGrowTree = state.getBlock().isAir(state, world, blockPos) || state.getBlock().isReplaceable(world, blockPos);
                 }
             }
         }
