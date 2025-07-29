@@ -87,7 +87,7 @@ repositories {
     }
     maven {
         name 'CurseMaven'
-        url 'https://cursemaven.com'
+        url 'https://curse.cleanroommc.com'
         content {
             includeGroup 'curse.maven'
         }
@@ -108,11 +108,10 @@ dependencies {
     }
 
     // Example of deobfuscating a dependency
-    // implementation rfg.deobf('curse.maven:had-enough-items-557549:4543375')
-    implementation rfg.deobf('curse.maven:had-enough-items-557549:5229422')
+    implementation "mezz:jei:4.28.1"
     implementation rfg.deobf('curse.maven:hwyla-253449:2568751')
     implementation rfg.deobf('curse.maven:mantle-74924:2713386')
-    implementation rfg.deobf('curse.maven:tinkers-construct-74072:2902483')
+    implementation rfg.deobf('curse.maven:tinkers-antique-1242239:6752868')
     implementation rfg.deobf('curse.maven:constructs-armory-287683:3174535')
 
     if (project.use_mixins.toBoolean()) {
