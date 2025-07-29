@@ -6,6 +6,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemFlintAndSteel;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
@@ -16,7 +17,7 @@ import net.minecraft.world.World;
 
 import com.progwml6.natura.Natura;
 
-public class ItemNaturaFlintAndBlaze extends Item
+public class ItemNaturaFlintAndBlaze extends ItemFlintAndSteel
 {
     public ItemNaturaFlintAndBlaze()
     {
