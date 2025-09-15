@@ -1,0 +1,602 @@
+##########################
+#    Overworld Blocks    #
+##########################
+
+tile.natura.clouds.white.name=구름
+tile.natura.clouds.white.tooltip=아주 가볍고 푹신푹신해요!\n추락할 때 당신을 구해줍니다
+tile.natura.clouds.dark.name=먹구름
+tile.natura.clouds.dark.tooltip=아주 가볍고 푹신푹신해요!\n벼락을 유발합니다
+tile.natura.clouds.ash.name=재 구름
+tile.natura.clouds.ash.tooltip=아주 가볍고 푹신푹신해요!\n3x3 범위의 블록을 숯으로 바꿉니다
+tile.natura.clouds.sulfur.name=유황 구름
+tile.natura.clouds.sulfur.tooltip=아주 가볍고 푹신푹신해요!\n2x2 범위의 블록을 유황으로 바꿉니다
+
+tile.natura.overworld_logs.maple.name=단풍나무 원목
+tile.natura.overworld_logs.maple.tooltip=약간 달콤함
+tile.natura.overworld_logs.silverbell.name=은방울나무 원목
+tile.natura.overworld_logs.silverbell.tooltip=은방울
+tile.natura.overworld_logs.amaranth.name=아마란스 원목
+tile.natura.overworld_logs.amaranth.tooltip=나무의 심장
+tile.natura.overworld_logs.tiger.name=호랑이 무늬 나무 원목
+tile.natura.overworld_logs.tiger.tooltip=거친 나뭇결
+
+tile.natura.overworld_logs2.willow.name=버드나무 원목
+tile.natura.overworld_logs2.willow.tooltip=수양버들
+tile.natura.overworld_logs2.eucalyptus.name=유칼립투스 원목
+tile.natura.overworld_logs2.eucalyptus.tooltip=분홍빛 나무
+tile.natura.overworld_logs2.sakura.name=벚나무 원목
+tile.natura.overworld_logs2.sakura.tooltip=꽃이 피는 벚나무
+tile.natura.overworld_logs2.hopseed.name=홉씨드 나무 원목
+tile.natura.overworld_logs2.hopseed.tooltip=승천한 글리치
+
+tile.natura.overworld_leaves.maple.name=단풍나무 잎
+tile.natura.overworld_leaves.maple.tooltip=약간 달콤함
+tile.natura.overworld_leaves.silverbell.name=은방울나무 잎
+tile.natura.overworld_leaves.silverbell.tooltip=은방울
+tile.natura.overworld_leaves.amaranth.name=아마란스 잎
+tile.natura.overworld_leaves.amaranth.tooltip=나무의 심장
+tile.natura.overworld_leaves.tiger.name=호랑이 무늬 나무 잎
+tile.natura.overworld_leaves.tiger.tooltip=거친 나뭇결
+
+tile.natura.overworld_leaves2.willow.name=버드나무 잎
+tile.natura.overworld_leaves2.willow.tooltip=수양버들
+tile.natura.overworld_leaves2.eucalyptus.name=유칼립투스 잎
+tile.natura.overworld_leaves2.eucalyptus.tooltip=분홍빛 나무
+tile.natura.overworld_leaves2.sakura.name=벚나무 잎
+tile.natura.overworld_leaves2.sakura.tooltip=꽃이 피는 벚나무
+tile.natura.overworld_leaves2.hopseed.name=홉씨드 나무 잎
+tile.natura.overworld_leaves2.hopseed.tooltip=승천한 글리치
+
+tile.natura.overworld_sapling.maple.name=단풍나무 묘목
+tile.natura.overworld_sapling.maple.tooltip=약간 달콤함
+tile.natura.overworld_sapling.silverbell.name=은방울나무 묘목
+tile.natura.overworld_sapling.silverbell.tooltip=은방울
+tile.natura.overworld_sapling.amaranth.name=아마란스 묘목
+tile.natura.overworld_sapling.amaranth.tooltip=나무의 심장
+tile.natura.overworld_sapling.tiger.name=호랑이 무늬 나무 묘목
+tile.natura.overworld_sapling.tiger.tooltip=거친 나뭇결
+
+tile.natura.overworld_sapling2.willow.name=버드나무 묘목
+tile.natura.overworld_sapling2.willow.tooltip=수양버들
+tile.natura.overworld_sapling2.eucalyptus.name=유칼립투스 묘목
+tile.natura.overworld_sapling2.eucalyptus.tooltip=분홍빛 나무
+tile.natura.overworld_sapling2.sakura.name=벚나무 묘목
+tile.natura.overworld_sapling2.sakura.tooltip=꽃이 피는 벚나무
+tile.natura.overworld_sapling2.hopseed.name=홉씨드 나무 묘목
+tile.natura.overworld_sapling2.hopseed.tooltip=승천한 글리치
+
+tile.natura.redwood_logs.bark.name=레드우드 껍질
+tile.natura.redwood_logs.bark.tooltip=태워서 숯으로 만들거나\n숨겨진 나무 문을 만드세요
+tile.natura.redwood_logs.heart.name=레드우드
+tile.natura.redwood_logs.heart.tooltip=나무의 심장
+tile.natura.redwood_logs.root.name=레드우드 뿌리
+tile.natura.redwood_logs.root.tooltip=나무의 뿌리
+
+tile.natura.redwood_leaves.normal.name=레드우드 잎
+tile.natura.redwood_leaves.normal.tooltip=거대한 세쿼이아
+
+tile.natura.redwood_sapling.redwood.name=레드우드 묘목
+tile.natura.redwood_sapling.redwood.tooltip=7x7 공간에 심으세요\n자라는데 며칠이 걸립니다
+
+tile.natura.apple_log.apple.name=사과나무 원목
+tile.natura.apple_log.apple.tooltip=속까지 사과나무
+
+tile.natura.apple_leaves.normal.name=사과나무 잎
+tile.natura.apple_leaves.normal.tooltip=속까지 사과나무
+tile.natura.apple_leaves.flowering.name=사과나무 잎
+tile.natura.apple_leaves.flowering.tooltip=속까지 사과나무\n꽃이 핀
+tile.natura.apple_leaves.fruit.name=사과나무 잎
+tile.natura.apple_leaves.fruit.tooltip=속까지 사과나무\n사과가 열림
+tile.natura.apple_leaves.golden_fruit.name=사과나무 잎
+tile.natura.apple_leaves.golden_fruit.tooltip=속까지 사과나무\n황금 사과가 열림
+
+tile.natura.apple_sapling.apple.name=사과나무 묘목
+tile.natura.apple_sapling.apple.tooltip=속까지 사과나무
+
+tile.natura.colored_grass.topiary.name=토피어리 잔디
+tile.natura.colored_grass.bluegrass.name=푸른 잔디
+tile.natura.colored_grass.autumnal.name=가을 잔디
+
+tile.natura.colored_grass_slab.topiary.name=토피어리 잔디 반 블록
+tile.natura.colored_grass_slab.bluegrass.name=푸른 잔디 반 블록
+tile.natura.colored_grass_slab.autumnal.name=가을 잔디 반 블록
+
+tile.natura.colored_grass_stairs_topiary.name=토피어리 잔디 계단
+tile.natura.colored_grass_stairs_bluegrass.name=푸른 잔디 계단
+tile.natura.colored_grass_stairs_autumnal.name=가을 잔디 계단
+
+tile.natura.overworld_planks.maple.name=단풍나무 판자
+tile.natura.overworld_planks.maple.tooltip=약간 달콤함
+tile.natura.overworld_planks.silverbell.name=은방울나무 판자
+tile.natura.overworld_planks.silverbell.tooltip=은방울
+tile.natura.overworld_planks.amaranth.name=아마란스 판자
+tile.natura.overworld_planks.amaranth.tooltip=나무의 심장
+tile.natura.overworld_planks.tiger.name=호랑이 무늬 나무 판자
+tile.natura.overworld_planks.tiger.tooltip=거친 나뭇결
+tile.natura.overworld_planks.willow.name=버드나무 판자
+tile.natura.overworld_planks.willow.tooltip=수양버들
+tile.natura.overworld_planks.eucalyptus.name=유칼립투스 판자
+tile.natura.overworld_planks.eucalyptus.tooltip=분홍빛 나무
+tile.natura.overworld_planks.sakura.name=벚나무 판자
+tile.natura.overworld_planks.sakura.tooltip=꽃이 피는 벚나무
+tile.natura.overworld_planks.hopseed.name=홉씨드 나무 판자
+tile.natura.overworld_planks.hopseed.tooltip=승천한 글리치
+tile.natura.overworld_planks.redwood.name=레드우드 판자
+tile.natura.overworld_planks.redwood.tooltip=거대한 세쿼이아
+tile.natura.overworld_planks.apple.name=사과나무 판자
+tile.natura.overworld_planks.apple.tooltip=속까지 사과나무
+
+tile.natura.overworld_slab.maple.name=단풍나무 반 블록
+tile.natura.overworld_slab.maple.tooltip=약간 달콤함
+tile.natura.overworld_slab.silverbell.name=은방울나무 반 블록
+tile.natura.overworld_slab.silverbell.tooltip=은방울
+tile.natura.overworld_slab.amaranth.name=아마란스 반 블록
+tile.natura.overworld_slab.amaranth.tooltip=나무의 심장
+tile.natura.overworld_slab.tiger.name=호랑이 무늬 나무 반 블록
+tile.natura.overworld_slab.tiger.tooltip=거친 나뭇결
+tile.natura.overworld_slab.willow.name=버드나무 반 블록
+tile.natura.overworld_slab.willow.tooltip=수양버들
+tile.natura.overworld_slab2.eucalyptus.name=유칼립투스 반 블록
+tile.natura.overworld_slab2.eucalyptus.tooltip=분홍빛 나무
+tile.natura.overworld_slab2.sakura.name=벚나무 반 블록
+tile.natura.overworld_slab2.sakura.tooltip=꽃이 피는 벚나무
+tile.natura.overworld_slab2.hopseed.name=홉씨드 나무 반 블록
+tile.natura.overworld_slab2.hopseed.tooltip=승천한 글리치
+tile.natura.overworld_slab2.redwood.name=레드우드 반 블록
+tile.natura.overworld_slab2.redwood.tooltip=거대한 세쿼이아
+tile.natura.overworld_slab2.apple.name=사과나무 반 블록
+tile.natura.overworld_slab2.apple.tooltip=속까지 사과나무
+
+tile.natura.overworld_stairs_maple.name=단풍나무 계단
+tile.natura.overworld_stairs_silverbell.name=은방울나무 계단
+tile.natura.overworld_stairs_amaranth.name=아마란스 계단
+tile.natura.overworld_stairs_tiger.name=호랑이 무늬 나무 계단
+tile.natura.overworld_stairs_willow.name=버드나무 계단
+tile.natura.overworld_stairs_eucalyptus.name=유칼립투스 계단
+tile.natura.overworld_stairs_hopseed.name=홉씨드 나무 계단
+tile.natura.overworld_stairs_sakura.name=벚나무 계단
+tile.natura.overworld_stairs_redwood.name=레드우드 계단
+tile.natura.overworld_stairs_apple.name=사과나무 계단
+
+tile.natura.overworld_berrybush_raspberry.name=라즈베리 덤불
+tile.natura.overworld_berrybush_raspberry.tooltip=달콤하고 빨간색\n따뜻한 지역에서 발견됨
+tile.natura.overworld_berrybush_blueberry.name=블루베리 덤불
+tile.natura.overworld_berrybush_blueberry.tooltip=새콤하고 파란색\n온화한 지역에서 발견됨
+tile.natura.overworld_berrybush_blackberry.name=블랙베리 덤불
+tile.natura.overworld_berrybush_blackberry.tooltip=달콤하고 검은색\n습한 지역에서 발견됨
+tile.natura.overworld_berrybush_maloberry.name=말로베리 덤불
+tile.natura.overworld_berrybush_maloberry.tooltip=맛있고 노란-주황색\n추운 지역에서 발견됨
+
+tile.natura.bluebells_flower.name=블루벨
+
+tile.natura.saguaro.name=사와로 선인장
+tile.natura.saguaro.tooltip=나무처럼 자람\n폭풍우가 지난 후 열매를 맺음
+tile.natura.saguaro_baby.name=아기 사와로 선인장
+tile.natura.saguaro_baby.tooltip=나무처럼 자람\n폭풍우가 지난 후 열매를 맺음
+tile.natura.saguaro_fruit.name=사와로 열매
+tile.natura.saguaro_fruit.tooltip=나무처럼 자람\n폭풍우가 지난 후 열매를 맺음
+
+tile.natura.maple_button.name=단풍나무 버튼
+tile.natura.maple_pressure_plate.name=단풍나무 압력판
+tile.natura.maple_trap_door.name=단풍나무 다락문
+tile.natura.maple_fence.name=단풍나무 울타리
+tile.natura.maple_fence_gate.name=단풍나무 울타리 문
+
+tile.natura.silverbell_button.name=은방울나무 버튼
+tile.natura.silverbell_pressure_plate.name=은방울나무 압력판
+tile.natura.silverbell_trap_door.name=은방울나무 다락문
+tile.natura.silverbell_fence.name=은방울나무 울타리
+tile.natura.silverbell_fence_gate.name=은방울나무 울타리 문
+
+tile.natura.amaranth_button.name=아마란스 버튼
+tile.natura.amaranth_pressure_plate.name=아마란스 압력판
+tile.natura.amaranth_trap_door.name=아마란스 다락문
+tile.natura.amaranth_fence.name=아마란스 울타리
+tile.natura.amaranth_fence_gate.name=아마란스 울타리 문
+
+tile.natura.tiger_button.name=호랑이 무늬 나무 버튼
+tile.natura.tiger_pressure_plate.name=호랑이 무늬 나무 압력판
+tile.natura.tiger_trap_door.name=호랑이 무늬 나무 다락문
+tile.natura.tiger_fence.name=호랑이 무늬 나무 울타리
+tile.natura.tiger_fence_gate.name=호랑이 무늬 나무 울타리 문
+
+tile.natura.willow_button.name=버드나무 버튼
+tile.natura.willow_pressure_plate.name=버드나무 압력판
+tile.natura.willow_trap_door.name=버드나무 다락문
+tile.natura.willow_fence.name=버드나무 울타리
+tile.natura.willow_fence_gate.name=버드나무 울타리 문
+
+tile.natura.eucalyptus_button.name=유칼립투스 버튼
+tile.natura.eucalyptus_pressure_plate.name=유칼립투스 압력판
+tile.natura.eucalyptus_trap_door.name=유칼립투스 다락문
+tile.natura.eucalyptus_fence.name=유칼립투스 울타리
+tile.natura.eucalyptus_fence_gate.name=유칼립투스 울타리 문
+
+tile.natura.hopseed_button.name=홉씨드 나무 버튼
+tile.natura.hopseed_pressure_plate.name=홉씨드 나무 압력판
+tile.natura.hopseed_trap_door.name=홉씨드 나무 다락문
+tile.natura.hopseed_fence.name=홉씨드 나무 울타리
+tile.natura.hopseed_fence_gate.name=홉씨드 나무 울타리 문
+
+tile.natura.sakura_button.name=벚나무 버튼
+tile.natura.sakura_pressure_plate.name=벚나무 압력판
+tile.natura.sakura_trap_door.name=벚나무 다락문
+tile.natura.sakura_fence.name=벚나무 울타리
+tile.natura.sakura_fence_gate.name=벚나무 울타리 문
+
+tile.natura.redwood_button.name=레드우드 버튼
+tile.natura.redwood_pressure_plate.name=레드우드 압력판
+tile.natura.redwood_trap_door.name=레드우드 다락문
+tile.natura.redwood_fence.name=레드우드 울타리
+tile.natura.redwood_fence_gate.name=레드우드 울타리 문
+
+tile.natura.apple_button.name=사과나무 버튼
+tile.natura.apple_pressure_plate.name=사과나무 압력판
+tile.natura.apple_trap_door.name=사과나무 다락문
+tile.natura.apple_fence.name=사과나무 울타리
+tile.natura.apple_fence_gate.name=사과나무 울타리 문
+
+tile.natura.overworld_bookshelves.maple.name=단풍나무 책장
+tile.natura.overworld_bookshelves.silverbell.name=은방울나무 책장
+tile.natura.overworld_bookshelves.amaranth.name=아마란스 책장
+tile.natura.overworld_bookshelves.tiger.name=호랑이 무늬 나무 책장
+tile.natura.overworld_bookshelves.willow.name=버드나무 책장
+tile.natura.overworld_bookshelves.eucalyptus.name=유칼립투스 책장
+tile.natura.overworld_bookshelves.hopseed.name=홉씨드 나무 책장
+tile.natura.overworld_bookshelves.sakura.name=벚나무 책장
+tile.natura.overworld_bookshelves.redwood.name=레드우드 책장
+tile.natura.overworld_bookshelves.apple.name=사과나무 책장
+
+tile.natura.overworld_workbenches.maple.name=단풍나무 제작대
+tile.natura.overworld_workbenches.silverbell.name=은방울나무 제작대
+tile.natura.overworld_workbenches.amaranth.name=아마란스 제작대
+tile.natura.overworld_workbenches.tiger.name=호랑이 무늬 나무 제작대
+tile.natura.overworld_workbenches.willow.name=버드나무 제작대
+tile.natura.overworld_workbenches.eucalyptus.name=유칼립투스 제작대
+tile.natura.overworld_workbenches.hopseed.name=홉씨드 나무 제작대
+tile.natura.overworld_workbenches.sakura.name=벚나무 제작대
+tile.natura.overworld_workbenches.redwood.name=레드우드 제작대
+tile.natura.overworld_workbenches.apple.name=사과나무 제작대
+
+#######################
+#    Nether Blocks    #
+#######################
+
+tile.natura.nether_logs.ghostwood.name=유령나무 원목
+tile.natura.nether_logs.ghostwood.tooltip=네더 나무\n유령처럼 창백함
+tile.natura.nether_logs.darkwood.name=어둠나무 원목
+tile.natura.nether_logs.darkwood.tooltip=네더 나무
+tile.natura.nether_logs.fusewood.name=퓨즈나무 원목
+tile.natura.nether_logs.fusewood.tooltip=네더 나무\n폭발적인 성격
+
+tile.natura.nether_logs2.name=혈목 원목
+tile.natura.nether_logs2.tooltip=내화성 나무
+
+tile.natura.nether_leaves.ghostwood.name=유령나무 잎
+tile.natura.nether_leaves.ghostwood.tooltip=네더 나무\n유령처럼 창백함
+tile.natura.nether_leaves.bloodwood.name=혈목 잎
+tile.natura.nether_leaves.bloodwood.tooltip=네더 나무\n내화성 잎
+tile.natura.nether_leaves.fusewood.name=퓨즈나무 잎
+tile.natura.nether_leaves.fusewood.tooltip=네더 나무\n폭발적인 성격
+
+tile.natura.nether_leaves2.darkwood.name=어둠나무 잎
+tile.natura.nether_leaves2.darkwood.tooltip=네더 나무
+tile.natura.nether_leaves2.darkwood_flowering.name=어둠나무 잎
+tile.natura.nether_leaves2.darkwood_flowering.tooltip=네더 나무\n꽃이 핀
+tile.natura.nether_leaves2.darkwood_fruit.name=어둠나무 잎
+tile.natura.nether_leaves2.darkwood_fruit.tooltip=네더 나무\n사과가 열림
+
+tile.natura.nether_sapling.ghostwood.name=유령나무 묘목
+tile.natura.nether_sapling.ghostwood.tooltip=유령처럼 창백함
+tile.natura.nether_sapling.fusewood.name=신관나무 묘목
+tile.natura.nether_sapling.fusewood.tooltip=폭발적인 성격
+tile.natura.nether_sapling.darkwood.name=어둠나무 묘목
+tile.natura.nether_sapling.darkwood.tooltip=분필 맛 사과를 생산함
+
+tile.natura.nether_sapling2.bloodwood.name=혈목 묘목
+tile.natura.nether_sapling2.bloodwood.tooltip=내화성 판자
+
+tile.natura.nether_planks.ghostwood.name=유령나무 판자
+tile.natura.nether_planks.ghostwood.tooltip=유령처럼 창백함
+tile.natura.nether_planks.bloodwood.name=혈목 판자
+tile.natura.nether_planks.bloodwood.tooltip=내화성 판자
+tile.natura.nether_planks.fusewood.name=신관나무 판자
+tile.natura.nether_planks.fusewood.tooltip=네더 나무\n폭발적인 성격
+tile.natura.nether_planks.darkwood.name=어둠나무 판자
+tile.natura.nether_planks.darkwood.tooltip=네더 나무
+
+tile.natura.nether_slab.ghostwood.name=유령나무 반 블록
+tile.natura.nether_slab.ghostwood.tooltip=유령처럼 창백함
+tile.natura.nether_slab.bloodwood.name=혈목 반 블록
+tile.natura.nether_slab.bloodwood.tooltip=내화성 판자
+tile.natura.nether_slab.fusewood.name=신관나무 반 블록
+tile.natura.nether_slab.fusewood.tooltip=네더 나무\n폭발적인 성격
+tile.natura.nether_slab.darkwood.name=어둠나무 반 블록
+tile.natura.nether_slab.darkwood.tooltip=네더 나무
+
+tile.natura.nether_stairs_ghostwood.name=유령나무 계단
+tile.natura.nether_stairs_bloodwood.name=혈목 계단
+tile.natura.nether_stairs_darkwood.name=어둠나무 계단
+tile.natura.nether_stairs_fusewood.name=신관나무 계단
+
+tile.natura.nether_glass.soul.name=영혼 유리
+tile.natura.nether_glass.soul.tooltip=유령 같은
+tile.natura.nether_glass.heat.name=내열 유리
+
+tile.natura.nether_tainted_soil.tainted_soil.name=오염된 흙
+tile.natura.nether_tainted_soil.tainted_farmland_dry.name=오염된 경작지
+tile.natura.nether_tainted_soil.tainted_farmland_heated.name=가열된 오염된 경작지
+
+tile.natura.nether_heat_sand.name=내열 모래
+
+tile.natura.nether_berrybush_blightberry.name=마름병 베리 덤불
+tile.natura.nether_berrybush_blightberry.tooltip=약간 사악함\n치명적인 치유
+tile.natura.nether_berrybush_duskberry.name=황혼 베리 덤불
+tile.natura.nether_berrybush_duskberry.tooltip=약간 사악함\n밤에도 보임
+tile.natura.nether_berrybush_skyberry.name=하늘 베리 덤불
+tile.natura.nether_berrybush_skyberry.tooltip=약간 사악함\n느린 낙하
+tile.natura.nether_berrybush_stingberry.name=쐐기 베리 덤불
+tile.natura.nether_berrybush_stingberry.tooltip=약간 사악함\n트럭처럼 강타함
+
+tile.natura.respawn_obelisk.inactive.name=비활성화된 부활 오벨리스크
+tile.natura.respawn_obelisk.active.name=활성화된 부활 오벨리스크
+
+tile.natura.nether_thorn_vines.name=가시 덩굴
+
+tile.natura.nether_glowshroom.green.name=초록색 빛나는 버섯
+tile.natura.nether_glowshroom.blue.name=파란색 빛나는 버섯
+tile.natura.nether_glowshroom.purple.name=보라색 빛나는 버섯
+
+tile.natura.nether_green_large_glowshroom.all_inside.name=초록색 빛나는 버섯
+tile.natura.nether_blue_large_glowshroom.all_inside.name=파란색 빛나는 버섯
+tile.natura.nether_purple_large_glowshroom.all_inside.name=보라색 빛나는 버섯
+
+tile.natura.nether_lever.name=네더랙 레버
+
+tile.natura.nether_pressure_plate.name=네더랙 압력판
+
+tile.natura.nether_button.name=네더랙 버튼
+
+tile.natura.blaze_rail.name=블레이즈 레일
+tile.natura.blaze_rail_golden.name=전력 블레이즈 레일
+tile.natura.blaze_rail_activator.name=활성화 블레이즈 레일
+tile.natura.blaze_rail_detector.name=감지 블레이즈 레일
+
+tile.natura.blaze_hopper.name=블레이즈 호퍼
+
+tile.natura.netherrack_furnace.name=네더랙 화로
+tile.natura.lit_netherrack_furnace.name=불 붙은 네더랙 화로
+
+tile.natura.ghostwood_button.name=유령나무 버튼
+tile.natura.ghostwood_pressure_plate.name=유령나무 압력판
+tile.natura.ghostwood_trap_door.name=유령나무 다락문
+tile.natura.ghostwood_fence.name=유령나무 울타리
+tile.natura.ghostwood_fence_gate.name=유령나무 울타리 문
+
+tile.natura.bloodwood_button.name=혈목 버튼
+tile.natura.bloodwood_pressure_plate.name=혈목 압력판
+tile.natura.bloodwood_trap_door.name=혈목 다락문
+tile.natura.bloodwood_fence.name=혈목 울타리
+tile.natura.bloodwood_fence_gate.name=혈목 울타리 문
+
+tile.natura.fusewood_button.name=신관나무 버튼
+tile.natura.fusewood_pressure_plate.name=신관나무 압력판
+tile.natura.fusewood_trap_door.name=신관나무 다락문
+tile.natura.fusewood_fence.name=신관나무 울타리
+tile.natura.fusewood_fence_gate.name=신관나무 울타리 문
+
+tile.natura.darkwood_button.name=어둠나무 버튼
+tile.natura.darkwood_pressure_plate.name=어둠나무 압력판
+tile.natura.darkwood_trap_door.name=어둠나무 다락문
+tile.natura.darkwood_fence.name=어둠나무 울타리
+tile.natura.darkwood_fence_gate.name=어둠나무 울타리 문
+
+tile.natura.charred_netherrack_bricks.name=그을린 네더랙 벽돌
+tile.natura.netherrack_bricks.name=네더랙 벽돌
+tile.natura.smooth_netherrack.name=매끄러운 네더랙
+
+tile.natura.nether_bookshelves.ghostwood.name=유령나무 책장
+tile.natura.nether_bookshelves.bloodwood.name=혈목 책장
+tile.natura.nether_bookshelves.fusewood.name=신관나무 책장
+tile.natura.nether_bookshelves.darkwood.name=어둠나무 책장
+
+tile.natura.nether_workbenches.ghostwood.name=유령나무 제작대
+tile.natura.nether_workbenches.bloodwood.name=혈목 제작대
+tile.natura.nether_workbenches.fusewood.name=신관나무 제작대
+tile.natura.nether_workbenches.darkwood.name=어둠나무 제작대
+
+################
+#    Items     #
+################
+
+item.natura.edibles.impmeat_raw.name=익히지 않은 임프 고기
+item.natura.edibles.impmeat_raw.tooltip=이걸 먹으면 아마 몸에 좋지 않을 겁니다
+item.natura.edibles.impmeat_cooked.name=익힌 임프 고기
+item.natura.edibles.impmeat_cooked.tooltip=따뜻한 온기가 느껴집니다
+
+item.natura.edibles.raspberry.name=라즈베리
+item.natura.edibles.raspberry.tooltip=포만감을 채워줘요!
+item.natura.edibles.blueberry.name=블루베리
+item.natura.edibles.blueberry.tooltip=포만감을 채워줘요!
+item.natura.edibles.blackberry.name=블랙베리
+item.natura.edibles.blackberry.tooltip=포만감을 채워줘요!
+item.natura.edibles.maloberry.name=말로베리
+item.natura.edibles.maloberry.tooltip=포만감을 채워줘요!
+
+item.natura.edibles.blightberry.name=마름병 베리
+item.natura.edibles.blightberry.tooltip=약간 사악함\n치명적인 치유
+item.natura.edibles.duskberry.name=황혼 베리
+item.natura.edibles.duskberry.tooltip=약간 사악함\n밤에도 보임
+item.natura.edibles.skyberry.name=하늘 베리
+item.natura.edibles.skyberry.tooltip=약간 사악함\n느린 낙하
+item.natura.edibles.stingberry.name=쐐기 베리
+item.natura.edibles.stingberry.tooltip=약간 사악함\n트럭처럼 강타함
+
+item.natura.edibles.potashapple.name=탄산칼륨 사과
+item.natura.edibles.potashapple.tooltip=약간 분필 같은 맛이 남
+
+item.natura.edibles.cactusjuice.name=선인장 주스
+item.natura.edibles.cactusjuice.tooltip=상쾌함!
+
+item.natura.materials.barley.name=보리
+item.natura.materials.barley.tooltip=밀과 비슷하며, 야생에서 자랍니다
+item.natura.materials.barley_flour.name=보릿가루
+item.natura.materials.barley_flour.tooltip=구워서 빵을 만드세요\n케이크를 만들 때도 사용됩니다
+item.natura.materials.wheat_flour.name=밀가루
+item.natura.materials.wheat_flour.tooltip=구워서 빵을 만드세요\n케이크를 만들 때도 사용됩니다
+item.natura.materials.cotton.name=목화
+item.natura.materials.cotton.tooltip=모든 실과 양털의 원료
+item.natura.materials.sulfur_powder.name=유황
+item.natura.materials.sulfur_powder.tooltip=2x2로 조합하여 화약을 만듭니다
+item.natura.materials.ghostwood_fletching.name=화살 깃
+item.natura.materials.ghostwood_fletching.tooltip=화살을 만드는 다른 방법
+item.natura.materials.imp_leather.name=임프 가죽
+item.natura.materials.imp_leather.tooltip=내열성!
+item.natura.materials.flame_string.name=화염실
+item.natura.materials.flame_string.tooltip=일반 실보다 약간 더 튼튼함
+item.natura.materials.blue_dye.name=파란색 염료
+
+item.natura.sticks.maple_stick.name=단풍나무 막대기
+item.natura.sticks.silverbell_stick.name=은방울나무 막대기
+item.natura.sticks.amaranth_stick.name=아마란스 막대기
+item.natura.sticks.tiger_stick.name=호랑이 무늬 나무 막대기
+item.natura.sticks.willow_stick.name=버드나무 막대기
+item.natura.sticks.eucalyptus_stick.name=유칼립투스 막대기
+item.natura.sticks.hopseed_stick.name=홉씨드 나무 막대기
+item.natura.sticks.sakura_stick.name=벚나무 막대기
+item.natura.sticks.redwood_stick.name=레드우드 막대기
+item.natura.sticks.apple_stick.name=사과나무 막대기
+item.natura.sticks.ghostwood_stick.name=유령나무 막대기
+item.natura.sticks.darkwood_stick.name=어둠나무 막대기
+item.natura.sticks.fusewood_stick.name=신관나무 막대기
+item.natura.sticks.bloodwood_stick.name=혈목 막대기
+
+item.natura.glowshroom_stew.name=빛나는 버섯 스튜
+
+item.natura.berry_medley.name=모둠 베리
+item.natura.soups.berry_medley.tooltip=거부할 수 없는 베리의 조합
+
+item.natura.imp_armor_helmet.name=임프 가죽 모자
+item.natura.imp_armor_chestplate.name=임프 가죽 조끼
+item.natura.imp_armor_leggings.name=임프 가죽 바지
+item.natura.imp_armor_boots.name=임프 가죽 장화
+
+item.natura.seed_bags.wheat_seed_bag.name=밀 씨앗 주머니
+item.natura.seed_bags.wheat_seed_bag.tooltip=3x3 영역에 심습니다
+item.natura.seed_bags.potatoes_seed_bag.name=감자 주머니
+item.natura.seed_bags.potatoes_seed_bag.tooltip=3x3 영역에 심습니다
+item.natura.seed_bags.carrots_seed_bag.name=당근 주머니
+item.natura.seed_bags.carrots_seed_bag.tooltip=3x3 영역에 심습니다
+item.natura.seed_bags.nether_wart_seed_bag.name=네더 사마귀 주머니
+item.natura.seed_bags.nether_wart_seed_bag.tooltip=3x3 영역에 심습니다
+item.natura.bonemeal_bag.name=뼛가루 주머니
+item.natura.bonemeal_bag.tooltip=3x3 영역의 식물을 자라게 합니다
+item.natura.overworld_seed_bags.barley_seed_bag.name=보리 씨앗 주머니
+item.natura.overworld_seed_bags.barley_seed_bag.tooltip=3x3 영역에 심습니다
+item.natura.overworld_seed_bags.cotton_seed_bag.name=목화 씨앗 주머니
+item.natura.overworld_seed_bags.cotton_seed_bag.tooltip=3x3 영역에 심습니다
+
+item.natura.overworld_seeds.barley_seeds.name=보리 씨앗
+item.natura.overworld_seeds.barley_seeds.tooltip=밀과 비슷하며, 야생에서 자랍니다
+item.natura.overworld_seeds.cotton_seeds.name=목화 씨앗
+item.natura.overworld_seeds.cotton_seeds.tooltip=모든 실과 양털의 원료
+
+item.natura.overworld_doors.eucalyptus_door.name=유칼립투스 문
+item.natura.overworld_doors.eucalyptus_door.tooltip=분홍빛 나무
+item.natura.overworld_doors.hopseed_door.name=홉씨드 나무 문
+item.natura.overworld_doors.hopseed_door.tooltip=승천한 글리치
+item.natura.overworld_doors.sakura_door.name=벚나무 문
+item.natura.overworld_doors.sakura_door.tooltip=꽃이 피는 벚나무
+item.natura.overworld_doors.redwood_door.name=레드우드 문
+item.natura.overworld_doors.redwood_door.tooltip=거대한 세쿼이아
+item.natura.overworld_doors.redwood_bark_door.name=레드우드 껍질 문
+item.natura.overworld_doors.redwood_bark_door.tooltip=비밀 통로
+item.natura.overworld_doors.tiger_door.name=호랑이 무늬 나무 문
+item.natura.overworld_doors.tiger_door.tooltip=거친 나뭇결
+item.natura.overworld_doors.maple_door.name=단풍나무 문
+item.natura.overworld_doors.maple_door.tooltip=약간 달콤함
+item.natura.overworld_doors.silverbell_door.name=은방울나무 문
+item.natura.overworld_doors.silverbell_door.tooltip=은방울
+item.natura.overworld_doors.amaranth_door.name=아마란스 문
+item.natura.overworld_doors.amaranth_door.tooltip=나무의 심장
+item.natura.overworld_doors.willow_door.name=버드나무 문
+item.natura.overworld_doors.willow_door.tooltip=수양버들
+item.natura.overworld_doors.apple_door.name=사과나무 문
+item.natura.overworld_doors.apple_door.tooltip=속까지 사과나무
+
+item.natura.nether_doors.ghostwood_door.name=유령나무 문
+item.natura.nether_doors.ghostwood_door.tooltip=유령처럼 창백함
+item.natura.nether_doors.bloodwood_door.name=혈목 문
+item.natura.nether_doors.bloodwood_door.tooltip=내화성 문
+item.natura.nether_doors.darkwood_door.name=어둠나무 문
+item.natura.nether_doors.darkwood_door.tooltip=네더 나무
+item.natura.nether_doors.fusewood_door.name=신관나무 문
+item.natura.nether_doors.fusewood_door.tooltip=네더 나무\n폭발적인 성격
+
+item.natura.saguaro_fruit_item.name=사와로 열매
+
+################
+#    Tools     #
+################
+
+item.natura.flint_and_blaze.name=부싯돌과 블레이즈
+item.natura.ghostwood_sword.name=유령나무 검
+item.natura.ghostwood_pickaxe.name=유령나무 곡괭이
+item.natura.ghostwood_shovel.name=유령나무 삽
+item.natura.ghostwood_axe.name=유령나무 도끼
+item.natura.ghostwood_hoe.name=유령나무 괭이
+item.natura.ghostwood_bow.name=유령나무 활
+
+item.natura.bloodwood_sword.name=혈목 검
+item.natura.bloodwood_pickaxe.name=혈목 곡괭이
+item.natura.bloodwood_shovel.name=혈목 삽
+item.natura.bloodwood_axe.name=혈목 도끼
+item.natura.bloodwood_hoe.name=혈목 괭이
+item.natura.bloodwood_bow.name=혈목 활
+
+item.natura.darkwood_sword.name=어둠나무 검
+item.natura.darkwood_pickaxe.name=어둠나무 곡괭이
+item.natura.darkwood_shovel.name=어둠나무 삽
+item.natura.darkwood_axe.name=어둠나무 도끼
+item.natura.darkwood_hoe.name=어둠나무 괭이
+item.natura.darkwood_bow.name=어둠나무 활
+
+item.natura.fusewood_sword.name=신관나무 검
+item.natura.fusewood_pickaxe.name=신관나무 곡괭이
+item.natura.fusewood_shovel.name=신관나무 삽
+item.natura.fusewood_axe.name=신관나무 도끼
+item.natura.fusewood_hoe.name=신관나무 괭이
+item.natura.fusewood_bow.name=신관나무 활
+
+item.natura.netherquartz_sword.name=네더 석영 검
+item.natura.netherquartz_pickaxe.name=네더 석영 곡괭이
+item.natura.netherquartz_shovel.name=네더 석영 삽
+item.natura.netherquartz_axe.name=네더 석영 도끼
+item.natura.netherquartz_hoe.name=네더 석영 괭이
+item.natura.netherquartz_bow.name=네더 석영 활
+item.natura.netherquartz_shears.name=네더 석영 가위
+
+################
+#    Items     #
+################
+
+entity.imp.name=임프
+entity.heatscarspider.name=화상 흉터 거미
+entity.babyheatscarspider.name=아기 화상 흉터 거미
+entity.nitrocreeper.name=니트로 크리퍼
+
+################
+#     GUIs     #
+################
+
+itemGroup.natura.tab=Natura 레거시
+
+msg.natura.respawn_obelisk.activate=오벨리스크가 활성화되었습니다. 스폰 지점이 설정되었습니다!
+msg.natura.respawn_obelisk.deactivate=오벨리스크가 비활성화되었습니다. 스폰 지점이 초기화되었습니다!
+
+###############
+#    HWYLA    #
+###############
+
+option.natura.alternatecropitem=대체 작물
+option.natura.alternatedooritem=대체 문
