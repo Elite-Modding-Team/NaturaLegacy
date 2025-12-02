@@ -107,12 +107,16 @@ dependencies {
         implementation 'zone.rong:mixinbooter:9.1'
     }
 
-    // Example of deobfuscating a dependency
-    implementation "mezz:jei:4.28.1"
+    // Had Enough Items
+    implementation rfg.deobf('curse.maven:had-enough-items-557549:7282920')
+
+    // HWYLA
     implementation rfg.deobf('curse.maven:hwyla-253449:2568751')
+
+    // Antique Suite
     implementation rfg.deobf('curse.maven:mantle-74924:2713386')
-    implementation rfg.deobf('curse.maven:tinkers-antique-1242239:6752868')
-    implementation rfg.deobf('curse.maven:constructs-armory-287683:3174535')
+    implementation rfg.deobf('curse.maven:tinkers-antique-1242239:7242538')
+    implementation rfg.deobf('curse.maven:antique-armory-1394222:7275086')
 
     if (project.use_mixins.toBoolean()) {
         // Change your mixin refmap name here:
