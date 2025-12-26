@@ -81,7 +81,7 @@ public class VineGenerator implements IWorldGenerator
 
     public boolean shouldGenerateInDimension(int dimension)
     {
-        for (int dimensionId : Config.overworldWorldGenWhitelist)
+        for (int dimensionId : Config.netherWorldGenWhitelist)
         {
             if (dimension == dimensionId)
             {
