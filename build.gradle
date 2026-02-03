@@ -108,7 +108,7 @@ dependencies {
     }
 
     // Had Enough Items
-    implementation rfg.deobf('curse.maven:had-enough-items-557549:7282920')
+    implementation rfg.deobf('curse.maven:had-enough-items-557549:7515497')
 
     // HWYLA
     implementation rfg.deobf('curse.maven:hwyla-253449:2568751')
