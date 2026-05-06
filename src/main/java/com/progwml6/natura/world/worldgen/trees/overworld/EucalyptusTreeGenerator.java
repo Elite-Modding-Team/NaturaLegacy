@@ -171,7 +171,7 @@ public class EucalyptusTreeGenerator extends BaseTreeGenerator
         {
             IBlockState state = world.getBlockState(pos);
             Block block = state.getBlock();
-            if (block.isAir(state, world, pos))
+            if (block.isAir(state, world, pos) || block.isLeaves(state, world, pos) || block.isReplaceable(world, pos))
             {
                 this.setBlockAndMetadata(world, pos, this.log);
             }

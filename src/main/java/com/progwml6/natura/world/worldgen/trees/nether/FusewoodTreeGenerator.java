@@ -117,7 +117,7 @@ public class FusewoodTreeGenerator extends BaseTreeGenerator
             BlockPos upN = position.up(localHeight);
             IBlockState state2 = worldIn.getBlockState(upN);
 
-            if (state2.getBlock().isAir(state2, worldIn, upN) || state2.getBlock().isLeaves(state2, worldIn, upN))
+            if (state2.getBlock().isAir(state2, worldIn, upN) || state2.getBlock().isLeaves(state2, worldIn, upN) || state2.getBlock().isReplaceable(worldIn, upN))
             {
                 worldIn.setBlockState(position.up(localHeight), this.log, 2);
             }

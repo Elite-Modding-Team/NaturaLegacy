@@ -119,7 +119,7 @@ public class DarkwoodTreeGenerator extends BaseTreeGenerator
             IBlockState state = world.getBlockState(blockpos);
             Block block = state.getBlock();
 
-            if (block.isAir(state, world, blockpos) || block.isLeaves(state, world, blockpos))
+            if (block.isAir(state, world, blockpos) || block.isLeaves(state, world, blockpos) || block.isReplaceable(world, blockpos))
             {
                 world.setBlockState(blockpos, this.log, 2);
             }
