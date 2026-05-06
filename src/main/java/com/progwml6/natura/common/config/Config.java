@@ -175,33 +175,43 @@ public final class Config
         prop.setComment("Controls what the lowest Y level trees can grow at in a flat world, make value lower if the tree will not grow");
         flatSeaLevel = prop.getInt(flatSeaLevel);
 
+        redwoodBiomeTypes = configFile.get(WORLDGEN, "Redwood Tree Biome Types", redwoodBiomeTypes).getStringList();
         redwoodSpawnRarity = configFile.get(WORLDGEN, "Redwood Tree Spawn Rarity", redwoodSpawnRarity).getInt(redwoodSpawnRarity);
         redwoodSpawnRange = configFile.get(WORLDGEN, "Redwood Tree Spawn Range", redwoodSpawnRange).getInt(redwoodSpawnRange);
 
+        mapleBiomeTypes = configFile.get(WORLDGEN, "Maple Tree Biome Types", mapleBiomeTypes).getStringList();
         mapleRarity = configFile.get(WORLDGEN, "Maple Tree Spawn Rarity", mapleRarity).getInt(mapleRarity);
         mapleSpawnRange = configFile.get(WORLDGEN, "Maple Tree Spawn Range", mapleSpawnRange).getInt(mapleSpawnRange);
 
+        silverbellBiomeTypes = configFile.get(WORLDGEN, "Silverbell Tree Biome Types", silverbellBiomeTypes).getStringList();
         silverbellRarity = configFile.get(WORLDGEN, "Silverbell Tree Spawn Rarity", silverbellRarity).getInt(silverbellRarity);
         silverbellSpawnRange = configFile.get(WORLDGEN, "Silverbell Tree Spawn Range", silverbellSpawnRange).getInt(silverbellSpawnRange);
 
+        amaranthBiomeTypes = configFile.get(WORLDGEN, "Amaranth Tree Biome Types", amaranthBiomeTypes).getStringList();
         amaranthRarity = configFile.get(WORLDGEN, "Amaranth Tree Spawn Rarity", amaranthRarity).getInt(amaranthRarity);
         amaranthSpawnRange = configFile.get(WORLDGEN, "Amaranth Tree Spawn Range", amaranthSpawnRange).getInt(amaranthSpawnRange);
 
+        tigerBiomeTypes = configFile.get(WORLDGEN, "Tigerwood Tree Biome Types", tigerBiomeTypes).getStringList();
         tigerRarity = configFile.get(WORLDGEN, "Tigerwood Tree Spawn Rarity", tigerRarity).getInt(tigerRarity);
         tigerSpawnRange = configFile.get(WORLDGEN, "Tigerwood Tree Spawn Range", tigerSpawnRange).getInt(tigerSpawnRange);
 
+        willowBiomeTypes = configFile.get(WORLDGEN, "Willow Tree Biome Types", willowBiomeTypes).getStringList();
         willowRarity = configFile.get(WORLDGEN, "Willow Tree Spawn Rarity", willowRarity).getInt(willowRarity);
         willowSpawnRange = configFile.get(WORLDGEN, "Willow Tree Spawn Range", willowSpawnRange).getInt(willowSpawnRange);
 
+        eucalyptusBiomeTypes = configFile.get(WORLDGEN, "Eucalyptus Tree Biome Types", eucalyptusBiomeTypes).getStringList();
         eucalyptusSpawnRarity = configFile.get(WORLDGEN, "Eucalyptus Tree Spawn Rarity", eucalyptusSpawnRarity).getInt(eucalyptusSpawnRarity);
         eucalyptusSpawnRange = configFile.get(WORLDGEN, "Eucalyptus Tree Spawn Range", eucalyptusSpawnRange).getInt(eucalyptusSpawnRange);
 
+        hopseedBiomeTypes = configFile.get(WORLDGEN, "Hopseed Tree Biome Types", hopseedBiomeTypes).getStringList();
         hopseedSpawnRarity = configFile.get(WORLDGEN, "Hopseed Tree Spawn Rarity", hopseedSpawnRarity).getInt(hopseedSpawnRarity);
         hopseedSpawnRange = configFile.get(WORLDGEN, "Hopseed Tree Spawn Range", hopseedSpawnRange).getInt(hopseedSpawnRange);
 
+        sakuraBiomeTypes = configFile.get(WORLDGEN, "Sakura Tree Biome Types", sakuraBiomeTypes).getStringList();
         sakuraSpawnRarity = configFile.get(WORLDGEN, "Sakura Tree Spawn Rarity", sakuraSpawnRarity).getInt(sakuraSpawnRarity);
         sakuraSpawnRange = configFile.get(WORLDGEN, "Sakura Tree Spawn Range", sakuraSpawnRange).getInt(sakuraSpawnRange);
 
+        appleBiomeTypes = configFile.get(WORLDGEN, "Apple Tree Biome Types", appleBiomeTypes).getStringList();
         appleSpawnRarity = configFile.get(WORLDGEN, "Apple Tree Spawn Rarity", appleSpawnRarity).getInt(appleSpawnRarity);
         appleSpawnRange = configFile.get(WORLDGEN, "Apple Tree Spawn Range", appleSpawnRange).getInt(appleSpawnRange);
 
@@ -211,6 +221,7 @@ public final class Config
         ghostwoodSpawnRarity = configFile.get(WORLDGEN, "Ghostwood Tree Spawn Rarity", ghostwoodSpawnRarity).getInt(ghostwoodSpawnRarity);
         // Trees End
 
+        saguaroBiomeTypes = configFile.get(WORLDGEN, "Saguaro Cactus Biome Types", saguaroBiomeTypes).getStringList();
         saguaroSpawnRarity = configFile.get(WORLDGEN, "Saguaro Cactus Spawn Rarity", saguaroSpawnRarity).getInt(saguaroSpawnRarity);
         saguaroSpawnRange = configFile.get(WORLDGEN, "Saguaro Cactus Spawn Range", saguaroSpawnRange).getInt(saguaroSpawnRange);
 
@@ -362,24 +373,34 @@ public final class Config
     public static boolean generateFusewood = true;
     public static boolean generateGhostwood = true;
 
+    public static String[] redwoodBiomeTypes = new String[] {"PLAINS"};
     public static int redwoodSpawnRarity = 200;
     public static int redwoodSpawnRange = 16;
+    public static String[] mapleBiomeTypes = new String[] {"FOREST"};
     public static int mapleRarity = 10;
     public static int mapleSpawnRange = 48;
+    public static String[] silverbellBiomeTypes = new String[] {"FOREST"};
     public static int silverbellRarity = 10;
     public static int silverbellSpawnRange = 48;
+    public static String[] amaranthBiomeTypes = new String[] {"JUNGLE", "SAVANNA"};
     public static int amaranthRarity = 10;
     public static int amaranthSpawnRange = 48;
+    public static String[] tigerBiomeTypes = new String[] {"FOREST"};
     public static int tigerRarity = 10;
     public static int tigerSpawnRange = 48;
+    public static String[] willowBiomeTypes = new String[] {"RIVER", "SWAMP"};
     public static int willowRarity = 10;
     public static int willowSpawnRange = 16;
+    public static String[] eucalyptusBiomeTypes = new String[] {"FOREST", "PLAINS", "MOUNTAIN", "HILLS"};
     public static int eucalyptusSpawnRarity = 30;
     public static int eucalyptusSpawnRange = 32;
+    public static String[] hopseedBiomeTypes = new String[] {"MOUNTAIN", "HILLS"};
     public static int hopseedSpawnRarity = 10;
     public static int hopseedSpawnRange = 32;
+    public static String[] sakuraBiomeTypes = new String[] {"FOREST", "RIVER"};
     public static int sakuraSpawnRarity = 30;
     public static int sakuraSpawnRange = 32;
+    public static String[] appleBiomeTypes = new String[] {"FOREST", "PLAINS"};
     public static int appleSpawnRarity = 20;
     public static int appleSpawnRange = 48;
 
@@ -441,6 +462,7 @@ public final class Config
     public static boolean generateBlueglowshroom = true;
     public static boolean generateGlowshroomtree = true;
 
+    public static String[] saguaroBiomeTypes = new String[] {"SANDY"};
     public static int saguaroSpawnRarity = 5;
     public static int saguaroSpawnRange = 16;
 
