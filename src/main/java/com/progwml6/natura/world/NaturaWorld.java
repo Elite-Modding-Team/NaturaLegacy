@@ -44,7 +44,7 @@ public class NaturaWorld extends NaturaPulse
     {
         if (isOverworldLoaded())
         {
-            GameRegistry.registerWorldGenerator(OverworldTreesGenerator.INSTANCE, 0);
+            MinecraftForge.TERRAIN_GEN_BUS.register(OverworldTreesGenerator.INSTANCE);
             GameRegistry.registerWorldGenerator(OverworldBerryBushesGenerator.INSTANCE, 0);
 
             if (Config.enableCloudBlocks)

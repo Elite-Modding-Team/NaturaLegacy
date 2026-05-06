@@ -21,13 +21,12 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeDictionary.Type;
-import net.minecraftforge.fml.common.IWorldGenerator;
+import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-public class OverworldTreesGenerator implements IWorldGenerator
+public class OverworldTreesGenerator
 {
     public static final OverworldTreesGenerator INSTANCE = new OverworldTreesGenerator();
 
@@ -78,10 +77,13 @@ public class OverworldTreesGenerator implements IWorldGenerator
         this.saguaroGen = new SaguaroGenerator(NaturaOverworld.saguaro.getDefaultState(), true, false);
     }
 
-    @Override
-    public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
+    @SubscribeEvent
+    public void onDecorate(DecorateBiomeEvent.Decorate event)
     {
-        this.generateOverworld(random, chunkX, chunkZ, world, false);
+        if (event.getType() == DecorateBiomeEvent.Decorate.EventType.TREE)
+        {
+            this.generateOverworld(event.getRand(), event.getChunkPos().x, event.getChunkPos().z, event.getWorld(), false);
+        }
     }
 
     public void retroGen(Random random, int chunkX, int chunkZ, World world)
@@ -91,7 +93,6 @@ public class OverworldTreesGenerator implements IWorldGenerator
         world.getChunk(chunkX, chunkZ).markDirty();
     }
 
-    // TODO: Rework tree generation to use DecorateBiomeEvent.Decorate.EventType.TREE, might have to scrap retro-gen
     public void generateOverworld(Random random, int chunkX, int chunkZ, World world, boolean retroGen)
     {
         int xSpawn;
