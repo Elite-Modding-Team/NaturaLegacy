@@ -18,10 +18,10 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.IStringSerializable;
-import net.minecraft.util.NonNullList;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.IBlockAccess;
@@ -61,27 +61,22 @@ public class BlockNetherLeaves2 extends BlockLeavesBase
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        if (state.getValue(TYPE) == LeavesType.DARKWOOD_FRUIT)
-        {
-            return NaturaCommons.edibles;
-        }
-        else
-        {
-            return Item.getItemFromBlock(NaturaNether.netherSapling);
-        }
+        return Item.getItemFromBlock(NaturaNether.netherSapling);
     }
 
     // sapling meta
     @Override
     public int damageDropped(IBlockState state)
     {
+        return 2;
+    }
+
+    @Override
+    protected void dropApple(World world, BlockPos pos, IBlockState state, int chance)
+    {
         if (state.getValue(TYPE) == LeavesType.DARKWOOD_FRUIT)
         {
-            return 10;
-        }
-        else
-        {
-            return 2;
+            spawnAsEntity(world, pos, new ItemStack(NaturaCommons.edibles, 1, 10));
         }
     }
 
@@ -139,6 +134,22 @@ public class BlockNetherLeaves2 extends BlockLeavesBase
         }
 
         return meta;
+    }
+
+    @Override
+    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
+    {
+        if (state.getValue(TYPE) == LeavesType.DARKWOOD_FRUIT)
+        {
+            if (!world.isRemote)
+            {
+                world.setBlockState(pos, state.withProperty(TYPE, LeavesType.DARKWOOD_FLOWERING));
+                world.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 0.6F, 1.5F);
+                spawnAsEntity(world, pos.down(), new ItemStack(NaturaCommons.edibles, 1, 10));
+            }
+            return true;
+        }
+        return false;
     }
 
     @Nonnull
