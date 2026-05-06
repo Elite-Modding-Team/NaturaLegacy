@@ -15,7 +15,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
@@ -57,7 +56,7 @@ public class BlockNetherSapling extends BlockSapling
             IBlockState soilBlockState = worldIn.getBlockState(pos.down());
             Block netherSoil = soilBlockState.getBlock();
 
-            return this.canGrowOnBlock(netherSoil) || netherSoil.canSustainPlant(soilBlockState, worldIn, pos.down(), EnumFacing.UP, this);
+            return this.canGrowOnBlock(netherSoil);
         }
         return false;
     }
@@ -65,18 +64,10 @@ public class BlockNetherSapling extends BlockSapling
     @Override
     public boolean canBlockStay(@Nonnull World worldIn, @Nonnull BlockPos pos, IBlockState state)
     {
-        switch (state.getValue(FOLIAGE))
-        {
-            case DARKWOOD:
-            case FUSEWOOD:
-            case GHOSTWOOD:
-                IBlockState soilBlockState = worldIn.getBlockState(pos.down());
-                Block netherSoil = soilBlockState.getBlock();
+        IBlockState soilBlockState = worldIn.getBlockState(pos.down());
+        Block netherSoil = soilBlockState.getBlock();
 
-                return this.canGrowOnBlock(netherSoil) || netherSoil.canSustainPlant(soilBlockState, worldIn, pos.down(), EnumFacing.UP, this);
-            default:
-                return true;
-        }
+        return this.canGrowOnBlock(netherSoil);
     }
 
     @Nonnull

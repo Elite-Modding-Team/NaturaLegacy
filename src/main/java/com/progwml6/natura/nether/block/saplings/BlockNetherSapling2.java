@@ -15,7 +15,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
@@ -54,7 +53,7 @@ public class BlockNetherSapling2 extends BlockSapling
             IBlockState ceilingBlockState = worldIn.getBlockState(pos.up());
             Block netherCeiling = ceilingBlockState.getBlock();
 
-            return this.canGrowOnBlock(netherCeiling) || netherCeiling.canSustainPlant(ceilingBlockState, worldIn, pos.up(), EnumFacing.DOWN, this);
+            return this.canGrowOnBlock(netherCeiling);
         }
         return false;
     }
@@ -67,7 +66,7 @@ public class BlockNetherSapling2 extends BlockSapling
             IBlockState ceilingBlockState = worldIn.getBlockState(pos.up());
             Block netherCeiling = ceilingBlockState.getBlock();
 
-            return this.canGrowOnBlock(netherCeiling) || netherCeiling.canSustainPlant(ceilingBlockState, worldIn, pos.up(), EnumFacing.DOWN, this);
+            return this.canGrowOnBlock(netherCeiling);
         }
         return true;
     }
