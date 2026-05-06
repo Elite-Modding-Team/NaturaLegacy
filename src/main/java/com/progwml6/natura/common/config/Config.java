@@ -401,7 +401,7 @@ public final class Config
     public static int sakuraSpawnRarity = 30;
     public static int sakuraSpawnRange = 32;
     public static String[] appleBiomeTypes = new String[] {"FOREST", "PLAINS"};
-    public static int appleSpawnRarity = 20;
+    public static int appleSpawnRarity = 30;
     public static int appleSpawnRange = 48;
 
     public static int bloodwoodSpawnRarity = 14;
