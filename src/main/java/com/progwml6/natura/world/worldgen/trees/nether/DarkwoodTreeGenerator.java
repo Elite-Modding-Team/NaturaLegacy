@@ -74,8 +74,8 @@ public class DarkwoodTreeGenerator extends BaseTreeGenerator
             {
                 soil.onPlantGrow(state, worldIn, position.down(), position);
 
-                this.placeCanopy(worldIn, rand, position, heightRange);
                 this.placeTrunk(worldIn, position, heightRange);
+                this.placeCanopy(worldIn, rand, position, heightRange);
             }
         }
     }

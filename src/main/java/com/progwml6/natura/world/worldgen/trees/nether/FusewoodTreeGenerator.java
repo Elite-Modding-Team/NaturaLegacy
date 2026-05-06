@@ -68,8 +68,8 @@ public class FusewoodTreeGenerator extends BaseTreeGenerator
             {
                 state.getBlock().onPlantGrow(state, worldIn, down, position);
 
-                this.placeCanopy(worldIn, rand, position, height);
                 this.placeTrunk(worldIn, position, height);
+                this.placeCanopy(worldIn, rand, position, height);
             }
         }
     }
