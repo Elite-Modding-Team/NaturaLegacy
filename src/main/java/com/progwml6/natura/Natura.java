@@ -15,6 +15,7 @@ import com.progwml6.natura.plugin.CraftingTweaks;
 import com.progwml6.natura.shared.NaturaCommons;
 import com.progwml6.natura.tools.NaturaTools;
 import com.progwml6.natura.world.NaturaWorld;
+import com.progwml6.natura.world.WorldEvents;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.datafix.FixTypes;
@@ -74,6 +75,8 @@ public class Natura
     public void preInit(FMLPreInitializationEvent event)
     {
         Config.load(event);
+
+        MinecraftForge.EVENT_BUS.register(new WorldEvents());
 
         if (!isServer())
         {
