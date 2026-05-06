@@ -61,14 +61,10 @@ public class BlockNetherSapling2 extends BlockSapling
     @Override
     public boolean canBlockStay(@Nonnull World worldIn, @Nonnull BlockPos pos, IBlockState state)
     {
-        if (state.getValue(FOLIAGE) == SaplingType.BLOODWOOD)
-        {
-            IBlockState ceilingBlockState = worldIn.getBlockState(pos.up());
-            Block netherCeiling = ceilingBlockState.getBlock();
+        IBlockState ceilingBlockState = worldIn.getBlockState(pos.up());
+        Block netherCeiling = ceilingBlockState.getBlock();
 
-            return this.canGrowOnBlock(netherCeiling);
-        }
-        return true;
+        return this.canGrowOnBlock(netherCeiling);
     }
 
     @Nonnull
