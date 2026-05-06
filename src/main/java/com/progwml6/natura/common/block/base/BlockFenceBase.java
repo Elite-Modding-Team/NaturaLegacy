@@ -22,6 +22,7 @@ public class BlockFenceBase extends BlockFence
         this.setResistance(5.0F);
         this.setSoundType(SoundType.WOOD);
         this.setCreativeTab(Natura.TAB);
+        Blocks.FIRE.setFireInfo(this, 5, 20);
     }
 
     @Override
