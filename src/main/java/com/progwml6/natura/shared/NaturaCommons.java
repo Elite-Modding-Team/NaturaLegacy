@@ -1,6 +1,7 @@
 package com.progwml6.natura.shared;
 
 import com.google.common.eventbus.Subscribe;
+import net.minecraft.block.BlockBeetroot;
 import org.apache.logging.log4j.Logger;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCrops;
@@ -97,6 +98,7 @@ public class NaturaCommons extends NaturaPulse
     public static ItemStack carrots_seed_bag;
     public static ItemStack potatoes_seed_bag;
     public static ItemStack nether_wart_seed_bag;
+    public static ItemStack beetroots_seed_bag;
 
     //Wood Sticks
     public static ItemStack maple_stick;
@@ -194,6 +196,7 @@ public class NaturaCommons extends NaturaPulse
         carrots_seed_bag = seed_bags.addMeta(1, "carrots_seed_bag", Blocks.CARROTS.getDefaultState().withProperty(BlockCrops.AGE, Integer.valueOf(0)));
         potatoes_seed_bag = seed_bags.addMeta(2, "potatoes_seed_bag", Blocks.POTATOES.getDefaultState().withProperty(BlockCrops.AGE, Integer.valueOf(0)));
         nether_wart_seed_bag = seed_bags.addMeta(3, "nether_wart_seed_bag", Blocks.NETHER_WART.getDefaultState().withProperty(BlockNetherWart.AGE, Integer.valueOf(0)));
+        beetroots_seed_bag = seed_bags.addMeta(4, "beetroots_seed_bag", Blocks.BEETROOTS.getDefaultState().withProperty(BlockBeetroot.BEETROOT_AGE, Integer.valueOf(0)));
 
         boneMealBag = registerItem(registry, new ItemBoneBag(), "bonemeal_bag");
 

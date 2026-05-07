@@ -8,6 +8,7 @@
         "wheat_seed_bag": [{ "textures": { "layer0": "natura:items/bags/wheat_seed_bag" }}],
         "carrots_seed_bag": [{ "textures": { "layer0": "natura:items/bags/carrots_seed_bag" }}],
         "potatoes_seed_bag": [{ "textures": { "layer0": "natura:items/bags/potatoes_seed_bag" }}],
-        "nether_wart_seed_bag": [{ "textures": { "layer0": "natura:items/bags/nether_wart_seed_bag" }}]
+        "nether_wart_seed_bag": [{ "textures": { "layer0": "natura:items/bags/nether_wart_seed_bag" }}],
+        "beetroots_seed_bag": [{ "textures": { "layer0": "natura:items/bags/beetroots_seed_bag" }}]
     }
 }
