@@ -7,14 +7,21 @@
     ],
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "AAA",
-        "A A",
-        "AAA"
+        "OOO",
+        "GNG",
+        "OOO"
     ],
     "key": {
-        "A": {
-            "item": "natura:nether_logs",
-            "data": 0
+        "O": {
+            "type": "forge:ore_dict",
+            "ore": "obsidian"
+        },
+        "G": {
+            "type": "forge:ore_dict",
+            "ore": "glowstone"
+        },
+        "N": {
+            "item": "minecraft:nether_star"
         }
     },
     "result": {
