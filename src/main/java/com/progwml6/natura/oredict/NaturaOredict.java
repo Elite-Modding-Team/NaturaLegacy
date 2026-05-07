@@ -59,6 +59,9 @@ public class NaturaOredict extends NaturaPulse {
         oredict(NaturaCommons.sulfurPowder, "dustSulfur");
 
         oredict(NaturaCommons.sticks, "stickWood");
+
+        // This is not an ore dictionary for some reason...
+        oredict(Items.BEETROOT, "cropBeetroot");
     }
 
     private static void registerOverworld() {
