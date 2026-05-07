@@ -246,10 +246,10 @@ public final class Config
         // Berries End
 
         // Cloud Start
-        cloudWhitelist = configFile.get(WORLDGEN, "dimension blacklist(clouds)", cloudWhitelist).getIntList();
-        darkCloudWhitelist = configFile.get(WORLDGEN, "dimension blacklist(dark clouds)", darkCloudWhitelist).getIntList();
-        ashWhitelist = configFile.get(WORLDGEN, "dimension blacklist(ash clouds)", ashWhitelist).getIntList();
-        sulfurCloudWhitelist = configFile.get(WORLDGEN, "dimension blacklist(sulfur clouds)", sulfurCloudWhitelist).getIntList();
+        cloudWhitelist = configFile.get(WORLDGEN, "Clouds Whitelist", cloudWhitelist).getIntList();
+        darkCloudWhitelist = configFile.get(WORLDGEN, "Dark Clouds Whitelist", darkCloudWhitelist).getIntList();
+        ashWhitelist = configFile.get(WORLDGEN, "Ash Clouds Whitelist", ashWhitelist).getIntList();
+        sulfurCloudWhitelist = configFile.get(WORLDGEN, "Sulfur Clouds Whitelist", sulfurCloudWhitelist).getIntList();
 
         cloudSpawnRarity = configFile.get(WORLDGEN, "Cloud Spawn Rarity", cloudSpawnRarity).getInt(cloudSpawnRarity);
         cloudSpawnHeight = configFile.get(WORLDGEN, "Cloud Spawn Height", cloudSpawnHeight).getInt(cloudSpawnHeight);
