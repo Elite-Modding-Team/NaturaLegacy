@@ -36,49 +36,51 @@ public class CloudsGenerator implements IWorldGenerator
     {
     }
 
-    public void generateCloud(Random random, World world, BlockPos pos)
-    {
+    public void generateCloud(Random random, World world, BlockPos pos) {
         if (Config.generateLegacyClouds)
         {
             generateLegacyCloud(random, world, pos);
             return;
         }
 
-        int xRand = random.nextInt(3) - 1;
-        int zRand = random.nextInt(3) - 1;
+        int clouds = 10 + random.nextInt(10);
 
-        for (int block = 0; block < this.cloudSize; block++)
+        for (int i = 0; i < clouds; i++)
         {
-            int xIter = pos.getX() + (random.nextInt(3) - 1) + xRand;
-            int yIter = pos.getY();
-            int zIter = pos.getZ() + (random.nextInt(3) - 1) + zRand;
+            int xOff = random.nextInt(16) - 8;
+            int yOff = random.nextInt(4) - 2;
+            int zOff = random.nextInt(16) - 8;
 
-            if (random.nextBoolean() && !this.flatCloud || this.flatCloud && random.nextInt(10) == 0)
+            int radiusX = random.nextInt(4) + 4;
+            int radiusY = random.nextInt(2) + 2;
+            int radiusZ = random.nextInt(4) + 4;
+
+            if (this.flatCloud)
             {
-                yIter = pos.getY() + random.nextInt(3) - 1;
+                radiusY = 1;
             }
 
-            for (int x = xIter; x < xIter + random.nextInt(4) + 3 * (this.flatCloud ? 3 : 1); x++)
+            generateCloud(world, pos.add(xOff, yOff, zOff), radiusX, radiusY, radiusZ);
+        }
+    }
+
+    private void generateCloud(World world, BlockPos center, int rx, int ry, int rz) {
+        for (int x = -rx; x <= rx; x++)
+        {
+            for (int y = -ry; y <= ry; y++)
             {
-                int mathX = xIter - x;
-
-                for (int y = yIter; y < yIter + random.nextInt(1) + 2; y++)
+                for (int z = -rz; z <= rz; z++)
                 {
-                    int mathY = yIter - y;
+                    double distance = (double)(x * x) / (rx * rx) +
+                            (double)(y * y) / (ry * ry) +
+                            (double)(z * z) / (rz * rz);
 
-                    for (int z = zIter; z < zIter + random.nextInt(4) + 3 * (this.flatCloud ? 3 : 1); z++)
+                    if (distance <= 0.9D)
                     {
-                        int mathZ = zIter - z;
-
-                        if (Math.abs(mathX) + Math.abs(mathY) + Math.abs(mathZ) < 4 * (this.flatCloud ? 3 : 1) + random.nextInt(2))
+                        BlockPos target = center.add(x, y, z);
+                        if (world.getBlockState(target).getBlock() == Blocks.AIR)
                         {
-                            BlockPos blockpos = new BlockPos(x, y, z);
-                            IBlockState state = world.getBlockState(blockpos);
-
-                            if (state.getBlock() == Blocks.AIR)
-                            {
-                                world.setBlockState(blockpos, this.cloud, 2);
-                            }
+                            world.setBlockState(target, this.cloud, 2);
                         }
                     }
                 }

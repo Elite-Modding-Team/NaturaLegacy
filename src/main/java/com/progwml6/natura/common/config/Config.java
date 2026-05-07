@@ -311,17 +311,17 @@ public final class Config
     public static int cloudSpawnHeight = 192;
     public static int cloudSpawnRange = 48;
 
-    public static int darkCloudSpawnRarity = 10;
-    public static int darkCloudSpawnHeight = 64;
+    public static int darkCloudSpawnRarity = 2;
+    public static int darkCloudSpawnHeight = 184;
     public static int darkCloudSpawnRange = 256;
 
-    public static int sulfurSpawnRarity = 8;
-    public static int sulfurSpawnHeight = 40;
-    public static int sulfurSpawnRange = 78;
+    public static int sulfurSpawnRarity = 1;
+    public static int sulfurSpawnHeight = 60;
+    public static int sulfurSpawnRange = 1024;
 
-    public static int ashSpawnRarity = 8;
-    public static int ashSpawnHeight = 40;
-    public static int ashSpawnRange = 78;
+    public static int ashSpawnRarity = 1;
+    public static int ashSpawnHeight = 60;
+    public static int ashSpawnRange = 1024;
     // Clouds End
 
     // Retrogen Start
