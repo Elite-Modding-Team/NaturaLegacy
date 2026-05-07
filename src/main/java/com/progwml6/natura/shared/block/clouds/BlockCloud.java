@@ -1,26 +1,27 @@
 package com.progwml6.natura.shared.block.clouds;
 
 import java.util.Locale;
+import java.util.Random;
 
 import com.progwml6.natura.Natura;
 import com.progwml6.natura.library.NaturaRegistry;
-import com.progwml6.natura.shared.NaturaCommons;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.init.Items;
+import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.BlockRenderLayer;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.IStringSerializable;
+import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.*;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
@@ -38,7 +39,7 @@ public class BlockCloud extends EnumBlock<BlockCloud.CloudType>
     {
         super(NaturaRegistry.cloud, TYPE, CloudType.class);
         this.setCreativeTab(Natura.TAB);
-        this.setHardness(0.3F);
+        this.setHardness(0.2F);
         this.setSoundType(SoundType.CLOTH);
     }
 
@@ -51,11 +52,44 @@ public class BlockCloud extends EnumBlock<BlockCloud.CloudType>
 
             if (entityarrow.isBurning())
             {
-                this.explode(worldIn, pos, 1, entityarrow.shootingEntity instanceof EntityLiving ? (EntityLiving) entityarrow.shootingEntity : null);
+                this.explode(worldIn, pos, 3, entityarrow.shootingEntity instanceof EntityLiving ? (EntityLiving) entityarrow.shootingEntity : null);
 
                 worldIn.setBlockToAir(pos);
 
                 return;
+            }
+        }
+
+        if (state.getValue(BlockCloud.TYPE) == BlockCloud.CloudType.SULFUR && entityIn instanceof EntityLivingBase && !worldIn.isRemote)
+        {
+            EntityLivingBase livingentity = (EntityLivingBase) entityIn;
+
+            if (livingentity.ticksExisted % 20 == 0) {
+                livingentity.addPotionEffect(new PotionEffect(MobEffects.POISON, 5 * 20, 0));
+                livingentity.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 5 * 20, 0));
+            }
+
+            if (livingentity.isBurning())
+            {
+                this.explode(worldIn, pos, 3, livingentity);
+
+                worldIn.setBlockToAir(pos);
+
+                return;
+            }
+        }
+
+        if (state.getValue(BlockCloud.TYPE) == BlockCloud.CloudType.ASH && entityIn instanceof EntityLivingBase && !worldIn.isRemote)
+        {
+            if (entityIn instanceof EntityPlayer) {
+                // Boots are protective
+                ItemStack stack = ((EntityPlayer) entityIn).inventory.getStackInSlot(36);
+
+                if (stack.isEmpty() && !entityIn.isImmuneToFire() && entityIn instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase) entityIn)) {
+                    entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 2.0F);
+                }
+            } else if (!entityIn.isImmuneToFire() && !(entityIn instanceof EntityPlayer) && entityIn instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase) entityIn)) {
+                entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 2.0F);
             }
         }
 
@@ -113,9 +147,22 @@ public class BlockCloud extends EnumBlock<BlockCloud.CloudType>
     @Deprecated
     @Override
     @SideOnly(Side.CLIENT)
-    public boolean shouldSideBeRendered(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side)
+    public boolean shouldSideBeRendered(IBlockState state, IBlockAccess worldIn, BlockPos pos, EnumFacing side)
     {
-        return blockAccess.getBlockState(pos.offset(side)).getMaterial() == this.material ? false : super.shouldSideBeRendered(blockState, blockAccess, pos, side);
+        IBlockState iblockstate = worldIn.getBlockState(pos);
+        Block block = iblockstate.getBlock();
+
+        if (worldIn.getBlockState(pos.offset(side)) != iblockstate)
+        {
+            return true;
+        }
+
+        if (block == this)
+        {
+            return false;
+        }
+
+        return !worldIn.getBlockState(pos.offset(side)).doesSideBlockRendering(worldIn, pos.offset(side), side.getOpposite());
     }
 
     @Override
@@ -141,13 +188,19 @@ public class BlockCloud extends EnumBlock<BlockCloud.CloudType>
     @Override
     public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos)
     {
-        if (worldIn.getBlockState(pos.down()).getBlock() == NaturaCommons.clouds)
+        return new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.01D, 1.0D);
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void randomDisplayTick(IBlockState state, World world, BlockPos pos, Random rand)
+    {
+        if (state.getValue(BlockCloud.TYPE) == CloudType.DARK)
         {
-            return null;
-        }
-        else
-        {
-            return new AxisAlignedBB(pos.getX(), pos.getY(), pos.getZ(), pos.getX() + 1.0D, pos.getY() + 0.0625D, pos.getZ() + 1.0D);
+            if (world.getBlockState(pos.down()).getBlock().isPassable(world, pos.down()))
+            {
+                world.spawnParticle(EnumParticleTypes.DRIP_WATER, pos.getX() + rand.nextFloat(), pos.getY(), pos.getZ() + rand.nextFloat(), 0, 0, 0);
+            }
         }
     }
 
