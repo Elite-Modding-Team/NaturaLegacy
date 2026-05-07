@@ -408,10 +408,8 @@ item.natura.edibles.cactusjuice.tooltip=清爽！
 
 item.natura.materials.barley.name=大麥
 item.natura.materials.barley.tooltip=類似小麥，但是野生的。
-item.natura.materials.barley_flour.name=大麥粉
-item.natura.materials.barley_flour.tooltip=可以烤成麵包\n或是做成蛋糕。
-item.natura.materials.wheat_flour.name=小麥粉
-item.natura.materials.wheat_flour.tooltip=可以烤成麵包\n或是做成蛋糕。
+item.natura.materials.flour.name=小麥粉
+item.natura.materials.flour.tooltip=可以烤成麵包\n或是做成蛋糕。
 item.natura.materials.cotton.name=棉花
 item.natura.materials.cotton.tooltip=可以合成線和羊毛。
 item.natura.materials.sulfur_powder.name=硫磺

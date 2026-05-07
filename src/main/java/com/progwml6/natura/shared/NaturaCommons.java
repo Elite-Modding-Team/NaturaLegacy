@@ -59,8 +59,7 @@ public class NaturaCommons extends NaturaPulse
 
     // Material Itemstacks
     public static ItemStack barley;
-    public static ItemStack barleyFlour;
-    public static ItemStack wheatFlour;
+    public static ItemStack flour;
     public static ItemStack cotton;
 
     public static ItemStack sulfurPowder;
@@ -146,8 +145,7 @@ public class NaturaCommons extends NaturaPulse
         seed_bags.setCreativeTab(Natura.TAB);
 
         barley = materials.addMeta(0, "barley");
-        barleyFlour = materials.addMeta(1, "barley_flour");
-        wheatFlour = materials.addMeta(2, "wheat_flour");
+        flour = materials.addMeta(1, "flour");
         cotton = materials.addMeta(3, "cotton");
         sulfurPowder = materials.addMeta(4, "sulfur_powder");
         ghostwoodFletching = materials.addMeta(5, "ghostwood_fletching");
@@ -238,7 +236,6 @@ public class NaturaCommons extends NaturaPulse
     {
         FurnaceRecipes furnaceRecipes = FurnaceRecipes.instance();
 
-        furnaceRecipes.addSmeltingRecipe(barleyFlour.copy(), new ItemStack(Items.BREAD, 1), 0.5f);
-        furnaceRecipes.addSmeltingRecipe(wheatFlour.copy(), new ItemStack(Items.BREAD, 1), 0.5f);
+        furnaceRecipes.addSmeltingRecipe(flour.copy(), new ItemStack(Items.BREAD, 1), 0.5f);
     }
 }

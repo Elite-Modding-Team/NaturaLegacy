@@ -408,10 +408,8 @@ item.natura.edibles.cactusjuice.tooltip=Освежающе!
 
 item.natura.materials.barley.name=Ячмень
 item.natura.materials.barley.tooltip=Подобен пшенице, растёт в дикой природе
-item.natura.materials.barley_flour.name=Ячменная мука
-item.natura.materials.barley_flour.tooltip=Запеките для получения хлеба\nТакже используется в готовке торта
-item.natura.materials.wheat_flour.name=Пшеничная мука
-item.natura.materials.wheat_flour.tooltip=Запеките для получения хлеба\nТакже используется в готовке торта
+item.natura.materials.flour.name=Пшеничная мука
+item.natura.materials.flour.tooltip=Запеките для получения хлеба\nТакже используется в готовке торта
 item.natura.materials.cotton.name=Хлопок
 item.natura.materials.cotton.tooltip=Источник ниток и шерсти
 item.natura.materials.sulfur_powder.name=Сера

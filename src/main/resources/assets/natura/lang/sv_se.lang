@@ -408,10 +408,8 @@ item.natura.edibles.cactusjuice.tooltip=Uppfriskande!
 
 item.natura.materials.barley.name=Korn
 item.natura.materials.barley.tooltip=Liknar vete, växer i det vilda
-item.natura.materials.barley_flour.name=Kornmjöl
-item.natura.materials.barley_flour.tooltip=Baka mig för att göra bröd\nAnvänds också för att baka tårta
-item.natura.materials.wheat_flour.name=Vetemjöl
-item.natura.materials.wheat_flour.tooltip=Baka mig för att göra bröd\nAnvänds också för att baka tårta
+item.natura.materials.flour.name=Vetemjöl
+item.natura.materials.flour.tooltip=Baka mig för att göra bröd\nAnvänds också för att baka tårta
 item.natura.materials.cotton.name=Bomull
 item.natura.materials.cotton.tooltip=Källan till all tråd och ull
 item.natura.materials.sulfur_powder.name=Svavel

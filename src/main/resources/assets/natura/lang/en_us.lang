@@ -440,10 +440,8 @@ item.natura.edibles.cactusjuice.tooltip=Refreshing!
 
 item.natura.materials.barley.name=Barley
 item.natura.materials.barley.tooltip=Similar to wheat, it grows in the wild
-item.natura.materials.barley_flour.name=Barley Flour
-item.natura.materials.barley_flour.tooltip=Bake me to make bread\nAlso used in baking cake
-item.natura.materials.wheat_flour.name=Wheat Flour
-item.natura.materials.wheat_flour.tooltip=Bake me to make bread\nAlso used in baking cake
+item.natura.materials.flour.name=Flour
+item.natura.materials.flour.tooltip=Bake me to make bread\nAlso used in baking cake
 item.natura.materials.cotton.name=Cotton
 item.natura.materials.cotton.tooltip=The source of all string and wool
 item.natura.materials.sulfur_powder.name=Sulfur

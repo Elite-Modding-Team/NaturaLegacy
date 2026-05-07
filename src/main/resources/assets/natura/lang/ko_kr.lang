@@ -440,10 +440,8 @@ item.natura.edibles.cactusjuice.tooltip=상쾌함!
 
 item.natura.materials.barley.name=보리
 item.natura.materials.barley.tooltip=밀과 비슷하며, 야생에서 자랍니다
-item.natura.materials.barley_flour.name=보릿가루
-item.natura.materials.barley_flour.tooltip=구워서 빵을 만드세요\n케이크를 만들 때도 사용됩니다
-item.natura.materials.wheat_flour.name=밀가루
-item.natura.materials.wheat_flour.tooltip=구워서 빵을 만드세요\n케이크를 만들 때도 사용됩니다
+item.natura.materials.flour.name=밀가루
+item.natura.materials.flour.tooltip=구워서 빵을 만드세요\n케이크를 만들 때도 사용됩니다
 item.natura.materials.cotton.name=목화
 item.natura.materials.cotton.tooltip=모든 실과 양털의 원료
 item.natura.materials.sulfur_powder.name=유황

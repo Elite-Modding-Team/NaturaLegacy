@@ -47,11 +47,10 @@ public class NaturaOredict extends NaturaPulse {
         oredict(NaturaCommons.barley, "cropBarley");
         oredict(NaturaCommons.cotton, "cropCotton");
 
-        oredict(NaturaCommons.barleyFlour, "foodFlour");
-        oredict(NaturaCommons.wheatFlour, "foodFlour");
+        oredict(NaturaCommons.flour, "foodFlour");
 
         oredict(NaturaCommons.barley, "listAllgrain");
-        oredict(NaturaCommons.wheatFlour, "foodEqualswheat");
+        oredict(NaturaCommons.flour, "foodEqualswheat");
 
         oredict(NaturaCommons.sulfurPowder, "dustSulphur");
         oredict(NaturaCommons.sulfurPowder, "dustSulfur");

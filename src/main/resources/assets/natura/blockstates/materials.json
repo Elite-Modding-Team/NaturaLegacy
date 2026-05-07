@@ -6,7 +6,7 @@
     },
     "variants": {
         "barley": [{ "textures": { "layer0": "natura:items/materials/barley" }}],
-        "barley_flour": [{ "textures": { "layer0": "natura:items/materials/barley_flour" }}],
+        "flour": [{ "textures": { "layer0": "natura:items/materials/flour" }}],
         "wheat_flour": [{ "textures": { "layer0": "natura:items/materials/wheat_flour" }}],
         "cotton": [{ "textures": { "layer0": "natura:items/materials/cotton" }}],
         "sulfur_powder": [{ "textures": { "layer0": "natura:items/materials/sulfur_powder" }}],

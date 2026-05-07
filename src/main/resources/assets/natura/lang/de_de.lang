@@ -436,10 +436,8 @@ item.natura.edibles.cactusjuice.tooltip=Erfrischend!
 
 item.natura.materials.barley.name=Gerste
 item.natura.materials.barley.tooltip=Ähnlich wie Weizen wächst es in der Natur
-item.natura.materials.barley_flour.name=Gerstenmehl
-item.natura.materials.barley_flour.tooltip=Back mich, um Brot zu machen\nAuch zum Backen von Kuchen verwendbar
-item.natura.materials.wheat_flour.name=Weizenmehl
-item.natura.materials.wheat_flour.tooltip=Back mich, um Brot zu machen\nAuch zum Backen von Kuchen verwendbar
+item.natura.materials.flour.name=Weizenmehl
+item.natura.materials.flour.tooltip=Back mich, um Brot zu machen\nAuch zum Backen von Kuchen verwendbar
 item.natura.materials.cotton.name=Baumwolle
 item.natura.materials.cotton.tooltip=Die Quelle aller Schnüre und Wolle
 item.natura.materials.sulfur_powder.name=Schwefel

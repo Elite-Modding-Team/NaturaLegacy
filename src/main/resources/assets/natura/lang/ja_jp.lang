@@ -408,10 +408,8 @@ item.natura.edibles.cactusjuice.tooltip=リフレッシュ!
 
 item.natura.materials.barley.name=大麦
 item.natura.materials.barley.tooltip=小麦に似ているが、自然に自生する
-item.natura.materials.barley_flour.name=大麦粉
-item.natura.materials.barley_flour.tooltip=焼くとパンができる\nケーキを作るときにも使える
-item.natura.materials.wheat_flour.name=小麦粉
-item.natura.materials.wheat_flour.tooltip=焼くとパンができる\nケーキを作るときにも使える
+item.natura.materials.flour.name=小麦粉
+item.natura.materials.flour.tooltip=焼くとパンができる\nケーキを作るときにも使える
 item.natura.materials.cotton.name=綿
 item.natura.materials.cotton.tooltip=糸や羊毛の源
 item.natura.materials.sulfur_powder.name=硫黄

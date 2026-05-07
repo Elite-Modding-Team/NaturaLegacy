@@ -399,10 +399,8 @@ item.natura.edibles.cactusjuice.tooltip=¡ᵷuᴉɥsǝɹɟǝᴚ
 
 item.natura.materials.barley.name=ʎǝꞁɹɐᗺ
 item.natura.materials.barley.tooltip=pꞁᴉʍ ǝɥʇ uᴉ sʍoɹᵷ ʇᴉ 'ʇɐǝɥʍ oʇ ɹɐꞁᴉɯᴉS
-item.natura.materials.barley_flour.name=ɹnoꞁℲ ʎǝꞁɹɐᗺ
-item.natura.materials.barley_flour.tooltip=ǝʞɐɔ ᵷuᴉʞɐq uᴉ pǝsn osꞁⱯ\npɐǝɹq ǝʞɐɯ oʇ ǝɯ ǝʞɐᗺ
-item.natura.materials.wheat_flour.name=ɹnoꞁℲ ʇɐǝɥM
-item.natura.materials.wheat_flour.tooltip=ǝʞɐɔ ᵷuᴉʞɐq uᴉ pǝsn osꞁⱯ\npɐǝɹq ǝʞɐɯ oʇ ǝɯ ǝʞɐᗺ
+item.natura.materials.flour.name=ɹnoꞁℲ
+item.natura.materials.flour.tooltip=ǝʞɐɔ ᵷuᴉʞɐq uᴉ pǝsn osꞁⱯ\npɐǝɹq ǝʞɐɯ oʇ ǝɯ ǝʞɐᗺ
 item.natura.materials.cotton.name=uoʇʇoƆ
 item.natura.materials.cotton.tooltip=ꞁooʍ puɐ ᵷuᴉɹʇs ꞁꞁɐ ɟo ǝɔɹnos ǝɥ⟘
 item.natura.materials.sulfur_powder.name=ɹnɟꞁnS
