@@ -65,7 +65,6 @@ public class NaturaCommons extends NaturaPulse
 
     public static ItemStack sulfurPowder;
     public static ItemStack ghostwoodFletching;
-    public static ItemStack blueDye;
 
     public static ItemStack impLeather;
     public static ItemStack flameString;
@@ -152,7 +151,6 @@ public class NaturaCommons extends NaturaPulse
         cotton = materials.addMeta(3, "cotton");
         sulfurPowder = materials.addMeta(4, "sulfur_powder");
         ghostwoodFletching = materials.addMeta(5, "ghostwood_fletching");
-        blueDye = materials.addMeta(8, "blue_dye");
 
         if (Config.enableStickVariants)
         {

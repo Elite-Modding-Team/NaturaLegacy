@@ -12,7 +12,6 @@
         "sulfur_powder": [{ "textures": { "layer0": "natura:items/materials/sulfur_powder" }}],
         "ghostwood_fletching": [{ "textures": { "layer0": "natura:items/materials/ghostwood_fletching" }}],
         "imp_leather": [{ "textures": { "layer0": "natura:items/materials/imp_leather" }}],
-        "flame_string": [{ "textures": { "layer0": "natura:items/materials/flame_string" }}],
-        "blue_dye": [{ "textures": { "layer0": "natura:items/materials/blue_dye" }}]
+        "flame_string": [{ "textures": { "layer0": "natura:items/materials/flame_string" }}]
     }
 }
