@@ -40,17 +40,7 @@ public class BlockNetherLog extends BlockEnumLog<BlockNetherLog.LogType>
     {
         if (state.getValue(BlockNetherLog.TYPE) == BlockNetherLog.LogType.FUSEWOOD)
         {
-            if (worldIn.getDifficulty() == EnumDifficulty.HARD)
-            {
-                worldIn.createExplosion(null, pos.getX(), pos.getY(), pos.getZ(), 2.0f, false);
-            }
-            else if (worldIn.getDifficulty() == EnumDifficulty.NORMAL || worldIn.getDifficulty() == EnumDifficulty.EASY)
-            {
-                worldIn.createExplosion(null, pos.getX(), pos.getY(), pos.getZ(), 1.75f, false);
-            }
-            else if (worldIn.getDifficulty() == EnumDifficulty.PEACEFUL)
-            {
-            }
+            worldIn.createExplosion(null, pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D, 0.0f, false);
         }
     }
 
