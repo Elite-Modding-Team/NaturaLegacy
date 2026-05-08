@@ -299,7 +299,7 @@ public final class Config
     public static boolean generateSulfurClouds = true;
     public static boolean generateAshClouds = true;
     public static boolean generateDarkClouds = true;
-    public static boolean generateLegacyClouds = true;
+    public static boolean generateLegacyClouds = false;
 
     public static int[] cloudWhitelist = new int[] {0};
     public static int[] darkCloudWhitelist = new int[] {1};
