@@ -4,12 +4,12 @@
 
 tile.natura.clouds.white.name=Cloud
 tile.natura.clouds.white.tooltip=So light and fluffy!\nSaves you when you fall
-tile.natura.clouds.dark.name=Dark Cloud
-tile.natura.clouds.dark.tooltip=So light and fluffy!\nCauses lightning strikes
-tile.natura.clouds.ash.name=Ash Cloud
-tile.natura.clouds.ash.tooltip=So light and fluffy!\n3x3 Converts into charcoal
-tile.natura.clouds.sulfur.name=Sulfur Cloud
-tile.natura.clouds.sulfur.tooltip=So light and fluffy!\n2x2 Converts into sulfur
+tile.natura.clouds.dark.name=Dark Voidcloud
+tile.natura.clouds.dark.tooltip=Produces rain!\nRumored to cause lightning strikes
+tile.natura.clouds.ash.name=Ash Pyrecloud
+tile.natura.clouds.ash.tooltip=Harmful and evil!\n3x3 Converts into charcoal
+tile.natura.clouds.sulfur.name=Sulfur Pyrecloud
+tile.natura.clouds.sulfur.tooltip=Toxic and evil!\n2x2 Converts into sulfur
 
 tile.natura.overworld_logs.maple.name=Maple Log
 tile.natura.overworld_logs.maple.tooltip=Somewhat Sweet
