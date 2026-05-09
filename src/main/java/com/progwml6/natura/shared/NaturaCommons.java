@@ -2,6 +2,7 @@ package com.progwml6.natura.shared;
 
 import com.google.common.eventbus.Subscribe;
 import net.minecraft.block.BlockBeetroot;
+import net.minecraft.potion.Potion;
 import org.apache.logging.log4j.Logger;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCrops;
@@ -133,6 +134,8 @@ public class NaturaCommons extends NaturaPulse
     {
         IForgeRegistry<Item> registry = event.getRegistry();
 
+        Potion isWeaknessEnabled = Config.enableNoPoisonInFoods ? MobEffects.WEAKNESS : MobEffects.POISON;
+
         clouds = registerEnumItemBlock(registry, clouds, "clouds");
 
         // Items
@@ -176,12 +179,12 @@ public class NaturaCommons extends NaturaPulse
 
         if (isNetherLoaded())
         {
-            blightberry = edibles.addFood(6, 1, 0.4F, 16, "blightberry", false, new PotionEffect(MobEffects.REGENERATION, 8 * 20, 0), new PotionEffect(MobEffects.WEAKNESS, 5 * 20, 0), new PotionEffect(MobEffects.WITHER, 5 * 20, 0));
+            blightberry = edibles.addFood(6, 1, 0.4F, 16, "blightberry", false, new PotionEffect(MobEffects.REGENERATION, 8 * 20, 0), new PotionEffect(isWeaknessEnabled, 5 * 20, 0), new PotionEffect(MobEffects.WITHER, 5 * 20, 0));
             duskberry = edibles.addFood(7, 1, 0.4F, 16, "duskberry", false, new PotionEffect(MobEffects.NIGHT_VISION, 15 * 20, 0), new PotionEffect(MobEffects.BLINDNESS, 3 * 20, 0));
             skyberry = edibles.addFood(8, 1, 0.4F, 16, "skyberry", false, new PotionEffect(MobEffects.JUMP_BOOST, 8 * 20, 0), new PotionEffect(MobEffects.SLOWNESS, 3 * 20, 0));
             stingberry = edibles.addFood(9, 1, 0.4F, 16, "stingberry", false, new PotionEffect(MobEffects.STRENGTH, 10 * 20, 0), new PotionEffect(MobEffects.MINING_FATIGUE, 10 * 20, 0));
 
-            potashApple = edibles.addFood(10, 4, 0.4F, 32, "potashapple", false, new PotionEffect(MobEffects.WEAKNESS, 2 * 20, 0));
+            potashApple = edibles.addFood(10, 4, 0.4F, 32, "potashapple", false, new PotionEffect(isWeaknessEnabled, 5 * 20, 0));
         }
 
         cactusJuice = edibles.addFood(11, 1, 0.1f, 12, "cactusjuice", false);
