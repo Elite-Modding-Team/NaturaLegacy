@@ -435,9 +435,6 @@ item.natura.edibles.stingberry.tooltip=약간 사악함\n트럭처럼 강타함
 item.natura.edibles.potashapple.name=탄산칼륨 사과
 item.natura.edibles.potashapple.tooltip=약간 분필 같은 맛이 남
 
-item.natura.edibles.cactusjuice.name=선인장 주스
-item.natura.edibles.cactusjuice.tooltip=상쾌함!
-
 item.natura.materials.barley.name=보리
 item.natura.materials.barley.tooltip=밀과 비슷하며, 야생에서 자랍니다
 item.natura.materials.flour.name=밀가루

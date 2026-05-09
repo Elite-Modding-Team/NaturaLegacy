@@ -435,9 +435,6 @@ item.natura.edibles.stingberry.tooltip=A little bit evil\nHit like a truck
 item.natura.edibles.potashapple.name=Potash Apple
 item.natura.edibles.potashapple.tooltip=Tastes a bit like chalk
 
-item.natura.edibles.cactusjuice.name=Cactus Juice
-item.natura.edibles.cactusjuice.tooltip=Refreshing!
-
 item.natura.materials.barley.name=Barley
 item.natura.materials.barley.tooltip=Similar to wheat, it grows in the wild
 item.natura.materials.flour.name=Flour

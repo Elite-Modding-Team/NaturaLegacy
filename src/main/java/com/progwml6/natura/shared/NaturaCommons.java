@@ -187,8 +187,6 @@ public class NaturaCommons extends NaturaPulse
             potashApple = edibles.addFood(10, 4, 0.4F, 32, "potashapple", false, new PotionEffect(isWeaknessEnabled, 5 * 20, 0));
         }
 
-        cactusJuice = edibles.addFood(11, 1, 0.1f, 12, "cactusjuice", false);
-
         glowshroom_stew = registerItem(registry, new ItemNaturaEdibleSoup(6, 0.6F, false), "glowshroom_stew").setCreativeTab(Natura.TAB);
 
         wheat_seed_bag = seed_bags.addMeta(0, "wheat_seed_bag", Blocks.WHEAT.getDefaultState().withProperty(BlockCrops.AGE, Integer.valueOf(0)));

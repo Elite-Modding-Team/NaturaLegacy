@@ -431,9 +431,6 @@ item.natura.edibles.stingberry.tooltip=Ein bisschen böse\nTrifft da, wo es weht
 item.natura.edibles.potashapple.name=Kalisalzapfel
 item.natura.edibles.potashapple.tooltip=Schmeckt ein bisschen nach Kreide
 
-item.natura.edibles.cactusjuice.name=Kaktussaft
-item.natura.edibles.cactusjuice.tooltip=Erfrischend!
-
 item.natura.materials.barley.name=Gerste
 item.natura.materials.barley.tooltip=Ähnlich wie Weizen wächst es in der Natur
 item.natura.materials.flour.name=Weizenmehl
