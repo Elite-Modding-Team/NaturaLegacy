@@ -138,10 +138,12 @@ public class NetherClientProxy extends ClientProxy
         }
 
         Item nether_log2 = Item.getItemFromBlock(NaturaNether.netherLog2);
-        for (int meta = 0; meta <= 15; meta++)
+        for (BlockNetherLog2.LogType type : BlockNetherLog2.LogType.values())
         {
-            String variant = String.format("%s=%s", BlockNetherLog2.META.getName(), Integer.valueOf(meta));
-            ModelLoader.setCustomModelResourceLocation(nether_log2, meta, new ModelResourceLocation(nether_log2.getRegistryName(), variant));
+            String variant = String.format("%s=%s,%s=%s", BlockNetherLog2.LOG_AXIS.getName(),
+                    BlockNetherLog2.LOG_AXIS.getName(BlockNetherLog2.EnumAxis.Y), BlockNetherLog2.TYPE.getName(),
+                    BlockNetherLog2.TYPE.getName(type));
+            ModelLoader.setCustomModelResourceLocation(nether_log2, type.meta, new ModelResourceLocation(nether_log2.getRegistryName(), variant));
         }
 
         // leaves

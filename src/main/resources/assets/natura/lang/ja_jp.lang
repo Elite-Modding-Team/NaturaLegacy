@@ -241,8 +241,8 @@ tile.natura.nether_logs.darkwood.tooltip=ネザーの木
 tile.natura.nether_logs.fusewood.name=ヒューズウッド
 tile.natura.nether_logs.fusewood.tooltip=ネザーの木\n採伐時に爆発する
 
-tile.natura.nether_logs2.name=ブラッドウッド
-tile.natura.nether_logs2.tooltip=火炎耐性のある木
+tile.natura.nether_logs2.bloodwood.name=ブラッドウッド
+tile.natura.nether_logs2.bloodwood.tooltip=火炎耐性のある木
 
 tile.natura.nether_leaves.ghostwood.name=ゴーストウッドの葉
 tile.natura.nether_leaves.ghostwood.tooltip=ネザーの木\n幽霊のように淡い

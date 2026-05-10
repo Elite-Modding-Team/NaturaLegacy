@@ -241,8 +241,8 @@ tile.natura.nether_logs.darkwood.tooltip=地獄的樹木。
 tile.natura.nether_logs.fusewood.name=導火原木
 tile.natura.nether_logs.fusewood.tooltip=地獄的樹木\n會爆！
 
-tile.natura.nether_logs2.name=紅血原木
-tile.natura.nether_logs2.tooltip=防火樹。
+tile.natura.nether_logs2.bloodwood.name=紅血原木
+tile.natura.nether_logs2.bloodwood.tooltip=防火樹。
 
 tile.natura.nether_leaves.ghostwood.name=白鬼樹葉
 tile.natura.nether_leaves.ghostwood.tooltip=地獄的樹木\n蒼白色。

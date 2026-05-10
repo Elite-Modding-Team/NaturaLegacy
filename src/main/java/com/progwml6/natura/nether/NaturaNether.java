@@ -209,7 +209,7 @@ public class NaturaNether extends NaturaPulse
 
         // Blocks Start
         netherLog = registerEnumItemBlock(registry, netherLog, "nether_logs");
-        netherLog2 = registerItemBlock(registry, netherLog2, "nether_logs2");
+        netherLog2 = registerEnumItemBlock(registry, netherLog2, "nether_logs2");
 
         netherLeaves = registerItemBlockProp(registry, new ItemBlockLeaves(netherLeaves), "nether_leaves", BlockNetherLeaves.TYPE);
         netherLeaves2 = registerItemBlockProp(registry, new ItemBlockLeaves(netherLeaves2), "nether_leaves2", BlockNetherLeaves2.TYPE);

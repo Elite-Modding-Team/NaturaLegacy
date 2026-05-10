@@ -11,25 +11,12 @@ import net.minecraft.world.World;
 
 public class BloodwoodTreeGenerator extends BaseTreeGenerator
 {
-    public final IBlockState full;
-
-    public final IBlockState trunk1;
-
-    public final IBlockState trunk2;
-
-    public final IBlockState trunk3;
-
-    public final IBlockState trunk4;
-
+    public final IBlockState log;
     public final IBlockState leaves;
 
-    public BloodwoodTreeGenerator(IBlockState full, IBlockState trunk1, IBlockState trunk2, IBlockState trunk3, IBlockState trunk4, IBlockState leaves)
+    public BloodwoodTreeGenerator(IBlockState log, IBlockState leaves)
     {
-        this.full = full;
-        this.trunk1 = trunk1;
-        this.trunk2 = trunk2;
-        this.trunk3 = trunk3;
-        this.trunk4 = trunk4;
+        this.log = log;
         this.leaves = leaves;
     }
 
@@ -49,10 +36,10 @@ public class BloodwoodTreeGenerator extends BaseTreeGenerator
             Block localBlock = world.getBlockState(pos.add(0, -heightIter, 0)).getBlock();
             if (localBlock == Blocks.AIR || localBlock == NaturaNether.netherLeaves)
             {
-                this.setBlockAndMetadata(world, pos.add(0, -heightIter, 0), this.trunk1);
-                this.setBlockAndMetadata(world, pos.add(1, -heightIter, 0), this.trunk2);
-                this.setBlockAndMetadata(world, pos.add(0, -heightIter, 1), this.trunk3);
-                this.setBlockAndMetadata(world, pos.add(1, -heightIter, 1), this.trunk4);
+                this.setBlockAndMetadata(world, pos.add(0, -heightIter, 0), this.log);
+                this.setBlockAndMetadata(world, pos.add(1, -heightIter, 0), this.log);
+                this.setBlockAndMetadata(world, pos.add(0, -heightIter, 1), this.log);
+                this.setBlockAndMetadata(world, pos.add(1, -heightIter, 1), this.log);
             }
         }
 
@@ -69,7 +56,7 @@ public class BloodwoodTreeGenerator extends BaseTreeGenerator
 
     public void generateNode(World world, BlockPos pos)
     {
-        this.setBlockAndMetadata(world, pos, this.full);
+        this.setBlockAndMetadata(world, pos, this.log);
 
         for (int xIter = pos.getX() - 1; xIter <= pos.getX() + 1; xIter++)
         {

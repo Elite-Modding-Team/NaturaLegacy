@@ -269,8 +269,8 @@ tile.natura.nether_logs.darkwood.tooltip=Nether Tree
 tile.natura.nether_logs.fusewood.name=Fusewood Log
 tile.natura.nether_logs.fusewood.tooltip=Nether Tree\nExplosive Personality
 
-tile.natura.nether_logs2.name=Bloodwood Log
-tile.natura.nether_logs2.tooltip=Fire-resistant tree
+tile.natura.nether_logs2.bloodwood.name=Bloodwood Log
+tile.natura.nether_logs2.bloodwood.tooltip=Fire-resistant tree
 
 tile.natura.nether_leaves.ghostwood.name=Ghostwood Leaves
 tile.natura.nether_leaves.ghostwood.tooltip=Nether Tree\nPale as a ghost

@@ -104,22 +104,14 @@ public class BlockNetherSapling2 extends BlockSapling
         BaseTreeGenerator gen = new BaseTreeGenerator();
 
         IBlockState log;
-        IBlockState log2;
-        IBlockState log3;
-        IBlockState log4;
-        IBlockState log5;
         IBlockState leaves;
 
         if (state.getValue(FOLIAGE) == SaplingType.BLOODWOOD)
         {
-            log = NaturaNether.netherLog2.getDefaultState().withProperty(BlockNetherLog2.META, 15);
-            log2 = NaturaNether.netherLog2.getDefaultState().withProperty(BlockNetherLog2.META, 0);
-            log3 = NaturaNether.netherLog2.getDefaultState().withProperty(BlockNetherLog2.META, 1);
-            log4 = NaturaNether.netherLog2.getDefaultState().withProperty(BlockNetherLog2.META, 2);
-            log5 = NaturaNether.netherLog2.getDefaultState().withProperty(BlockNetherLog2.META, 3);
+            log = NaturaNether.netherLog2.getDefaultState().withProperty(BlockNetherLog2.TYPE, BlockNetherLog2.LogType.BLOODWOOD);
             leaves = NaturaNether.netherLeaves.getDefaultState().withProperty(BlockNetherLeaves.TYPE, BlockNetherLeaves.LeavesType.BLOODWOOD);
 
-            gen = new BloodwoodTreeGenerator(log, log2, log3, log4, log5, leaves);
+            gen = new BloodwoodTreeGenerator(log, leaves);
         }
         else
         {

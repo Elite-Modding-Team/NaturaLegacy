@@ -1,61 +1,31 @@
 package com.progwml6.natura.nether.block.logs;
 
-import com.progwml6.natura.Natura;
-import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
-import net.minecraft.block.properties.PropertyInteger;
+import com.progwml6.natura.common.block.BlockEnumLog;
+import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.NonNullList;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
+import net.minecraft.util.IStringSerializable;
+import slimeknights.mantle.block.EnumBlock;
 
-public class BlockNetherLog2 extends Block
+import java.util.Locale;
+
+public class BlockNetherLog2 extends BlockEnumLog<BlockNetherLog2.LogType>
 {
-    public static final PropertyInteger META = PropertyInteger.create("meta", 0, 15);
+    public static PropertyEnum<BlockNetherLog2.LogType> TYPE = PropertyEnum.create("type", BlockNetherLog2.LogType.class);
 
     public BlockNetherLog2()
     {
-        super(Material.WOOD);
+        super(TYPE, BlockNetherLog2.LogType.class);
 
-        this.setHardness(8.0F);
-        this.setResistance(25.0F);
-        this.setSoundType(SoundType.METAL);
-        this.setCreativeTab(Natura.TAB);
-        this.setHarvestLevel("axe", 2);
-        this.setDefaultState(this.blockState.getBaseState().withProperty(META, Integer.valueOf(0)));
-    }
+        this.setHardness(3.5F);
+        this.setResistance(20.0F);
+        this.setHarvestLevel("axe", 2, this.blockState.getBaseState().withProperty(TYPE, BlockNetherLog2.LogType.BLOODWOOD));
+        this.setDefaultState(this.blockState.getBaseState().withProperty(LOG_AXIS, BlockEnumLog.EnumAxis.Y));
 
-    @Override
-    public boolean isReplaceable(IBlockAccess worldIn, BlockPos pos)
-    {
-        return false;
-    }
-
-    @Override
-    public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
-    {
-        if (worldIn.isAreaLoaded(pos.add(-5, -5, -5), pos.add(5, 5, 5)))
-        {
-            for (BlockPos blockpos : BlockPos.getAllInBox(pos.add(-4, -4, -4), pos.add(4, 4, 4)))
-            {
-                IBlockState iblockstate = worldIn.getBlockState(blockpos);
-
-                if (iblockstate.getBlock().isLeaves(iblockstate, worldIn, blockpos))
-                {
-                    iblockstate.getBlock().beginLeavesDecay(iblockstate, worldIn, blockpos);
-                }
-            }
-        }
+        Blocks.FIRE.setFireInfo(this, 0, 0);
     }
 
     /**
@@ -64,28 +34,61 @@ public class BlockNetherLog2 extends Block
     @Override
     public IBlockState getStateFromMeta(int meta)
     {
-        return this.getDefaultState().withProperty(META, Integer.valueOf(meta));
+        IBlockState iblockstate = this.getDefaultState().withProperty(TYPE, this.fromMeta((meta & 3)));
+
+        switch (meta & 12)
+        {
+            case 0:
+                iblockstate = iblockstate.withProperty(LOG_AXIS, BlockEnumLog.EnumAxis.Y);
+                break;
+            case 4:
+                iblockstate = iblockstate.withProperty(LOG_AXIS, BlockEnumLog.EnumAxis.X);
+                break;
+            case 8:
+                iblockstate = iblockstate.withProperty(LOG_AXIS, BlockEnumLog.EnumAxis.Z);
+                break;
+            default:
+                iblockstate = iblockstate.withProperty(LOG_AXIS, BlockEnumLog.EnumAxis.NONE);
+        }
+
+        return iblockstate;
     }
 
     /**
      * Convert the BlockState into the correct metadata value
      */
     @Override
+    @SuppressWarnings("incomplete-switch")
     public int getMetaFromState(IBlockState state)
     {
-        return state.getValue(META).intValue();
+        int i = 0;
+        i = i | (state.getValue(TYPE)).getMeta();
+
+        switch (state.getValue(LOG_AXIS))
+        {
+            case X:
+                i |= 4;
+                break;
+            case Z:
+                i |= 8;
+                break;
+            case NONE:
+                i |= 12;
+        }
+
+        return i;
     }
 
     @Override
     protected BlockStateContainer createBlockState()
     {
-        return new BlockStateContainer(this, new IProperty[] { META });
+        return new BlockStateContainer(this, TYPE, LOG_AXIS);
     }
 
     @Override
     protected ItemStack getSilkTouchDrop(IBlockState state)
     {
-        return new ItemStack(Item.getItemFromBlock(this), 1, state.getValue(META).intValue() & 3);
+        return new ItemStack(Item.getItemFromBlock(this), 1, state.getValue(TYPE).getMeta());
     }
 
     /**
@@ -95,82 +98,31 @@ public class BlockNetherLog2 extends Block
     @Override
     public int damageDropped(IBlockState state)
     {
-        int meta = state.getValue(META).intValue();
-
-        if (meta < 12)
-        {
-            return 0;
-        }
-        else if (meta == 15)
-        {
-            return 15;
-        }
-
-        return 12;
+        return state.getValue(TYPE).getMeta();
     }
 
-    @Override
-    public IBlockState getStateForPlacement(World world, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer, EnumHand hand)
+    public enum LogType implements IStringSerializable, EnumBlock.IEnumMeta
     {
-        if (meta >= 12)
+        BLOODWOOD;
+
+        public final int meta;
+
+        LogType()
         {
-            return this.getStateFromMeta(meta);
+            this.meta = this.ordinal();
         }
 
-        int metadata = meta & 3;
-        byte add = 0;
-
-        switch (facing)
+        @Override
+        public String getName()
         {
-        case DOWN:
-        case UP:
-            add = 0;
-            if (hitX > 0.5f)
-            {
-                add += 1;
-            }
-            if (hitZ > 0.5f)
-            {
-                add += 2;
-            }
-            break;
-        case NORTH:
-        case SOUTH:
-            add = 8;
-            if (hitX > 0.5f)
-            {
-                add += 1;
-            }
-            if (hitZ < 0.5f)
-            {
-                add += 2;
-            }
-            break;
-        case WEST:
-        case EAST:
-            add = 4;
-            if (hitX < 0.5f)
-            {
-                add += 1;
-            }
-            if (hitZ < 0.5f)
-            {
-                add += 2;
-            }
+            return this.toString().toLowerCase(Locale.US);
         }
 
-        return this.getStateFromMeta(metadata | add);
+        @Override
+        public int getMeta()
+        {
+            return this.meta;
+        }
     }
 
-    @Override
-    public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list)
-    {
-        list.add(new ItemStack(this, 1, 0));
-        list.add(new ItemStack(this, 1, 15));
-    }
-
-    //@formatter:off
-    @Override public boolean canSustainLeaves(IBlockState state, net.minecraft.world.IBlockAccess world, BlockPos pos){ return true; }
-    @Override public boolean isWood(net.minecraft.world.IBlockAccess world, BlockPos pos){ return true; }
-    //@formatter:on
 }

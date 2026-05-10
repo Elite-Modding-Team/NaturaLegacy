@@ -44,7 +44,7 @@ public class NetherTreesGenerator implements IWorldGenerator
         this.darkwoodTreeGen = new DarkwoodTreeGenerator(3, netherLog.withProperty(BlockNetherLog.TYPE, BlockNetherLog.LogType.DARKWOOD), netherLeaves2.withProperty(BlockNetherLeaves2.TYPE, BlockNetherLeaves2.LeavesType.DARKWOOD), netherLeaves2.withProperty(BlockNetherLeaves2.TYPE, BlockNetherLeaves2.LeavesType.DARKWOOD_FLOWERING), netherLeaves2.withProperty(BlockNetherLeaves2.TYPE, BlockNetherLeaves2.LeavesType.DARKWOOD_FRUIT));
         this.fusewoodTreeGen = new FusewoodTreeGenerator(3, netherLog.withProperty(BlockNetherLog.TYPE, BlockNetherLog.LogType.FUSEWOOD), netherLeaves.withProperty(BlockNetherLeaves.TYPE, BlockNetherLeaves.LeavesType.FUSEWOOD));
         this.ghostwoodTreeGen = new GhostwoodTreeGenerator(netherLog.withProperty(BlockNetherLog.TYPE, BlockNetherLog.LogType.GHOSTWOOD), netherLeaves.withProperty(BlockNetherLeaves.TYPE, BlockNetherLeaves.LeavesType.GHOSTWOOD), true);
-        this.bloodwoodTreeGen = new BloodwoodTreeGenerator(netherLog2.withProperty(BlockNetherLog2.META, 15), netherLog2.withProperty(BlockNetherLog2.META, 0), netherLog2.withProperty(BlockNetherLog2.META, 1), netherLog2.withProperty(BlockNetherLog2.META, 2), netherLog2.withProperty(BlockNetherLog2.META, 3), netherLeaves.withProperty(BlockNetherLeaves.TYPE, BlockNetherLeaves.LeavesType.BLOODWOOD));
+        this.bloodwoodTreeGen = new BloodwoodTreeGenerator(netherLog2.withProperty(BlockNetherLog2.TYPE, BlockNetherLog2.LogType.BLOODWOOD), netherLeaves.withProperty(BlockNetherLeaves.TYPE, BlockNetherLeaves.LeavesType.BLOODWOOD));
     }
 
     @Override

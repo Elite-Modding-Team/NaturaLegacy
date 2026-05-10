@@ -269,8 +269,8 @@ tile.natura.nether_logs.darkwood.tooltip=Netherbaum
 tile.natura.nether_logs.fusewood.name=Zündholz
 tile.natura.nether_logs.fusewood.tooltip=Netherbaum\nExplosive Persönlichkeit
 
-tile.natura.nether_logs2.name=Blutholz
-tile.natura.nether_logs2.tooltip=Feuerresistenter Baum
+tile.natura.nether_logs2.bloodwood.name=Blutholz
+tile.natura.nether_logs2.bloodwood.tooltip=Feuerresistenter Baum
 
 tile.natura.nether_leaves.ghostwood.name=Geisterholzblätter
 tile.natura.nether_leaves.ghostwood.tooltip=Netherbaum\nBleich wie ein Gespenst

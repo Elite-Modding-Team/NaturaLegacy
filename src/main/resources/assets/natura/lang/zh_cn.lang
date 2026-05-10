@@ -241,8 +241,8 @@ tile.natura.nether_logs.darkwood.tooltip=下界之树木
 tile.natura.nether_logs.fusewood.name=熔融原木
 tile.natura.nether_logs.fusewood.tooltip=下界之树木\n易爆
 
-tile.natura.nether_logs2.name=血树原木
-tile.natura.nether_logs2.tooltip=防火木材
+tile.natura.nether_logs2.bloodwood.name=血树原木
+tile.natura.nether_logs2.bloodwood.tooltip=防火木材
 
 tile.natura.nether_leaves.ghostwood.name=幽魂树树叶
 tile.natura.nether_leaves.ghostwood.tooltip=下界之树木\n苍白如鬼魂

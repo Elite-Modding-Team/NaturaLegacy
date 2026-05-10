@@ -241,8 +241,8 @@ tile.natura.nether_logs.darkwood.tooltip=Дерево Нижнего мира
 tile.natura.nether_logs.fusewood.name=Древесина плавкого дерева
 tile.natura.nether_logs.fusewood.tooltip=Дерево Нижнего мира\nВзрывная личность
 
-tile.natura.nether_logs2.name=Кровавое дерево
-tile.natura.nether_logs2.tooltip=Огнеупорное дерево
+tile.natura.nether_logs2.bloodwood.name=Кровавое дерево
+tile.natura.nether_logs2.bloodwood.tooltip=Огнеупорное дерево
 
 tile.natura.nether_leaves.ghostwood.name=Листва призрачного дерева
 tile.natura.nether_leaves.ghostwood.tooltip=Дерево Нижнего мира\nБледный, как призрак

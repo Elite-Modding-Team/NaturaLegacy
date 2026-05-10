@@ -269,8 +269,8 @@ tile.natura.nether_logs.darkwood.tooltip=네더 나무
 tile.natura.nether_logs.fusewood.name=퓨즈나무 원목
 tile.natura.nether_logs.fusewood.tooltip=네더 나무\n폭발적인 성격
 
-tile.natura.nether_logs2.name=혈목 원목
-tile.natura.nether_logs2.tooltip=내화성 나무
+tile.natura.nether_logs2.bloodwood.name=혈목 원목
+tile.natura.nether_logs2.bloodwood.tooltip=내화성 나무
 
 tile.natura.nether_leaves.ghostwood.name=유령나무 잎
 tile.natura.nether_leaves.ghostwood.tooltip=네더 나무\n유령처럼 창백함

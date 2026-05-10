@@ -241,8 +241,8 @@ tile.natura.nether_logs.darkwood.tooltip=Netherträ
 tile.natura.nether_logs.fusewood.name=Stubinträ
 tile.natura.nether_logs.fusewood.tooltip=Netherträ\nExplosiv personlighet
 
-tile.natura.nether_logs2.name=Blodträ
-tile.natura.nether_logs2.tooltip=Eldresistant trä
+tile.natura.nether_logs2.bloodwood.name=Blodträ
+tile.natura.nether_logs2.bloodwood.tooltip=Eldresistant trä
 
 tile.natura.nether_leaves.ghostwood.name=Spökträlöv
 tile.natura.nether_leaves.ghostwood.tooltip=Netherträ\nBlekt som ett lakan
