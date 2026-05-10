@@ -1,0 +1,14 @@
+{
+    "ctm":{
+        "ctm_version": 1,
+        "type": "ctm",
+        "textures":[
+            "natura:blocks/logs/nether/bloodwood_log_top_ctm"
+        ],
+        "extra": {
+            "width": 2,
+            "height": 2,
+            "ignore_states": false
+        }
+    }
+}
