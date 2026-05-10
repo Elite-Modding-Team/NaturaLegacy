@@ -118,6 +118,9 @@ dependencies {
     implementation rfg.deobf('curse.maven:tinkers-antique-1242239:7242538')
     implementation rfg.deobf('curse.maven:antique-armory-1394222:7275086')
 
+    // CTM
+    implementation rfg.deobf('curse.maven:ctm-267602:2915363')
+
     if (project.use_mixins.toBoolean()) {
         // Change your mixin refmap name here:
         String mixin = modUtils.enableMixins('org.spongepowered:mixin:0.8.3', "mixins.${project.mod_id}.refmap.json")
