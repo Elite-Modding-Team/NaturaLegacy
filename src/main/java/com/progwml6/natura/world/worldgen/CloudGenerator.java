@@ -215,6 +215,8 @@ public class CloudGenerator implements IWorldGenerator
 
     public void generateEnd(Random random, int chunkX, int chunkZ, World world)
     {
+        if (isCentralEndIsland(chunkX, chunkZ)) return;
+
         int xSpawn;
         int ySpawn;
         int zSpawn;
@@ -280,5 +282,13 @@ public class CloudGenerator implements IWorldGenerator
         int spawnChunkZ = spawn.getZ() >> 4;
 
         return Math.abs(chunkX - spawnChunkX) <= 2 && Math.abs(chunkZ - spawnChunkZ) <= 2;
+    }
+
+    public boolean isCentralEndIsland(int chunkX, int chunkZ)
+    {
+        int blockX = chunkX << 4;
+        int blockZ = chunkZ << 4;
+
+        return blockX > -500 && blockX < 500 && blockZ > -500 && blockZ < 500;
     }
 }
