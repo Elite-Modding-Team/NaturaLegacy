@@ -26,6 +26,9 @@
             },
             "apple": {
                 "textures": { "all": "natura:blocks/planks/overworld/apple_planks" }
+            },
+            "redwood_bark": {
+                "textures": { "all": "natura:blocks/logs/overworld/redwood_bark" }
             }
         },
         "half": {

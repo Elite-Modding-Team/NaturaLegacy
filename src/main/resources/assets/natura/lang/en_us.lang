@@ -66,7 +66,7 @@ tile.natura.overworld_sapling2.hopseed.name=Hopseed Sapling
 tile.natura.overworld_sapling2.hopseed.tooltip=Ascended Glitch
 
 tile.natura.redwood_logs.bark.name=Redwood Bark
-tile.natura.redwood_logs.bark.tooltip=Burn it for charcoal\nor make a hidden tree door
+tile.natura.redwood_logs.bark.tooltip=Shell of the tree
 tile.natura.redwood_logs.heart.name=Redwood
 tile.natura.redwood_logs.heart.tooltip=Heart of the tree
 tile.natura.redwood_logs.root.name=Redwood Root
@@ -146,6 +146,8 @@ tile.natura.overworld_slab2.redwood.name=Redwood Slab
 tile.natura.overworld_slab2.redwood.tooltip=Giant Sequoia
 tile.natura.overworld_slab2.apple.name=Apple Slab
 tile.natura.overworld_slab2.apple.tooltip=Apples to the Core
+tile.natura.overworld_slab2.redwood_bark.name=Redwood Bark Slab
+tile.natura.overworld_slab2.redwood_bark.tooltip=Giant Sequoia
 
 tile.natura.overworld_stairs_maple.name=Maple Stairs
 tile.natura.overworld_stairs_silverbell.name=Silverbell Stairs
@@ -157,6 +159,7 @@ tile.natura.overworld_stairs_hopseed.name=Hopseed Stairs
 tile.natura.overworld_stairs_sakura.name=Sakura Stairs
 tile.natura.overworld_stairs_redwood.name=Redwood Stairs
 tile.natura.overworld_stairs_apple.name=Apple Stairs
+tile.natura.overworld_stairs_redwood_bark.name=Redwood Bark Stairs
 
 tile.natura.overworld_berrybush_raspberry.name=Raspberry Bush
 tile.natura.overworld_berrybush_raspberry.tooltip=Sweet and red\nFound in warm areas
@@ -235,6 +238,13 @@ tile.natura.apple_pressure_plate.name=Apple Pressure Plate
 tile.natura.apple_trap_door.name=Apple Trapdoor
 tile.natura.apple_fence.name=Apple Fence
 tile.natura.apple_fence_gate.name=Apple Fence Gate
+
+tile.natura.redwood_bark_button.name=Redwood Bark Button
+tile.natura.redwood_bark_pressure_plate.name=Redwood Bark Pressure Plate
+tile.natura.redwood_bark_trap_door.name=Redwood Bark Trapdoor
+tile.natura.redwood_bark_trap_door.tooltip=Secret Tunnel
+tile.natura.redwood_bark_fence.name=Redwood Bark Fence
+tile.natura.redwood_bark_fence_gate.name=Redwood Bark Fence Gate
 
 tile.natura.overworld_bookshelves.maple.name=Maple Bookshelf
 tile.natura.overworld_bookshelves.silverbell.name=Silverbell Bookshelf

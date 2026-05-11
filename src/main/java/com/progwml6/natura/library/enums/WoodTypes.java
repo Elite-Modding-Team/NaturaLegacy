@@ -18,6 +18,7 @@ public enum WoodTypes implements IStringSerializable
     SAKURA(WorldType.OVERWORLD, 7, 7),
     REDWOOD(WorldType.OVERWORLD, 8, 8),
     APPLE(WorldType.OVERWORLD, 9, 9),
+    REDWOOD_BARK(WorldType.OVERWORLD, 9, 9),
     GHOSTWOOD(WorldType.NETHER, 0, 9),
     BLOODWOOD(WorldType.NETHER, 1, 12),
     FUSEWOOD(WorldType.NETHER, 2, 11),
