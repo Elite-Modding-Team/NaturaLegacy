@@ -1,6 +1,7 @@
 package com.progwml6.natura.nether.block.logs;
 
 import com.progwml6.natura.common.block.BlockEnumLog;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -24,6 +25,7 @@ public class BlockNetherLog2 extends BlockEnumLog<BlockNetherLog2.LogType>
         this.setResistance(20.0F);
         this.setHarvestLevel("axe", 2, this.blockState.getBaseState().withProperty(TYPE, BlockNetherLog2.LogType.BLOODWOOD));
         this.setDefaultState(this.blockState.getBaseState().withProperty(LOG_AXIS, BlockEnumLog.EnumAxis.Y));
+        this.setSoundType(SoundType.METAL);
 
         Blocks.FIRE.setFireInfo(this, 0, 0);
     }
