@@ -93,6 +93,8 @@ public class CloudGenerator implements IWorldGenerator
 
     public void generateOverworld(Random random, int chunkX, int chunkZ, World world)
     {
+        if (isNearWorldSpawn(world, chunkX, chunkZ)) return;
+
         int xSpawn;
         int ySpawn;
         int zSpawn;
@@ -269,5 +271,14 @@ public class CloudGenerator implements IWorldGenerator
         }
 
         return false;
+    }
+
+    public boolean isNearWorldSpawn(World world, int chunkX, int chunkZ)
+    {
+        BlockPos spawn = world.getSpawnPoint();
+        int spawnChunkX = spawn.getX() >> 4;
+        int spawnChunkZ = spawn.getZ() >> 4;
+
+        return Math.abs(chunkX - spawnChunkX) <= 2 && Math.abs(chunkZ - spawnChunkZ) <= 2;
     }
 }
