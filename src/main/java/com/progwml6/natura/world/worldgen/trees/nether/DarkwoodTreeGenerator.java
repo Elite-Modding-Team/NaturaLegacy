@@ -98,13 +98,7 @@ public class DarkwoodTreeGenerator extends BaseTreeGenerator
                     if (Math.abs(mathX) != subtract2 || Math.abs(mathZ) != subtract2 || random.nextInt(2) != 0 && subtract != 0)
                     {
                         BlockPos blockpos = new BlockPos(x, y, z);
-                        IBlockState state = world.getBlockState(blockpos);
-
-                        state.getBlock();
-                        if (state.getBlock().canBeReplacedByLeaves(state, world, blockpos))
-                        {
-                            world.setBlockState(blockpos, this.getRandomizedLeaves(random), 2);
-                        }
+                        this.setBlockAndMetadataNether(world, blockpos, this.getRandomizedLeaves(random));
                     }
                 }
             }
@@ -116,13 +110,7 @@ public class DarkwoodTreeGenerator extends BaseTreeGenerator
         for (int localHeight = 0; localHeight < height; ++localHeight)
         {
             BlockPos blockpos = new BlockPos(pos.getX(), pos.getY() + localHeight, pos.getZ());
-            IBlockState state = world.getBlockState(blockpos);
-            Block block = state.getBlock();
-
-            if (block.isAir(state, world, blockpos) || block.isLeaves(state, world, blockpos) || block.isReplaceable(world, blockpos))
-            {
-                world.setBlockState(blockpos, this.log, 2);
-            }
+            this.setBlockAndMetadataNether(world, blockpos, this.log);
         }
     }
 
@@ -183,10 +171,7 @@ public class DarkwoodTreeGenerator extends BaseTreeGenerator
                     {
                         pos.setPos(x, y, z);
 
-                        IBlockState state = worldIn.getBlockState(pos);
-                        Block block = state.getBlock();
-
-                        if (!worldIn.isAirBlock(pos) && !block.isAir(state, worldIn, pos) && !block.isLeaves(state, worldIn, pos) && block != Blocks.NETHERRACK && block != Blocks.SOUL_SAND && block != NaturaNether.netherTaintedSoil && !block.isWood(worldIn, pos))
+                        if (isReplaceableNether(worldIn, pos))
                         {
                             canGrowTree = false;
                         }

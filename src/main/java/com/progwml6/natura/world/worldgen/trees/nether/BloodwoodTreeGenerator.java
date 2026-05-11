@@ -36,10 +36,10 @@ public class BloodwoodTreeGenerator extends BaseTreeGenerator
             Block localBlock = world.getBlockState(pos.add(0, -heightIter, 0)).getBlock();
             if (localBlock == Blocks.AIR || localBlock == NaturaNether.netherLeaves)
             {
-                this.setBlockAndMetadata(world, pos.add(0, -heightIter, 0), this.log);
-                this.setBlockAndMetadata(world, pos.add(1, -heightIter, 0), this.log);
-                this.setBlockAndMetadata(world, pos.add(0, -heightIter, 1), this.log);
-                this.setBlockAndMetadata(world, pos.add(1, -heightIter, 1), this.log);
+                this.setBlockAndMetadataNether(world, pos.add(0, -heightIter, 0), this.log);
+                this.setBlockAndMetadataNether(world, pos.add(1, -heightIter, 0), this.log);
+                this.setBlockAndMetadataNether(world, pos.add(0, -heightIter, 1), this.log);
+                this.setBlockAndMetadataNether(world, pos.add(1, -heightIter, 1), this.log);
             }
         }
 
@@ -56,7 +56,7 @@ public class BloodwoodTreeGenerator extends BaseTreeGenerator
 
     public void generateNode(World world, BlockPos pos)
     {
-        this.setBlockAndMetadata(world, pos, this.log);
+        this.setBlockAndMetadataNether(world, pos, this.log);
 
         for (int xIter = pos.getX() - 1; xIter <= pos.getX() + 1; xIter++)
         {
@@ -68,7 +68,7 @@ public class BloodwoodTreeGenerator extends BaseTreeGenerator
 
                 if (block != NaturaNether.netherLeaves && !state.isFullBlock())
                 {
-                    this.setBlockAndMetadata(world, newPos, this.leaves);
+                    this.setBlockAndMetadataNether(world, newPos, this.leaves);
                 }
             }
         }
@@ -83,7 +83,7 @@ public class BloodwoodTreeGenerator extends BaseTreeGenerator
 
                 if (block != NaturaNether.netherLeaves && !state.isFullBlock())
                 {
-                    this.setBlockAndMetadata(world, newPos, this.leaves);
+                    this.setBlockAndMetadataNether(world, newPos, this.leaves);
                 }
             }
         }
@@ -98,15 +98,10 @@ public class BloodwoodTreeGenerator extends BaseTreeGenerator
 
                 if (block != NaturaNether.netherLeaves && !state.isFullBlock())
                 {
-                    this.setBlockAndMetadata(world, newPos, this.leaves);
+                    this.setBlockAndMetadataNether(world, newPos, this.leaves);
                 }
             }
         }
-    }
-
-    protected void setBlockAndMetadata(World world, BlockPos pos, IBlockState stateNew)
-    {
-        world.setBlockState(pos, stateNew, 2);
     }
 
     BlockPos findCeiling(World world, BlockPos pos)

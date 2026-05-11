@@ -134,12 +134,7 @@ public class WillowTreeGenerator extends BaseTreeGenerator
                                 if (Math.abs(k3) != l2 || Math.abs(j1) != l2 || random.nextInt(2) != 0 && j2 != 0)
                                 {
                                     BlockPos blockpos = new BlockPos(j3, k1, i4);
-                                    state = worldIn.getBlockState(blockpos);
-
-                                    if (state.getBlock().canBeReplacedByLeaves(state, worldIn, blockpos))
-                                    {
-                                        this.setBlockAndMetadata(worldIn, blockpos, this.leaves);
-                                    }
+                                    this.setBlockAndMetadata(worldIn, blockpos, this.leaves);
                                 }
                             }
                         }
@@ -147,14 +142,7 @@ public class WillowTreeGenerator extends BaseTreeGenerator
 
                     for (int l1 = 0; l1 < height; ++l1)
                     {
-                        BlockPos upN = position.up(l1);
-                        IBlockState iblockstate1 = worldIn.getBlockState(upN);
-                        Block block2 = iblockstate1.getBlock();
-
-                        if (block2.isAir(iblockstate1, worldIn, upN) || block2.isLeaves(iblockstate1, worldIn, upN) || block2.isReplaceable(worldIn, upN) || block2 == Blocks.FLOWING_WATER || block2 == Blocks.WATER)
-                        {
-                            this.setBlockAndMetadata(worldIn, position.up(l1), this.log);
-                        }
+                        this.setBlockAndMetadata(worldIn, position.up(l1), this.log);
                     }
 
                     for (int i2 = position.getY() - 3 + height; i2 <= position.getY() + height; ++i2)
@@ -201,16 +189,6 @@ public class WillowTreeGenerator extends BaseTreeGenerator
                     }
                 }
             }
-        }
-    }
-
-    protected void setBlockAndMetadata(World world, BlockPos pos, IBlockState stateNew)
-    {
-        IBlockState state = world.getBlockState(pos);
-        Block block = state.getBlock();
-        if (block.isAir(state, world, pos) || block.canPlaceBlockAt(world, pos) || world.getBlockState(pos) == this.leaves)
-        {
-            world.setBlockState(pos, stateNew, 2);
         }
     }
 

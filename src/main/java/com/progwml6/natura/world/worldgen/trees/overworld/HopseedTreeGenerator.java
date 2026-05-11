@@ -93,7 +93,7 @@ public class HopseedTreeGenerator extends BaseTreeGenerator
                     {
                         if (y >= 0 && y < 256)
                         {
-                            if (!this.isReplaceable(worldIn, mutableblockpos.setPos(x, y, z)))
+                            if (!isReplaceable(worldIn, mutableblockpos.setPos(x, y, z)))
                             {
                                 hasSpace = false;
                             }
@@ -172,13 +172,6 @@ public class HopseedTreeGenerator extends BaseTreeGenerator
         }
     }
 
-    public boolean isReplaceable(World worldIn, BlockPos positionIn)
-    {
-        IBlockState state = worldIn.getBlockState(positionIn);
-
-        return state.getBlock().isAir(state, worldIn, positionIn);
-    }
-
     protected void growLeaves(World worldIn, Random random, BlockPos positionIn, int height)
     {
         for (int y = positionIn.getY() - 2 + height; y <= positionIn.getY() + height; ++y)
@@ -195,25 +188,13 @@ public class HopseedTreeGenerator extends BaseTreeGenerator
                     int mathZ = z - positionIn.getZ();
 
                     BlockPos blockpos = new BlockPos(x, y, z);
-                    IBlockState state = worldIn.getBlockState(blockpos);
 
-                    if ((mathX >= 0 || mathZ >= 0 || mathX * mathX + mathZ * mathZ <= subtract2 * subtract2) && (mathX <= 0 && mathZ <= 0 || mathX * mathX + mathZ * mathZ <= (subtract2 + 1) * (subtract2 + 1)) && (random.nextInt(4) != 0 || mathX * mathX + mathZ * mathZ <= (subtract2 - 1) * (subtract2 - 1)) && (state.getBlock().isAir(state, worldIn, blockpos) || state.getBlock().isLeaves(state, worldIn, blockpos) || state.getBlock().canBeReplacedByLeaves(state, worldIn, blockpos)))
+                    if ((mathX >= 0 || mathZ >= 0 || mathX * mathX + mathZ * mathZ <= subtract2 * subtract2) && (mathX <= 0 && mathZ <= 0 || mathX * mathX + mathZ * mathZ <= (subtract2 + 1) * (subtract2 + 1)) && (random.nextInt(4) != 0 || mathX * mathX + mathZ * mathZ <= (subtract2 - 1) * (subtract2 - 1)) && (isReplaceable(worldIn, blockpos)))
                     {
                         this.setBlockAndMetadata(worldIn, blockpos, this.leaves);
                     }
                 }
             }
-        }
-    }
-
-    protected void setBlockAndMetadata(World worldIn, BlockPos positionIn, IBlockState stateNew)
-    {
-        IBlockState state = worldIn.getBlockState(positionIn);
-        Block block = state.getBlock();
-
-        if (block.isAir(state, worldIn, positionIn) || block.canPlaceBlockAt(worldIn, positionIn) || worldIn.getBlockState(positionIn) == this.leaves)
-        {
-            worldIn.setBlockState(positionIn, stateNew, 2);
         }
     }
 

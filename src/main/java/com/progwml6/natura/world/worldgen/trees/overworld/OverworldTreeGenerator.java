@@ -94,9 +94,8 @@ public class OverworldTreeGenerator extends BaseTreeGenerator
                     if (Math.abs(mathX) != subtract2 || Math.abs(mathZ) != subtract2 || random.nextInt(2) != 0 && subtract != 0)
                     {
                         BlockPos blockpos = new BlockPos(x, y, z);
-                        IBlockState state = world.getBlockState(blockpos);
 
-                        if (state.getBlock().isAir(state, world, blockpos) || state.getBlock().canBeReplacedByLeaves(state, world, blockpos))
+                        if (isReplaceable(world, blockpos))
                         {
                             world.setBlockState(blockpos, this.leaves, 2);
                         }
@@ -111,10 +110,8 @@ public class OverworldTreeGenerator extends BaseTreeGenerator
         for (int localHeight = 0; localHeight < height; ++localHeight)
         {
             BlockPos blockpos = new BlockPos(pos.getX(), pos.getY() + localHeight, pos.getZ());
-            IBlockState state = world.getBlockState(blockpos);
-            Block block = state.getBlock();
 
-            if (block.isAir(state, world, blockpos) || block.isLeaves(state, world, blockpos) || block.isReplaceable(world, blockpos))
+            if (isReplaceable(world, blockpos))
             {
                 world.setBlockState(blockpos, this.log, 2);
             }
@@ -176,8 +173,7 @@ public class OverworldTreeGenerator extends BaseTreeGenerator
                 for (int z = position.getZ() - range; z <= position.getZ() + range && canGrowTree; ++z)
                 {
                     blockPos.setPos(x, y, z);
-                    IBlockState state = world.getBlockState(blockPos);
-                    canGrowTree = state.getBlock().isAir(state, world, blockPos) || state.getBlock().isReplaceable(world, blockPos);
+                    canGrowTree = isReplaceable(world, blockPos);
                 }
             }
         }

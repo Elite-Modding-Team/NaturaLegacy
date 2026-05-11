@@ -46,12 +46,6 @@ public class SakuraTreeGenerator extends BaseTreeGenerator
         this.leaves = leaves;
     }
 
-    public boolean isReplaceable(World world, BlockPos pos)
-    {
-        IBlockState state = world.getBlockState(pos);
-        return state.getBlock().isAir(state, world, pos);
-    }
-
     @Override
     public void generateTree(Random random, World worldIn, BlockPos position)
     {
@@ -81,17 +75,6 @@ public class SakuraTreeGenerator extends BaseTreeGenerator
             this.generateLeafNodeBases();
         }
         this.world = null; //Fix vanilla Mem leak, holds latest world
-    }
-
-    protected void setBlockAndMetadata(World world, BlockPos pos, IBlockState stateNew)
-    {
-        IBlockState state = world.getBlockState(pos);
-        Block block = state.getBlock();
-
-        if (block.isAir(state, world, pos) || block.canPlaceBlockAt(world, pos) || world.getBlockState(pos) == this.leaves)
-        {
-            world.setBlockState(pos, stateNew, 2);
-        }
     }
 
     protected BlockPos findGround(World world, BlockPos pos)
@@ -210,12 +193,7 @@ public class SakuraTreeGenerator extends BaseTreeGenerator
                 if (Math.pow(Math.abs(j) + 0.5D, 2.0D) + Math.pow(Math.abs(k) + 0.5D, 2.0D) <= p_181631_2_ * p_181631_2_)
                 {
                     BlockPos blockpos = pos.add(j, 0, k);
-                    IBlockState state = this.world.getBlockState(blockpos);
-
-                    if (state.getBlock().isAir(state, this.world, blockpos) || state.getBlock().isLeaves(state, this.world, blockpos))
-                    {
-                        this.setBlockAndMetadata(this.world, blockpos, p_181631_3_);
-                    }
+                    this.setBlockAndMetadata(this.world, blockpos, p_181631_3_);
                 }
             }
         }

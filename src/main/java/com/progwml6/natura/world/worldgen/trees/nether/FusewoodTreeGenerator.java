@@ -74,12 +74,6 @@ public class FusewoodTreeGenerator extends BaseTreeGenerator
         }
     }
 
-    public boolean isReplaceable(World world, BlockPos pos)
-    {
-        IBlockState state = world.getBlockState(pos);
-        return state.getBlock() != Blocks.AIR && !state.getBlock().isLeaves(state, world, pos) && state.getBlock() != Blocks.NETHERRACK && state.getBlock() != Blocks.SOUL_SAND && state.getBlock() != NaturaNether.netherTaintedSoil && !state.getBlock().isWood(world, pos);
-    }
-
     protected void placeCanopy(World worldIn, Random rand, BlockPos position, int height)
     {
         for (int y = position.getY() - 3 + height; y <= position.getY() + height; ++y)
@@ -98,12 +92,7 @@ public class FusewoodTreeGenerator extends BaseTreeGenerator
                     if (Math.abs(mathX) != subtract2 || Math.abs(mathZ) != subtract2 || rand.nextInt(2) != 0 && subtract != 0)
                     {
                         BlockPos blockpos = new BlockPos(x, y, z);
-                        IBlockState state2 = worldIn.getBlockState(blockpos);
-
-                        if (state2.getBlock().isAir(state2, worldIn, blockpos))
-                        {
-                            worldIn.setBlockState(blockpos, this.leaves, 2);
-                        }
+                        this.setBlockAndMetadataNether(worldIn, blockpos, this.leaves);
                     }
                 }
             }
@@ -114,13 +103,7 @@ public class FusewoodTreeGenerator extends BaseTreeGenerator
     {
         for (int localHeight = 0; localHeight < height; ++localHeight)
         {
-            BlockPos upN = position.up(localHeight);
-            IBlockState state2 = worldIn.getBlockState(upN);
-
-            if (state2.getBlock().isAir(state2, worldIn, upN) || state2.getBlock().isLeaves(state2, worldIn, upN) || state2.getBlock().isReplaceable(worldIn, upN))
-            {
-                worldIn.setBlockState(position.up(localHeight), this.log, 2);
-            }
+            this.setBlockAndMetadataNether(worldIn, position.up(localHeight), this.log);
         }
     }
 
@@ -173,7 +156,7 @@ public class FusewoodTreeGenerator extends BaseTreeGenerator
                 {
                     if (j >= 0 && j < 256)
                     {
-                        if (this.isReplaceable(worldIn, mutableblockpos.setPos(l, j, i1)))
+                        if (isReplaceableNether(worldIn, mutableblockpos.setPos(l, j, i1)))
                         {
                             flag = false;
                         }

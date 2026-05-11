@@ -63,12 +63,7 @@ public class AppleTreeGenerator extends OverworldTreeGenerator
                     if (Math.abs(mathX) != subtract2 || Math.abs(mathZ) != subtract2 || random.nextInt(2) != 0 && subtract != 0)
                     {
                         BlockPos blockpos = new BlockPos(x, y, z);
-                        IBlockState state = world.getBlockState(blockpos);
-
-                        if (state.getBlock().isAir(state, world, blockpos) || state.getBlock().canBeReplacedByLeaves(state, world, blockpos))
-                        {
-                            world.setBlockState(blockpos, this.getRandomizedLeaves(random), 2);
-                        }
+                        setBlockAndMetadata(world, blockpos, this.getRandomizedLeaves(random));
                     }
                 }
             }

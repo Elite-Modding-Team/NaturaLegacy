@@ -6,8 +6,8 @@ import com.google.common.collect.Lists;
 import com.progwml6.natura.common.config.Config;
 import com.progwml6.natura.overworld.NaturaOverworld;
 import com.progwml6.natura.world.worldgen.trees.BaseTreeGenerator;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
+
+import net.minecraft.block.*;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumFacing;
@@ -54,12 +54,6 @@ public class RedwoodTreeGenerator extends BaseTreeGenerator
     public RedwoodTreeGenerator(IBlockState log, IBlockState heart, IBlockState root, IBlockState leaves)
     {
         this(log, heart, root, leaves, true, true);
-    }
-
-    public boolean isReplaceable(World world, BlockPos pos)
-    {
-        IBlockState state = world.getBlockState(pos);
-        return state.getBlock().isAir(state, world, pos) || state.getBlock().isLeaves(state, world, pos) || state.getBlock().isReplaceable(world, pos) || state.getBlock().isWood(world, pos) || this.canGrowInto(state.getBlock());
     }
 
     public boolean isValidSpawn(World world, BlockPos pos)
@@ -246,6 +240,22 @@ public class RedwoodTreeGenerator extends BaseTreeGenerator
             this.growSmallRoots(world, groundPosition.down());
 
             this.growTop(groundPosition.up(this.height));
+        }
+    }
+
+    @Override
+    protected boolean isReplaceable(World world, BlockPos pos)
+    {
+        IBlockState state = world.getBlockState(pos);
+        return super.isReplaceable(world, pos) || canGrowInto(state.getBlock());
+    }
+
+    @Override
+    protected void setBlockAndMetadata(World world, BlockPos pos, IBlockState stateNew)
+    {
+        if (this.isReplaceable(world, pos))
+        {
+            world.setBlockState(pos, stateNew, 2);
         }
     }
 
@@ -1925,22 +1935,13 @@ public class RedwoodTreeGenerator extends BaseTreeGenerator
         }
     }
 
-    protected void setBlockAndMetadata(World world, BlockPos pos, IBlockState stateNew)
-    {
-        if (this.isReplaceable(world, pos))
-        {
-            world.setBlockState(pos, stateNew, 2);
-        }
-    }
-
     /**
      * returns whether a tree can grow into a block
      * For example, a tree will not grow into stone
      */
     protected boolean canGrowInto(Block blockType)
     {
-        Material material = blockType.getDefaultState().getMaterial();
-        return material == Material.AIR || material == Material.LEAVES || blockType == Blocks.GRASS || blockType == Blocks.DIRT || blockType == Blocks.LOG || blockType == Blocks.LOG2 || blockType == Blocks.SAPLING || blockType == Blocks.VINE;
+        return blockType instanceof BlockGrass || blockType instanceof BlockDirt || blockType instanceof BlockLog || blockType instanceof BlockSapling || blockType instanceof BlockVine;
     }
 
     protected BlockPos findGround(World world, BlockPos pos)
@@ -2061,12 +2062,7 @@ public class RedwoodTreeGenerator extends BaseTreeGenerator
                 if (Math.pow(Math.abs(j) + 0.5D, 2.0D) + Math.pow(Math.abs(k) + 0.5D, 2.0D) <= size * size)
                 {
                     BlockPos blockpos = pos.add(j, 0, k);
-                    IBlockState stateAtPos = this.world.getBlockState(blockpos);
-
-                    if (stateAtPos.getBlock().isAir(stateAtPos, this.world, blockpos) || stateAtPos.getBlock().isLeaves(stateAtPos, this.world, blockpos))
-                    {
-                        this.setBlockAndMetadata(this.world, blockpos, state);
-                    }
+                    setBlockAndMetadata(this.world, blockpos, state);
                 }
             }
         }

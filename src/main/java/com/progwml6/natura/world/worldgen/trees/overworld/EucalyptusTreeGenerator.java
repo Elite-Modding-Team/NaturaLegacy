@@ -169,25 +169,13 @@ public class EucalyptusTreeGenerator extends BaseTreeGenerator
     {
         while (height >= 0)
         {
-            IBlockState state = world.getBlockState(pos);
-            Block block = state.getBlock();
-            if (block.isAir(state, world, pos) || block.isLeaves(state, world, pos) || block.isReplaceable(world, pos))
+            if (isReplaceable(world, pos))
             {
                 this.setBlockAndMetadata(world, pos, this.log);
             }
 
             pos = pos.up();
             height--;
-        }
-    }
-
-    protected void setBlockAndMetadata(World world, BlockPos pos, IBlockState stateNew)
-    {
-        IBlockState state = world.getBlockState(pos);
-        Block block = state.getBlock();
-        if (block.isAir(state, world, pos) || block.canPlaceBlockAt(world, pos) || world.getBlockState(pos) == this.leaves)
-        {
-            world.setBlockState(pos, stateNew, 2);
         }
     }
 
