@@ -296,9 +296,9 @@ public final class Config
 
     //@formatter:off
     // Clouds Start
-    public static boolean generateOverworldClouds = true;
-    public static boolean generateSulfurClouds = true;
-    public static boolean generateAshClouds = true;
+    public static boolean generateOverworldClouds = false;
+    public static boolean generateSulfurClouds = false;
+    public static boolean generateAshClouds = false;
     public static boolean generateDarkClouds = true;
     public static boolean generateLegacyClouds = false;
 
@@ -307,7 +307,7 @@ public final class Config
     public static int[] ashWhitelist = new int[] {-1};
     public static int[] sulfurCloudWhitelist = new int[] {-1};
 
-    public static boolean enableCloudBlocks = false;
+    public static boolean enableCloudBlocks = true;
     public static int cloudSpawnRarity = 10;
     public static int cloudSpawnHeight = 192;
     public static int cloudSpawnRange = 48;
