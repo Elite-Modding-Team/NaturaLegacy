@@ -289,6 +289,6 @@ public class CloudGenerator implements IWorldGenerator
         int blockX = chunkX << 4;
         int blockZ = chunkZ << 4;
 
-        return blockX > -500 && blockX < 500 && blockZ > -500 && blockZ < 500;
+        return blockX > -250 && blockX < 250 && blockZ > -250 && blockZ < 250;
     }
 }
