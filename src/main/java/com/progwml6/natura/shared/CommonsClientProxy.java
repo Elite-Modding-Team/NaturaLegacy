@@ -32,5 +32,6 @@ public class CommonsClientProxy extends ClientProxy
         registerItemModel(berry_medley);
         registerItemModel(boneMealBag);
         registerItemModel(glowshroom_stew);
+        registerItemModel(saguaros_delight);
     }
 }

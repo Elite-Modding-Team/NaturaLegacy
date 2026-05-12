@@ -76,6 +76,7 @@ public class NaturaCommons extends NaturaPulse
     // Soups
     public static Item berry_medley;
     public static Item glowshroom_stew;
+    public static Item saguaros_delight;
 
     // Berries
     public static ItemStack raspberry;
@@ -89,8 +90,6 @@ public class NaturaCommons extends NaturaPulse
 
     // Apples
     public static ItemStack potashApple;
-
-    public static ItemStack cactusJuice;
 
     //Seed Bags
     public static ItemStack wheat_seed_bag;
@@ -116,6 +115,7 @@ public class NaturaCommons extends NaturaPulse
 
     //Dummy Entries (for compatibility purposes)
     public static ItemStack berryMedley = new ItemStack(new ItemNaturaEdibleSoup(5, 1.4F, false));
+    public static ItemStack cactusJuice;
     public static ItemMetaDynamic empty_bowls;
     public static ItemNaturaEdibleSoup soups;
     //@formatter:on
@@ -188,6 +188,7 @@ public class NaturaCommons extends NaturaPulse
         }
 
         glowshroom_stew = registerItem(registry, new ItemNaturaEdibleSoup(6, 0.6F, false), "glowshroom_stew").setCreativeTab(Natura.TAB);
+        saguaros_delight = registerItem(registry, new ItemNaturaEdibleSoup(6, 0.6F, false), "saguaros_delight").setCreativeTab(Natura.TAB);
 
         wheat_seed_bag = seed_bags.addMeta(0, "wheat_seed_bag", Blocks.WHEAT.getDefaultState().withProperty(BlockCrops.AGE, Integer.valueOf(0)));
         carrots_seed_bag = seed_bags.addMeta(1, "carrots_seed_bag", Blocks.CARROTS.getDefaultState().withProperty(BlockCrops.AGE, Integer.valueOf(0)));

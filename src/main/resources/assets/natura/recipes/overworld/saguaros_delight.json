@@ -2,7 +2,7 @@
     "conditions": [
         {
             "type": "natura:is_pulse_loaded",
-            "pulse_name": "NaturaNether"
+            "pulse_name": "NaturaOverworld"
         }
     ],
     "type": "minecraft:crafting_shapeless",
@@ -11,19 +11,16 @@
             "item": "minecraft:bowl"
         },
         {
-            "item": "natura:nether_glowshroom",
-            "data": 0
+            "item": "natura:saguaro_fruit_item"
         },
         {
-            "item": "natura:nether_glowshroom",
-            "data": 1
+            "item": "natura:saguaro_fruit_item"
         },
         {
-            "item": "natura:nether_glowshroom",
-            "data": 2
+            "item": "minecraft:cactus"
         }
     ],
     "result": {
-        "item": "natura:glowshroom_stew"
+        "item": "natura:saguaros_delight"
     }
 }

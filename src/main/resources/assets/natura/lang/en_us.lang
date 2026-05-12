@@ -478,7 +478,10 @@ item.natura.sticks.bloodwood_stick.name=Bloodwood Stick
 item.natura.glowshroom_stew.name=Glowshroom Stew
 
 item.natura.berry_medley.name=Berry Medley
-item.natura.soups.berry_medley.tooltip=An irresistable combination of berries
+item.natura.berry_medley.tooltip=An irresistable combination of berries
+
+item.natura.saguaros_delight.name=Saguaro's Delight
+item.natura.saguaros_delight.tooltip=This looks painful...
 
 item.natura.imp_armor_helmet.name=Imp Hide Cap
 item.natura.imp_armor_chestplate.name=Imp Hide Jerkin

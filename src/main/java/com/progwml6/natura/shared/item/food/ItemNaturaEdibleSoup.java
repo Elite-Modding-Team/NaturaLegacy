@@ -10,6 +10,7 @@ import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
 public class ItemNaturaEdibleSoup extends ItemFood {
@@ -30,6 +31,12 @@ public class ItemNaturaEdibleSoup extends ItemFood {
         if (this.equals(NaturaCommons.glowshroom_stew)) {
             entityLiving.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 45 * 20, 0));
             entityLiving.addPotionEffect(new PotionEffect(MobEffects.MINING_FATIGUE, 8 * 20, 0));
+        }
+
+        if (this.equals(NaturaCommons.saguaros_delight)) {
+            entityLiving.addPotionEffect(new PotionEffect(MobEffects.STRENGTH, 60 * 20, 0));
+            entityLiving.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 8 * 20, 0));
+            entityLiving.attackEntityFrom(DamageSource.CACTUS, 2.0F);
         }
 
         return new ItemStack(Items.BOWL);
