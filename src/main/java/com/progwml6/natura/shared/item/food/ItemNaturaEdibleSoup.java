@@ -29,8 +29,8 @@ public class ItemNaturaEdibleSoup extends ItemFood {
         super.onItemUseFinish(stack, worldIn, entityLiving);
 
         if (this.equals(NaturaCommons.glowshroom_stew)) {
-            entityLiving.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 45 * 20, 0));
-            entityLiving.addPotionEffect(new PotionEffect(MobEffects.MINING_FATIGUE, 8 * 20, 0));
+            entityLiving.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 120 * 20, 0));
+            entityLiving.addPotionEffect(new PotionEffect(MobEffects.MINING_FATIGUE, 20 * 20, 0));
         }
 
         if (this.equals(NaturaCommons.saguaros_delight)) {

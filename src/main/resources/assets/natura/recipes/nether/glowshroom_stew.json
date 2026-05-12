@@ -21,6 +21,10 @@
         {
             "item": "natura:nether_glowshroom",
             "data": 2
+        },
+        {
+            "item": "natura:nether_glowshroom",
+            "data": 3
         }
     ],
     "result": {
