@@ -356,10 +356,12 @@ tile.natura.nether_thorn_vines.name=Thornvines
 tile.natura.nether_glowshroom.green.name=Green Glowshroom
 tile.natura.nether_glowshroom.blue.name=Blue Glowshroom
 tile.natura.nether_glowshroom.purple.name=Purple Glowshroom
+tile.natura.nether_glowshroom.amber.name=Amber Glowshroom
 
 tile.natura.nether_green_large_glowshroom.all_inside.name=Green Glowshroom
 tile.natura.nether_blue_large_glowshroom.all_inside.name=Blue Glowshroom
 tile.natura.nether_purple_large_glowshroom.all_inside.name=Purple Glowshroom
+tile.natura.nether_amber_large_glowshroom.all_inside.name=Amber Glowshroom
 
 tile.natura.nether_lever.name=Netherrack Lever
 

@@ -213,6 +213,9 @@ public class NetherClientProxy extends ClientProxy
         glowshroom = new ItemStack(Item.getItemFromBlock(NaturaNether.netherGlowshroom), 1, NaturaNether.netherGlowshroom.getMetaFromState(NaturaNether.netherGlowshroom.getDefaultState().withProperty(BlockNetherGlowshroom.TYPE, BlockNetherGlowshroom.GlowshroomType.PURPLE)));
         this.registerItemModelNatura(glowshroom, "nether_glowshroom_purple");
 
+        glowshroom = new ItemStack(Item.getItemFromBlock(NaturaNether.netherGlowshroom), 1, NaturaNether.netherGlowshroom.getMetaFromState(NaturaNether.netherGlowshroom.getDefaultState().withProperty(BlockNetherGlowshroom.TYPE, BlockNetherGlowshroom.GlowshroomType.AMBER)));
+        this.registerItemModelNatura(glowshroom, "nether_glowshroom_amber");
+
         Item nether_large_green_glowshroom = Item.getItemFromBlock(NaturaNether.netherLargeGreenGlowshroom);
         for (BlockNetherLargeGlowshroom.EnumType type : BlockNetherLargeGlowshroom.EnumType.values())
         {
@@ -232,6 +235,13 @@ public class NetherClientProxy extends ClientProxy
         {
             String variant = String.format("%s=%s", BlockNetherLargeGlowshroom.VARIANT.getName(), BlockNetherLargeGlowshroom.VARIANT.getName(type));
             ModelLoader.setCustomModelResourceLocation(nether_large_purple_glowshroom, type.getMeta(), new ModelResourceLocation(nether_large_purple_glowshroom.getRegistryName(), variant));
+        }
+
+        Item nether_large_amber_glowshroom = Item.getItemFromBlock(NaturaNether.netherLargeAmberGlowshroom);
+        for (BlockNetherLargeGlowshroom.EnumType type : BlockNetherLargeGlowshroom.EnumType.values())
+        {
+            String variant = String.format("%s=%s", BlockNetherLargeGlowshroom.VARIANT.getName(), BlockNetherLargeGlowshroom.VARIANT.getName(type));
+            ModelLoader.setCustomModelResourceLocation(nether_large_amber_glowshroom, type.getMeta(), new ModelResourceLocation(nether_large_amber_glowshroom.getRegistryName(), variant));
         }
 
         stack = new ItemStack(Item.getItemFromBlock(NaturaNether.ghostwoodDoor), 1, NaturaNether.ghostwoodDoor.getMetaFromState(NaturaNether.ghostwoodDoor.getDefaultState().withProperty(BlockDoor.FACING, EnumFacing.EAST).withProperty(BlockDoor.OPEN, Boolean.valueOf(false)).withProperty(BlockDoor.HINGE, BlockDoor.EnumHingePosition.LEFT).withProperty(BlockDoor.HALF, BlockDoor.EnumDoorHalf.LOWER)));

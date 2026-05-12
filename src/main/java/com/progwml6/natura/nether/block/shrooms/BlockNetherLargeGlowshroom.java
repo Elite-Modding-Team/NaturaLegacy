@@ -125,7 +125,7 @@ public class BlockNetherLargeGlowshroom extends Block {
     public boolean shouldSideBeRendered(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side) {
         IBlockState iblockstate = blockAccess.getBlockState(pos.offset(side));
         Block block = iblockstate.getBlock();
-        if (this == NaturaNether.netherLargeBlueGlowshroom || this == NaturaNether.netherLargeGreenGlowshroom || this == NaturaNether.netherLargePurpleGlowshroom) {
+        if (this == NaturaNether.netherLargeBlueGlowshroom || this == NaturaNether.netherLargeGreenGlowshroom || this == NaturaNether.netherLargePurpleGlowshroom || this == NaturaNether.netherLargeAmberGlowshroom) {
             if (block == this) {
                 return false;
             }

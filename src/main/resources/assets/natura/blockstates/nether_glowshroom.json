@@ -20,6 +20,11 @@
                 "textures": {
                     "cross": "natura:blocks/glowshroom/purple/purple_glowshroom"
                 }
+            },
+            "amber": {
+                "textures": {
+                    "cross": "natura:blocks/glowshroom/amber/amber_glowshroom"
+                }
             }
         }
     }

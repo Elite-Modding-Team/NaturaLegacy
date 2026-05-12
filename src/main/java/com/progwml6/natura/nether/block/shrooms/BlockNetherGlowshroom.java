@@ -26,12 +26,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import slimeknights.mantle.block.EnumBlock;
 
-public class BlockNetherGlowshroom extends BlockMushroom
-{
+public class BlockNetherGlowshroom extends BlockMushroom {
     public static PropertyEnum<GlowshroomType> TYPE = PropertyEnum.create("type", GlowshroomType.class);
 
-    public BlockNetherGlowshroom()
-    {
+    public BlockNetherGlowshroom() {
         super();
 
         this.setLightLevel(0.825F);
@@ -40,20 +38,15 @@ public class BlockNetherGlowshroom extends BlockMushroom
     }
 
     @Override
-    public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
-    {
-        if (rand.nextInt(25) == 0)
-        {
+    public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
+        if (rand.nextInt(25) == 0) {
             int i = 5;
 
-            for (BlockPos blockpos : BlockPos.getAllInBoxMutable(pos.add(-4, -1, -4), pos.add(4, 1, 4)))
-            {
-                if (worldIn.getBlockState(blockpos).getBlock() == this)
-                {
+            for (BlockPos blockpos : BlockPos.getAllInBoxMutable(pos.add(-4, -1, -4), pos.add(4, 1, 4))) {
+                if (worldIn.getBlockState(blockpos).getBlock() == this) {
                     --i;
 
-                    if (i <= 0)
-                    {
+                    if (i <= 0) {
                         return;
                     }
                 }
@@ -63,10 +56,8 @@ public class BlockNetherGlowshroom extends BlockMushroom
 
             IBlockState currentState = worldIn.getBlockState(pos);
 
-            for (int k = 0; k < 4; ++k)
-            {
-                if (worldIn.isAirBlock(blockpos1) && this.canBlockStay(worldIn, blockpos1, currentState))
-                {
+            for (int k = 0; k < 4; ++k) {
+                if (worldIn.isAirBlock(blockpos1) && this.canBlockStay(worldIn, blockpos1, currentState)) {
                     pos = blockpos1;
                 }
 
@@ -75,41 +66,33 @@ public class BlockNetherGlowshroom extends BlockMushroom
 
             currentState = worldIn.getBlockState(pos);
 
-            if (worldIn.isAirBlock(blockpos1) && this.canBlockStay(worldIn, blockpos1, currentState))
-            {
+            if (worldIn.isAirBlock(blockpos1) && this.canBlockStay(worldIn, blockpos1, currentState)) {
                 worldIn.setBlockState(blockpos1, currentState, 3);
             }
         }
     }
 
     @Override
-    public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list)
-    {
-        for (GlowshroomType type : GlowshroomType.values())
-        {
+    public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list) {
+        for (GlowshroomType type : GlowshroomType.values()) {
             list.add(new ItemStack(this, 1, this.getMetaFromState(this.getDefaultState().withProperty(TYPE, type))));
         }
     }
 
     @Override
-    public boolean canBlockStay(World worldIn, BlockPos pos, IBlockState state)
-    {
-        if (pos.getY() >= 0 && pos.getY() < 256)
-        {
+    public boolean canBlockStay(World worldIn, BlockPos pos, IBlockState state) {
+        if (pos.getY() >= 0 && pos.getY() < 256) {
             IBlockState iblockstate = worldIn.getBlockState(pos.down());
 
             return (iblockstate.getBlock() == Blocks.MYCELIUM || iblockstate.getBlock() == Blocks.NETHERRACK || iblockstate.getBlock() == Blocks.SOUL_SAND || iblockstate.getBlock() == NaturaNether.netherTaintedSoil) ? true : (worldIn.getLight(pos) < 13 && iblockstate.getBlock().canSustainPlant(iblockstate, worldIn, pos.down(), net.minecraft.util.EnumFacing.UP, this));
-        }
-        else
-        {
+        } else {
             return false;
         }
     }
 
     @Nonnull
     @Override
-    protected BlockStateContainer createBlockState()
-    {
+    protected BlockStateContainer createBlockState() {
         return new BlockStateContainer(this, TYPE);
     }
 
@@ -118,10 +101,8 @@ public class BlockNetherGlowshroom extends BlockMushroom
      */
     @Nonnull
     @Override
-    public IBlockState getStateFromMeta(int meta)
-    {
-        if (meta < 0 || meta >= GlowshroomType.values().length)
-        {
+    public IBlockState getStateFromMeta(int meta) {
+        if (meta < 0 || meta >= GlowshroomType.values().length) {
             meta = 0;
         }
 
@@ -134,48 +115,50 @@ public class BlockNetherGlowshroom extends BlockMushroom
      * Convert the BlockState into the correct metadata value
      */
     @Override
-    public int getMetaFromState(IBlockState state)
-    {
+    public int getMetaFromState(IBlockState state) {
         return state.getValue(TYPE).ordinal();
     }
 
     @Override
-    public int damageDropped(IBlockState state)
-    {
+    public int damageDropped(IBlockState state) {
         return this.getMetaFromState(state);
     }
 
     @Override
-    public boolean generateBigMushroom(World worldIn, BlockPos pos, IBlockState state, Random rand)
-    {
+    public boolean generateBigMushroom(World worldIn, BlockPos pos, IBlockState state, Random rand) {
         BaseGlowshroomGenerator gen = new BaseGlowshroomGenerator();
 
         IBlockState glowshroom;
 
-        switch (state.getValue(TYPE))
-        {
-        case GREEN:
-            glowshroom = NaturaNether.netherLargeGreenGlowshroom.getDefaultState();
+        switch (state.getValue(TYPE)) {
+            case GREEN:
+                glowshroom = NaturaNether.netherLargeGreenGlowshroom.getDefaultState();
 
-            gen = new GreenGlowshroomGenerator(glowshroom);
+                gen = new GreenGlowshroomGenerator(glowshroom);
 
-            break;
-        case BLUE:
-            glowshroom = NaturaNether.netherLargeBlueGlowshroom.getDefaultState();
+                break;
+            case BLUE:
+                glowshroom = NaturaNether.netherLargeBlueGlowshroom.getDefaultState();
 
-            gen = new BlueGlowshroomGenerator(glowshroom);
+                gen = new BlueGlowshroomGenerator(glowshroom);
 
-            break;
-        case PURPLE:
-            glowshroom = NaturaNether.netherLargePurpleGlowshroom.getDefaultState();
+                break;
+            case PURPLE:
+                glowshroom = NaturaNether.netherLargePurpleGlowshroom.getDefaultState();
 
-            gen = new PurpleGlowshroomGenerator(glowshroom);
+                gen = new PurpleGlowshroomGenerator(glowshroom);
 
-            break;
-        default:
-            Natura.log.warn("BlockNetherGlowshroom Warning: Invalid meta, " + state.getValue(TYPE) + ". Please report!");
+                break;
+            case AMBER:
+                glowshroom = NaturaNether.netherLargeAmberGlowshroom.getDefaultState();
 
-            break;
+                gen = new PurpleGlowshroomGenerator(glowshroom);
+
+                break;
+            default:
+                Natura.log.warn("BlockNetherGlowshroom Warning: Invalid meta, " + state.getValue(TYPE) + ". Please report!");
+
+                break;
         }
 
         worldIn.setBlockToAir(pos);
@@ -183,37 +166,30 @@ public class BlockNetherGlowshroom extends BlockMushroom
         gen.generateShroom(rand, worldIn, pos);
 
         // check if it generated
-        if (worldIn.isAirBlock(pos))
-        {
+        if (worldIn.isAirBlock(pos)) {
             worldIn.setBlockState(pos, state, 4);
             return false;
-        }
-        else
-        {
+        } else {
             return true;
         }
     }
 
-    public enum GlowshroomType implements IStringSerializable, EnumBlock.IEnumMeta
-    {
-        GREEN, BLUE, PURPLE;
+    public enum GlowshroomType implements IStringSerializable, EnumBlock.IEnumMeta {
+        GREEN, BLUE, PURPLE, AMBER;
 
         public final int meta;
 
-        GlowshroomType()
-        {
+        GlowshroomType() {
             this.meta = this.ordinal();
         }
 
         @Override
-        public String getName()
-        {
+        public String getName() {
             return this.toString().toLowerCase(Locale.US);
         }
 
         @Override
-        public int getMeta()
-        {
+        public int getMeta() {
             return this.meta;
         }
     }

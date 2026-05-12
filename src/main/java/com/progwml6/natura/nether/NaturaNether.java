@@ -98,6 +98,7 @@ public class NaturaNether extends NaturaPulse
     public static BlockNetherLargeGlowshroom netherLargeGreenGlowshroom;
     public static BlockNetherLargeGlowshroom netherLargeBlueGlowshroom;
     public static BlockNetherLargeGlowshroom netherLargePurpleGlowshroom;
+    public static BlockNetherLargeGlowshroom netherLargeAmberGlowshroom;
 
     public static BlockRespawnObelisk respawnObelisk;
 
@@ -176,6 +177,7 @@ public class NaturaNether extends NaturaPulse
         netherLargeGreenGlowshroom = registerBlock(registry, new BlockNetherLargeGlowshroom(netherGlowshroom, BlockNetherGlowshroom.GlowshroomType.GREEN.getMeta()), "nether_green_large_glowshroom");
         netherLargeBlueGlowshroom = registerBlock(registry, new BlockNetherLargeGlowshroom(netherGlowshroom, BlockNetherGlowshroom.GlowshroomType.BLUE.getMeta()), "nether_blue_large_glowshroom");
         netherLargePurpleGlowshroom = registerBlock(registry, new BlockNetherLargeGlowshroom(netherGlowshroom, BlockNetherGlowshroom.GlowshroomType.PURPLE.getMeta()), "nether_purple_large_glowshroom");
+        netherLargeAmberGlowshroom = registerBlock(registry, new BlockNetherLargeGlowshroom(netherGlowshroom, BlockNetherGlowshroom.GlowshroomType.AMBER.getMeta()), "nether_amber_large_glowshroom");
 
         ghostwoodDoor = registerBlock(registry, new BlockNaturaDoor(), "nether_door_ghostwood");
         bloodwoodDoor = registerBlock(registry, new BlockNaturaDoor(), "nether_door_bloodwood");
@@ -253,6 +255,7 @@ public class NaturaNether extends NaturaPulse
         netherLargeGreenGlowshroom = registerItemBlockProp(registry, new ItemBlockMeta(netherLargeGreenGlowshroom), "nether_green_large_glowshroom", BlockNetherLargeGlowshroom.VARIANT);
         netherLargeBlueGlowshroom = registerItemBlockProp(registry, new ItemBlockMeta(netherLargeBlueGlowshroom), "nether_blue_large_glowshroom", BlockNetherLargeGlowshroom.VARIANT);
         netherLargePurpleGlowshroom = registerItemBlockProp(registry, new ItemBlockMeta(netherLargePurpleGlowshroom), "nether_purple_large_glowshroom", BlockNetherLargeGlowshroom.VARIANT);
+        netherLargeAmberGlowshroom = registerItemBlockProp(registry, new ItemBlockMeta(netherLargeAmberGlowshroom), "nether_amber_large_glowshroom", BlockNetherLargeGlowshroom.VARIANT);
 
         ghostwoodDoor = registerItemBlock(registry, ghostwoodDoor, "nether_door_ghostwood");
         bloodwoodDoor = registerItemBlock(registry, bloodwoodDoor, "nether_door_bloodwood");

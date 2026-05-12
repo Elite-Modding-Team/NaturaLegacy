@@ -2,6 +2,7 @@ package com.progwml6.natura.world.worldgen;
 
 import java.util.Random;
 
+import com.progwml6.natura.world.worldgen.glowshroom.nether.*;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
@@ -16,10 +17,6 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 import com.progwml6.natura.common.config.Config;
 import com.progwml6.natura.nether.NaturaNether;
 import com.progwml6.natura.nether.block.shrooms.BlockNetherGlowshroom;
-import com.progwml6.natura.world.worldgen.glowshroom.nether.BabyGlowshroomGenerator;
-import com.progwml6.natura.world.worldgen.glowshroom.nether.BlueGlowshroomGenerator;
-import com.progwml6.natura.world.worldgen.glowshroom.nether.GreenGlowshroomGenerator;
-import com.progwml6.natura.world.worldgen.glowshroom.nether.PurpleGlowshroomGenerator;
 
 public class GlowshroomGenerator implements IWorldGenerator
 {
@@ -29,10 +26,12 @@ public class GlowshroomGenerator implements IWorldGenerator
     final GreenGlowshroomGenerator greenGlowshroomGen;
     final BlueGlowshroomGenerator blueGlowshroomGen;
     final PurpleGlowshroomGenerator purpleGlowshroomGen;
+    final AmberGlowshroomGenerator amberGlowshroomGen;
 
     final BabyGlowshroomGenerator greenBabyGlowshroomGen;
     final BabyGlowshroomGenerator blueBabyGlowshroomGen;
     final BabyGlowshroomGenerator purpleBabyGlowshroomGen;
+    final BabyGlowshroomGenerator amberBabyGlowshroomGen;
     //@formatter:on
 
     public GlowshroomGenerator()
@@ -40,10 +39,12 @@ public class GlowshroomGenerator implements IWorldGenerator
         this.greenGlowshroomGen = new GreenGlowshroomGenerator(NaturaNether.netherLargeGreenGlowshroom.getDefaultState());
         this.blueGlowshroomGen = new BlueGlowshroomGenerator(NaturaNether.netherLargeBlueGlowshroom.getDefaultState());
         this.purpleGlowshroomGen = new PurpleGlowshroomGenerator(NaturaNether.netherLargePurpleGlowshroom.getDefaultState());
+        this.amberGlowshroomGen = new AmberGlowshroomGenerator(NaturaNether.netherLargeAmberGlowshroom.getDefaultState());
 
         this.greenBabyGlowshroomGen = new BabyGlowshroomGenerator(NaturaNether.netherGlowshroom.getDefaultState().withProperty(BlockNetherGlowshroom.TYPE, BlockNetherGlowshroom.GlowshroomType.GREEN));
         this.blueBabyGlowshroomGen = new BabyGlowshroomGenerator(NaturaNether.netherGlowshroom.getDefaultState().withProperty(BlockNetherGlowshroom.TYPE, BlockNetherGlowshroom.GlowshroomType.BLUE));
         this.purpleBabyGlowshroomGen = new BabyGlowshroomGenerator(NaturaNether.netherGlowshroom.getDefaultState().withProperty(BlockNetherGlowshroom.TYPE, BlockNetherGlowshroom.GlowshroomType.PURPLE));
+        this.amberBabyGlowshroomGen = new BabyGlowshroomGenerator(NaturaNether.netherGlowshroom.getDefaultState().withProperty(BlockNetherGlowshroom.TYPE, BlockNetherGlowshroom.GlowshroomType.AMBER));
     }
 
     @Override
@@ -85,7 +86,7 @@ public class GlowshroomGenerator implements IWorldGenerator
                     ySpawn = this.findGround(world, xSpawn, random.nextInt(64) + 32, zSpawn);
                     position = new BlockPos(xSpawn, ySpawn, zSpawn);
 
-                    if (random.nextInt(3) == 0)
+                    if (random.nextInt(2) == 0)
                     {
                         this.purpleGlowshroomGen.generateShroom(random, world, position);
                     }
@@ -95,9 +96,13 @@ public class GlowshroomGenerator implements IWorldGenerator
                         {
                             this.greenGlowshroomGen.generateShroom(random, world, position);
                         }
-                        else
+                        if (random.nextInt(2) == 0)
                         {
                             this.blueGlowshroomGen.generateShroom(random, world, position);
+                        }
+                        else
+                        {
+                            this.amberGlowshroomGen.generateShroom(random, world, position);
                         }
                     }
                 }
@@ -113,7 +118,7 @@ public class GlowshroomGenerator implements IWorldGenerator
                 this.greenBabyGlowshroomGen.generateShroom(random, world, position);
             }
 
-            if (Config.generatePurpleglowshroom && random.nextInt(8) == 0)
+            if (Config.generatePurpleglowshroom && random.nextInt(7) == 0)
             {
                 xSpawn = xPos + random.nextInt(16);
                 ySpawn = random.nextInt(128);
@@ -123,7 +128,7 @@ public class GlowshroomGenerator implements IWorldGenerator
                 this.purpleBabyGlowshroomGen.generateShroom(random, world, position);
             }
 
-            if (Config.generateBlueglowshroom && random.nextInt(9) == 0)
+            if (Config.generateBlueglowshroom && random.nextInt(7) == 0)
             {
                 xSpawn = xPos + random.nextInt(16);
                 ySpawn = random.nextInt(128);
@@ -131,6 +136,16 @@ public class GlowshroomGenerator implements IWorldGenerator
                 position = new BlockPos(xSpawn, ySpawn, zSpawn);
 
                 this.blueBabyGlowshroomGen.generateShroom(random, world, position);
+            }
+
+            if (Config.generateAmberglowshroom && random.nextInt(7) == 0)
+            {
+                xSpawn = xPos + random.nextInt(16);
+                ySpawn = random.nextInt(128);
+                zSpawn = zPos + random.nextInt(16);
+                position = new BlockPos(xSpawn, ySpawn, zSpawn);
+
+                this.amberBabyGlowshroomGen.generateShroom(random, world, position);
             }
 
         }

@@ -151,6 +151,7 @@ public final class Config
         generateGreenglowshroom = configFile.get(ENABLE_DISABLE, "Generate Green Glowshroom", generateGreenglowshroom).getBoolean(generateGreenglowshroom);
         generatePurpleglowshroom = configFile.get(ENABLE_DISABLE, "Generate Purple Glowshroom", generatePurpleglowshroom).getBoolean(generatePurpleglowshroom);
         generateBlueglowshroom = configFile.get(ENABLE_DISABLE, "Generate Blue Glowshroom", generateBlueglowshroom).getBoolean(generateBlueglowshroom);
+        generateAmberglowshroom = configFile.get(ENABLE_DISABLE, "Generate Amber Glowshroom", generateAmberglowshroom).getBoolean(generateAmberglowshroom);
         generateGlowshroomtree = configFile.get(ENABLE_DISABLE, "Generate Glowshroom Trees", generateGlowshroomtree).getBoolean(generateGlowshroomtree);
         dropCotton = configFile.get(ENABLE_DISABLE, "Drop cotton seeds from grass", dropCotton).getBoolean(dropCotton);
         dropBarley = configFile.get(ENABLE_DISABLE, "Drop barley seeds from grass", dropBarley).getBoolean(dropBarley);
@@ -461,6 +462,7 @@ public final class Config
     public static boolean generateGreenglowshroom = true;
     public static boolean generatePurpleglowshroom = true;
     public static boolean generateBlueglowshroom = true;
+    public static boolean generateAmberglowshroom = true;
     public static boolean generateGlowshroomtree = true;
 
     public static String[] saguaroBiomeTypes = new String[] {"SANDY"};
