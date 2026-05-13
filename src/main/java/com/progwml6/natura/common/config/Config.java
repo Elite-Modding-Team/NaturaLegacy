@@ -375,34 +375,34 @@ public final class Config
     public static boolean generateFusewood = true;
     public static boolean generateGhostwood = true;
 
-    public static String[] redwoodBiomeTypes = new String[] {"PLAINS"};
+    public static String[] redwoodBiomeTypes = new String[] {"PLAINS", "!DEAD"};
     public static int redwoodSpawnRarity = 200;
     public static int redwoodSpawnRange = 16;
-    public static String[] mapleBiomeTypes = new String[] {"FOREST"};
+    public static String[] mapleBiomeTypes = new String[] {"FOREST", "!DEAD"};
     public static int mapleRarity = 10;
     public static int mapleSpawnRange = 48;
-    public static String[] silverbellBiomeTypes = new String[] {"FOREST"};
+    public static String[] silverbellBiomeTypes = new String[] {"FOREST", "!DEAD"};
     public static int silverbellRarity = 10;
     public static int silverbellSpawnRange = 48;
-    public static String[] amaranthBiomeTypes = new String[] {"JUNGLE", "SAVANNA"};
+    public static String[] amaranthBiomeTypes = new String[] {"JUNGLE", "SAVANNA", "!DEAD"};
     public static int amaranthRarity = 10;
     public static int amaranthSpawnRange = 48;
-    public static String[] tigerBiomeTypes = new String[] {"FOREST"};
+    public static String[] tigerBiomeTypes = new String[] {"FOREST", "!DEAD"};
     public static int tigerRarity = 10;
     public static int tigerSpawnRange = 48;
-    public static String[] willowBiomeTypes = new String[] {"RIVER", "SWAMP"};
+    public static String[] willowBiomeTypes = new String[] {"RIVER", "SWAMP", "!DEAD"};
     public static int willowRarity = 10;
     public static int willowSpawnRange = 16;
-    public static String[] eucalyptusBiomeTypes = new String[] {"FOREST", "PLAINS", "MOUNTAIN", "HILLS"};
+    public static String[] eucalyptusBiomeTypes = new String[] {"FOREST", "PLAINS", "MOUNTAIN", "HILLS", "!DEAD"};
     public static int eucalyptusSpawnRarity = 30;
     public static int eucalyptusSpawnRange = 32;
-    public static String[] hopseedBiomeTypes = new String[] {"MOUNTAIN", "HILLS"};
+    public static String[] hopseedBiomeTypes = new String[] {"MOUNTAIN", "HILLS", "!DEAD"};
     public static int hopseedSpawnRarity = 10;
     public static int hopseedSpawnRange = 32;
-    public static String[] sakuraBiomeTypes = new String[] {"FOREST", "RIVER"};
+    public static String[] sakuraBiomeTypes = new String[] {"FOREST", "RIVER", "!DEAD"};
     public static int sakuraSpawnRarity = 30;
     public static int sakuraSpawnRange = 32;
-    public static String[] appleBiomeTypes = new String[] {"FOREST", "PLAINS"};
+    public static String[] appleBiomeTypes = new String[] {"FOREST", "PLAINS", "!DEAD"};
     public static int appleSpawnRarity = 30;
     public static int appleSpawnRange = 48;
 
@@ -465,7 +465,7 @@ public final class Config
     public static boolean generateAmberglowshroom = true;
     public static boolean generateGlowshroomtree = true;
 
-    public static String[] saguaroBiomeTypes = new String[] {"SANDY"};
+    public static String[] saguaroBiomeTypes = new String[] {"SANDY", "!DEAD"};
     public static int saguaroSpawnRarity = 5;
     public static int saguaroSpawnRange = 16;
 

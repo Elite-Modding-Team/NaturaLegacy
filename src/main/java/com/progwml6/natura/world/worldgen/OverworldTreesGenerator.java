@@ -244,14 +244,31 @@ public class OverworldTreesGenerator
 
 	public boolean matchesBiomeTypes(Biome biome, String[] typeNames)
 	{
+		// Blacklisted biome types
 		for (String name : typeNames)
 		{
-			BiomeDictionary.Type type = BiomeDictionary.Type.getType(name);
-			if (BiomeDictionary.hasType(biome, type))
+			if (name.startsWith("!"))
 			{
-				return true;
+				BiomeDictionary.Type type = BiomeDictionary.Type.getType(name.substring(1));
+				if (BiomeDictionary.hasType(biome, type))
+				{
+					return false;
+				}
 			}
 		}
+		// Whitelisted biome types
+		for (String name : typeNames)
+		{
+			if (!name.startsWith("!"))
+			{
+				BiomeDictionary.Type type = BiomeDictionary.Type.getType(name);
+				if (BiomeDictionary.hasType(biome, type))
+				{
+					return true;
+				}
+			}
+		}
+
 		return false;
 	}
 }
