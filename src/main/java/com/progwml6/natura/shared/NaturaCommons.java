@@ -114,10 +114,12 @@ public class NaturaCommons extends NaturaPulse
     public static ItemStack bloodwood_stick;
 
     //Dummy Entries (for compatibility purposes)
+    public static ItemStack barleyFlour = new ItemStack(Items.AIR);
     public static ItemStack berryMedley = new ItemStack(new ItemNaturaEdibleSoup(5, 1.4F, false));
-    public static ItemStack cactusJuice;
+    public static ItemStack cactusJuice = new ItemStack(Items.AIR);
     public static ItemMetaDynamic empty_bowls;
     public static ItemNaturaEdibleSoup soups;
+    public static ItemStack wheatFlour = new ItemStack(Items.AIR);
     //@formatter:on
 
     @SubscribeEvent
