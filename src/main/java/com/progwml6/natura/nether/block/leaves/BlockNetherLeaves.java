@@ -150,15 +150,6 @@ public class BlockNetherLeaves extends BlockLeavesBase
         return Lists.newArrayList(this.getSilkTouchDrop(state));
     }
 
-    @Override
-    public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune)
-    {
-        super.getDrops(drops, world, pos, state, fortune);
-
-        Random rand = new Random();
-        rand.setSeed(2 ^ 16 + 2 ^ 8 + (4 * 3 * 271));
-    }
-
     public enum LeavesType implements IStringSerializable, EnumBlock.IEnumMeta
     {
         GHOSTWOOD(0, 0), BLOODWOOD(0, 1), FUSEWOOD(1, 2);
