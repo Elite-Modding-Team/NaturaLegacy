@@ -157,6 +157,7 @@ public final class Config
         dropBarley = configFile.get(ENABLE_DISABLE, "Drop barley seeds from grass", dropBarley).getBoolean(dropBarley);
         enableStickVariants = configFile.get(ENABLE_DISABLE, "Enable stick variants", enableStickVariants).getBoolean(enableStickVariants);
         enableNoPoisonInFoods = configFile.get(ENABLE_DISABLE, "Enable Weakness instead of Poison in foods (Blightberry and Potash Apple)", true).getBoolean(true);
+        enableBloodwoodLeavesRedstoneDrop = configFile.get(ENABLE_DISABLE, "Enable Bloodwood Leaves having a chance to drop Redstone Dust when using a tool with Fortune III", true).getBoolean(true);
         try
         {
             Class.forName("chococraft.common.ModChocoCraft");
@@ -476,6 +477,7 @@ public final class Config
     public static boolean generateThornvines = true;
 
     public static boolean enableNoPoisonInFoods = true;
+    public static boolean enableBloodwoodLeavesRedstoneDrop = true;
     public static boolean enableWheatRecipe = true;
     public static boolean dropBarley = true;
     public static boolean dropCotton = true;

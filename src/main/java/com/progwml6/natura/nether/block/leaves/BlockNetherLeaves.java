@@ -9,6 +9,7 @@ import javax.annotation.Nonnull;
 import com.google.common.collect.Lists;
 import com.progwml6.natura.Natura;
 import com.progwml6.natura.common.block.base.BlockLeavesBase;
+import com.progwml6.natura.common.config.Config;
 import com.progwml6.natura.nether.NaturaNether;
 
 import net.minecraft.block.properties.PropertyEnum;
@@ -148,6 +149,24 @@ public class BlockNetherLeaves extends BlockLeavesBase
         IBlockState state = world.getBlockState(pos);
 
         return Lists.newArrayList(this.getSilkTouchDrop(state));
+    }
+
+    @Override
+    public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune)
+    {
+        super.getDrops(drops, world, pos, state, fortune);
+
+        Random rand = world instanceof World ? ((World)world).rand : RANDOM;;
+        rand.setSeed(2 ^ 16 + 2 ^ 8 + (4 * 3 * 271));
+
+        // Not sure why this was done, but it's configurable now
+        if (Config.enableBloodwoodLeavesRedstoneDrop && state.getValue(TYPE) == LeavesType.BLOODWOOD)
+        {
+            if (fortune > 3 || rand.nextInt(40 - fortune * 10) == 0)
+            {
+                drops.add(new ItemStack(Items.REDSTONE));
+            }
+        }
     }
 
     public enum LeavesType implements IStringSerializable, EnumBlock.IEnumMeta
