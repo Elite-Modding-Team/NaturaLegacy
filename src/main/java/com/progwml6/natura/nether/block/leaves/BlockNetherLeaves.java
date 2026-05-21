@@ -157,14 +157,6 @@ public class BlockNetherLeaves extends BlockLeavesBase
 
         Random rand = new Random();
         rand.setSeed(2 ^ 16 + 2 ^ 8 + (4 * 3 * 271));
-
-        if (state.getValue(TYPE) == LeavesType.BLOODWOOD)
-        {
-            if (fortune > 3 || rand.nextInt(40 - fortune * 10) == 0)
-            {
-                drops.add(new ItemStack(Items.REDSTONE));
-            }
-        }
     }
 
     public enum LeavesType implements IStringSerializable, EnumBlock.IEnumMeta
