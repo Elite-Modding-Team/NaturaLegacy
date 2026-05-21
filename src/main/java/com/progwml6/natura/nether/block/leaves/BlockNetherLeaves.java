@@ -157,7 +157,6 @@ public class BlockNetherLeaves extends BlockLeavesBase
         super.getDrops(drops, world, pos, state, fortune);
 
         Random rand = world instanceof World ? ((World)world).rand : RANDOM;;
-        rand.setSeed(2 ^ 16 + 2 ^ 8 + (4 * 3 * 271));
 
         // Not sure why this was done, but it's configurable now
         if (Config.enableBloodwoodLeavesRedstoneDrop && state.getValue(TYPE) == LeavesType.BLOODWOOD)
