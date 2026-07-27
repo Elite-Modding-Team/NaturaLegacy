@@ -40,7 +40,7 @@ public class NaturaEntities extends NaturaPulse
 
     static final Logger log = Util.getLogger(PulseId);
 
-    @SidedProxy(clientSide = "com.progwml6.natura.entities.EntitiesClientProxy", serverSide = "com.progwml6.natura.common.CommonProxy")
+    @SidedProxy(clientSide = "com.progwml6.natura.entities.EntitiesClientProxy", serverSide = "com.progwml6.natura.common.CommonProxy", modId = Natura.modID)
     public static CommonProxy proxy;
     
     // Loot Tables

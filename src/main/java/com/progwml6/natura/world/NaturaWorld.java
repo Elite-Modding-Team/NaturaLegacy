@@ -1,6 +1,7 @@
 package com.progwml6.natura.world;
 
 import com.google.common.eventbus.Subscribe;
+import com.progwml6.natura.Natura;
 import org.apache.logging.log4j.Logger;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -24,7 +25,7 @@ public class NaturaWorld extends NaturaPulse
 
     static final Logger log = Util.getLogger(PulseId);
 
-    @SidedProxy(clientSide = "com.progwml6.natura.world.WorldClientProxy", serverSide = "com.progwml6.natura.common.CommonProxy")
+    @SidedProxy(clientSide = "com.progwml6.natura.world.WorldClientProxy", serverSide = "com.progwml6.natura.common.CommonProxy", modId = Natura.modID)
     public static CommonProxy proxy;
 
     @Subscribe
