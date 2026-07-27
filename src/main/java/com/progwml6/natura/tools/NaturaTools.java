@@ -1,6 +1,7 @@
 package com.progwml6.natura.tools;
 
 import com.google.common.eventbus.Subscribe;
+import com.progwml6.natura.Natura;
 import org.apache.logging.log4j.Logger;
 import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
@@ -34,7 +35,7 @@ public class NaturaTools extends NaturaPulse
 
     static final Logger log = Util.getLogger(PulseId);
 
-    @SidedProxy(clientSide = "com.progwml6.natura.tools.ToolsClientProxy", serverSide = "com.progwml6.natura.common.CommonProxy")
+    @SidedProxy(clientSide = "com.progwml6.natura.tools.ToolsClientProxy", serverSide = "com.progwml6.natura.common.CommonProxy", modId = Natura.modID)
     public static CommonProxy proxy;
 
     //@formatter:off

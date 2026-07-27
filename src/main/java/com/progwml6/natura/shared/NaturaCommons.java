@@ -44,7 +44,7 @@ public class NaturaCommons extends NaturaPulse
 
     static final Logger log = Util.getLogger(PulseId);
 
-    @SidedProxy(clientSide = "com.progwml6.natura.shared.CommonsClientProxy", serverSide = "com.progwml6.natura.common.CommonProxy")
+    @SidedProxy(clientSide = "com.progwml6.natura.shared.CommonsClientProxy", serverSide = "com.progwml6.natura.common.CommonProxy", modId = Natura.modID)
     public static CommonProxy proxy;
 
     //@formatter:off

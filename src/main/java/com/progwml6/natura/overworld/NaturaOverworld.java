@@ -61,7 +61,7 @@ public class NaturaOverworld extends NaturaPulse
 
     static final Logger log = Util.getLogger(PulseId);
 
-    @SidedProxy(clientSide = "com.progwml6.natura.overworld.OverworldClientProxy", serverSide = "com.progwml6.natura.common.CommonProxy")
+    @SidedProxy(clientSide = "com.progwml6.natura.overworld.OverworldClientProxy", serverSide = "com.progwml6.natura.common.CommonProxy", modId = Natura.modID)
     public static CommonProxy proxy;
 
     //@formatter:off

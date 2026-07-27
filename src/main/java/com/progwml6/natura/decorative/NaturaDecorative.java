@@ -1,5 +1,6 @@
 package com.progwml6.natura.decorative;
 
+import com.progwml6.natura.Natura;
 import org.apache.logging.log4j.Logger;
 
 import com.google.common.eventbus.Subscribe;
@@ -36,7 +37,7 @@ public class NaturaDecorative extends NaturaPulse
 
     static final Logger log = Util.getLogger(PulseId);
 
-    @SidedProxy(clientSide = "com.progwml6.natura.decorative.DecorativeClientProxy", serverSide = "com.progwml6.natura.common.CommonProxy")
+    @SidedProxy(clientSide = "com.progwml6.natura.decorative.DecorativeClientProxy", serverSide = "com.progwml6.natura.common.CommonProxy", modId = Natura.modID)
     public static CommonProxy proxy;
 
     //@formatter:off
